@@ -1,0 +1,36 @@
+title: "Conversión bruta vs lift incremental"
+subtitle: "El segmento más cómodo no necesariamente produce más impacto."
+note: "La evidencia separa ventas visibles de ventas causadas por la campaña."
+analytic_level: 20
+primary_technique: "uplift e incrementalidad"
+minimum_sufficient_technique: "comparación tratamiento-control por segmento"
+dashboard_constraints:
+  filters: false
+  tabs: false
+  kpi_cards: false
+  self_service: false
+  max_visualizations: 1
+chart:
+  type: bar
+  data:
+    labels: ["Alta propensión", "Propensión media"]
+    datasets:
+      - label: "Tratamiento"
+        data: [31, 18]
+        backgroundColor: "#3568a8"
+      - label: "Control"
+        data: [29, 10]
+        backgroundColor: "#9aa6b2"
+      - label: "Lift"
+        data: [2, 8]
+        backgroundColor: "#2f7d55"
+  options:
+    plugins:
+      legend:
+        position: bottom
+    scales:
+      y:
+        title:
+          display: true
+          text: "% de compra"
+

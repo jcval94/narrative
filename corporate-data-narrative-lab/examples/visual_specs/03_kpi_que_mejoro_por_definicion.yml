@@ -1,0 +1,40 @@
+title: "KPI publicado vs KPI comparable"
+subtitle: "La mejora aparece cuando cambia la definición, no cuando cambia el proceso."
+note: "La brecha entre líneas mide el efecto metodológico de excluir casos complejos."
+analytic_level: 23
+primary_technique: "versionado de KPI y comparación de denominadores"
+minimum_sufficient_technique: "línea antes/después con serie comparable"
+dashboard_constraints:
+  filters: false
+  tabs: false
+  kpi_cards: false
+  self_service: false
+  max_visualizations: 1
+chart:
+  type: line
+  data:
+    labels: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
+    datasets:
+      - label: "KPI publicado"
+        data: [72, 71, 73, 72, 74, 73, 84, 86, 87, 86, 88, 87]
+        borderColor: "#2f7d55"
+        backgroundColor: "#2f7d55"
+      - label: "KPI comparable"
+        data: [72, 71, 73, 72, 74, 73, 74, 75, 74, 75, 76, 75]
+        borderColor: "#a84f35"
+        backgroundColor: "#a84f35"
+  options:
+    plugins:
+      legend:
+        position: bottom
+    scales:
+      y:
+        min: 60
+        max: 95
+        title:
+          display: true
+          text: "% en SLA"
+      x:
+        title:
+          display: true
+          text: "Mes"
