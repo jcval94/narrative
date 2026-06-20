@@ -1,0 +1,25 @@
+scenario: cancellations_window
+seed: 17
+rows: 420
+objective: "Mostrar motivos de cancelación que maduran después del mes 6 y quedan fuera de una herramienta de 3 meses."
+analytic_level: 5
+primary_technique: "análisis de ventana temporal"
+minimum_sufficient_technique: "línea temporal por mes desde apertura"
+columns:
+  - name: case_id
+    type: string
+    role: identificador sintético
+  - name: month_since_open
+    type: integer
+    range: [1, 24]
+  - name: cancel_reason
+    type: category
+    values: ["Economía Personal", "Mala Venta", "Precio", "Cambio de Producto", "Servicio"]
+  - name: visible_in_tool
+    type: boolean
+  - name: included_in_6m_cut
+    type: boolean
+pattern: "Economía Personal y Mala Venta tienen mayor concentración entre los meses 7 y 14."
+edge_cases:
+  - "Casos de mala venta confirmados después del mes 9."
+  - "Motivos tempranos que sí caben en la herramienta y crean falsa tranquilidad."

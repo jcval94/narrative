@@ -1,0 +1,28 @@
+scenario: duplicated_productivity
+seed: 47
+rows: 420
+objective: "Mostrar que tickets cerrados suben tras una integración, pero problemas únicos resueltos casi no cambian."
+analytic_level: 6
+primary_technique: "perfilamiento de calidad de datos y deduplicación"
+minimum_sufficient_technique: "comparar tickets cerrados contra problemas únicos"
+columns:
+  - name: ticket_id
+    type: string
+    role: identificador sintético de fila
+  - name: problem_key
+    type: string
+    role: identificador sintético de problema único
+  - name: period
+    type: category
+    values: [before_integration, after_integration]
+  - name: customer_id
+    type: string
+  - name: reason
+    type: category
+  - name: closed
+    type: boolean
+pattern: "Después de la integración aumentan tickets por problema, inflando productividad bruta."
+edge_cases:
+  - "Tickets no idénticos que representan el mismo problema."
+  - "Subcasos creados después de anunciar deduplicación."
+

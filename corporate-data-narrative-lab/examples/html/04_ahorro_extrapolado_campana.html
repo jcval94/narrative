@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>El ahorro extrapolado que no cabía en la realidad</title>
+  <style>
+    :root {
+      --ink: #1d2433;
+      --muted: #5e697a;
+      --line: #d7dde7;
+      --paper: #ffffff;
+      --bg: #f6f7f9;
+      --accent: #3568a8;
+      --risk: #a84f35;
+      --ok: #2f7d55;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.58; }
+    main { width: min(940px, calc(100% - 32px)); margin: 0 auto; padding: 42px 0 60px; }
+    header, section { margin-bottom: 28px; }
+    h1 { margin: 0 0 10px; font-size: clamp(2rem, 5vw, 3.35rem); line-height: 1.05; }
+    h2 { margin: 0 0 10px; font-size: 1.25rem; }
+    p { margin: 0 0 10px; }
+    ul { margin: 0; padding-left: 20px; }
+    .subtitle { color: var(--muted); max-width: 760px; font-size: 1.08rem; }
+    .evidence { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 18px; }
+    .note { border-left: 4px solid var(--accent); padding-left: 14px; color: var(--muted); }
+    .warning { border-left-color: var(--risk); }
+    svg { width: 100%; height: auto; display: block; }
+    .axis { stroke: #7d8794; stroke-width: 1; }
+    .bar-presented { fill: var(--risk); }
+    .bar-eligible { fill: var(--accent); }
+    .bar-capturable { fill: var(--ok); }
+    .label { fill: #4a5361; font-size: 12px; }
+    .value { fill: #1d2433; font-size: 14px; font-weight: 700; }
+    .annotation { fill: #4a5361; font-size: 13px; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>El ahorro extrapolado que no cabía en la realidad</h1>
+      <p class="subtitle">Una regla de 3 no era el problema. El problema era usarla sobre una población que la campaña nunca podía tocar.</p>
+    </header>
+
+    <section>
+      <h2>Contexto</h2>
+      <p>Canales Digitales presenta una campaña de migración con ahorro esperado de 18 millones de pesos. Data revisa el cálculo y separa universo total, clientes elegibles, contactables y adopción esperada. Los datos del caso son sintéticos.</p>
+    </section>
+
+    <section>
+      <h2>Nivel analítico y técnica</h2>
+      <p>Nivel 0: aritmética de negocio. Técnica principal: regla de 3 con población elegible. Técnica mínima suficiente: calcular ahorro capturable con elegibilidad, contacto y adopción.</p>
+    </section>
+
+    <section class="evidence">
+      <h2>Evidencia visual</h2>
+      <svg viewBox="0 0 860 430" role="img" aria-label="Ahorro presentado contra ahorro capturable">
+        <line x1="90" y1="350" x2="805" y2="350" class="axis"/>
+        <line x1="90" y1="70" x2="90" y2="350" class="axis"/>
+        <rect x="150" y="90" width="120" height="260" class="bar-presented"/>
+        <rect x="370" y="235" width="120" height="115" class="bar-eligible"/>
+        <rect x="590" y="305" width="120" height="45" class="bar-capturable"/>
+        <text x="146" y="78" class="value">$18.0M</text>
+        <text x="372" y="223" class="value">$8.0M</text>
+        <text x="594" y="293" class="value">$3.1M</text>
+        <text x="132" y="380" class="label">Presentado</text>
+        <text x="348" y="380" class="label">Solo elegibles</text>
+        <text x="558" y="380" class="label">Capturable</text>
+        <path d="M275 110 C340 120 360 230 370 245" fill="none" stroke="#7d8794" stroke-dasharray="5 5"/>
+        <path d="M495 250 C550 260 575 300 590 318" fill="none" stroke="#7d8794" stroke-dasharray="5 5"/>
+        <text x="300" y="118" class="annotation">Elegibilidad reduce la base</text>
+        <text x="520" y="260" class="annotation">Contacto y adopción reducen el ahorro realista</text>
+        <text x="300" y="415" class="label">Ahorro anual estimado</text>
+        <text x="22" y="240" class="label" transform="rotate(-90 22 240)">Millones de pesos</text>
+      </svg>
+      <p class="note">Lo que cambia la decisión no es una técnica sofisticada. Es usar el denominador que la campaña sí puede accionar.</p>
+    </section>
+
+    <section>
+      <h2>Qué parece</h2>
+      <p>Una oportunidad grande y rápida: si cada cliente migrado ahorra dinero, basta multiplicar por toda la base.</p>
+    </section>
+
+    <section>
+      <h2>Qué revela</h2>
+      <p>El ahorro presentado incluye clientes no elegibles, no contactables o ya digitales. El business case no estaba mal calculado; estaba calculado sobre una población equivocada.</p>
+    </section>
+
+    <section>
+      <h2>Giro</h2>
+      <p>Tres meses después, la campaña no alcanza el ahorro prometido y se pide optimizar creatividades. El problema estaba en el denominador desde el inicio.</p>
+    </section>
+
+    <section>
+      <h2>Decisión de negocio</h2>
+      <p>Se mantiene la meta original porque ya fue presentada en comité y se decide ajustar el mensaje de campaña.</p>
+    </section>
+
+    <section>
+      <h2>Acción robusta</h2>
+      <ul>
+        <li>Separar universo, elegibles, contactables, interesados y adoptantes.</li>
+        <li>Publicar ahorro bruto, capturable y observado.</li>
+        <li>Medir reducción neta de llamadas contra grupo comparador.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Acción débil</h2>
+      <p>Mantener el ahorro de 18 millones y explicar cualquier desviación como problema de ejecución.</p>
+    </section>
+
+    <section>
+      <h2>Piloto</h2>
+      <p>Seis semanas con clientes elegibles y contactables. Métrica principal: reducción neta de llamadas por cliente contactado. Reversa si la reducción neta queda por debajo de 50% del supuesto mínimo.</p>
+    </section>
+
+    <section>
+      <h2>Aprendizajes</h2>
+      <p>El denominador correcto puede importar más que una técnica avanzada. Un piloto no debe extrapolarse a poblaciones que no comparten condiciones.</p>
+    </section>
+
+    <section>
+      <h2>Comentario tragicómico</h2>
+      <p class="note warning">Detectaste correctamente el problema, así que naturalmente fuiste recompensado con más trabajo. Eso te pasa por eficiente.</p>
+    </section>
+
+    <section>
+      <h2>Preguntas</h2>
+      <p>¿Qué población debe usarse para estimar el ahorro capturable? ¿Por qué un modelo de propensión sería sobreingeniería aquí?</p>
+    </section>
+
+    <section>
+      <h2>Respuesta esperada</h2>
+      <p>El alumno debe recalcular el ahorro sobre población elegible, contactable y adoptante, y proponer medición de reducción neta contra comparador.</p>
+    </section>
+
+    <section>
+      <h2>Riesgos</h2>
+      <p>Respetar consentimiento de contacto y evitar presionar a clientes que requieren canales asistidos por accesibilidad, edad, idioma o vulnerabilidad.</p>
+    </section>
+  </main>
+</body>
+</html>

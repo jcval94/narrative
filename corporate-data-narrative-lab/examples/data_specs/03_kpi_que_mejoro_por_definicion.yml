@@ -1,0 +1,26 @@
+scenario: kpi_definition_shift
+seed: 23
+rows: 720
+objective: "Mostrar un KPI que sube al excluir casos complejos, mientras la serie comparable se mantiene casi plana."
+analytic_level: 23
+primary_technique: "gobernanza analítica y comparación de denominadores"
+minimum_sufficient_technique: "línea del KPI publicado contra KPI comparable"
+columns:
+  - name: case_id
+    type: string
+    role: identificador sintético
+  - name: month
+    type: year_month
+  - name: definition_version
+    type: category
+    values: [v1_all_cases, v2_excludes_complex]
+  - name: complex_case
+    type: boolean
+  - name: included_in_kpi
+    type: boolean
+  - name: resolved_sla
+    type: boolean
+pattern: "Después del mes 6 se excluyen casos complejos y el KPI publicado salta sin mejora equivalente en la serie comparable."
+edge_cases:
+  - "Meses con más exclusiones y mejor KPI publicado."
+  - "Casos complejos acumulados fuera de la métrica oficial."

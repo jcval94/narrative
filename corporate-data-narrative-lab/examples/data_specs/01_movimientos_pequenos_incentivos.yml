@@ -1,0 +1,27 @@
+scenario: movements_incentives
+seed: 11
+rows: 500
+objective: "Mostrar una concentración de salidas pequeñas cerca de -1 peso antes de una alerta y desplazamiento a fondeo externo después."
+analytic_level: 14
+primary_technique: "modelo supervisado interpretable"
+minimum_sufficient_technique: "histograma inicial y definición comportamental monitoreable"
+columns:
+  - name: case_id
+    type: string
+    role: identificador sintético
+  - name: period
+    type: category
+    values: [before_alert, after_alert]
+  - name: movement_amount
+    type: number
+    range: [-10, 10]
+  - name: source_type
+    type: category
+    values: [employee_account, external_bank, customer_cash, customer_transfer]
+  - name: days_since_open
+    type: integer
+    range: [0, 60]
+pattern: "Antes de la alerta hay exceso de salidas entre -2.04 y -0.71 desde employee_account; después aparece fondeo pequeño desde external_bank."
+edge_cases:
+  - "Transferencias de 1.01 pesos que evaden umbral fijo."
+  - "Entradas desde banco externo que no dispara alerta de empleado."
