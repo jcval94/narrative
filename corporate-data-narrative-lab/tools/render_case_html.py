@@ -59,10 +59,36 @@ p, li {
 .evidence {
   border-left: 4px solid var(--accent);
 }
+.clue {
+  border-left: 4px solid #2f7d68;
+}
+.decision {
+  border-left: 4px solid #7a5a1f;
+}
 .tragicomic {
   border-left: 4px solid var(--warn);
 }
+.rule {
+  border-left: 4px solid #4a6f2c;
+}
 """
+
+
+DISPLAY_HEADINGS = {
+    "opening_hook": "Apertura",
+    "protagonist_or_student_role": "Tu rol en la investigación",
+    "central_mystery": "El misterio",
+    "official_story": "Lo que parece",
+    "hidden_story": "Lo que realmente pasa",
+    "visual_clue": "Pista visual",
+    "student_question": "Pregunta activa",
+    "jargon_translation": "Traducción de jerga",
+    "analytical_twist": "Giro analítico",
+    "weak_decision": "Decisión cómoda",
+    "robust_decision": "Acción robusta",
+    "tragicomic_ending": "Cierre tragicómico",
+    "transferable_rule": "Regla transferible",
+}
 
 
 def split_sections(markdown: str) -> tuple[str, list[tuple[str, list[str]]]]:
@@ -138,20 +164,37 @@ def render_lines(lines: list[str]) -> str:
     return "\n".join(blocks)
 
 
+def plain_section_text(lines: list[str]) -> str:
+    return " ".join(line.strip().lstrip("- ") for line in lines if line.strip())
+
+
 def render_case(markdown: str) -> str:
     title, sections = split_sections(markdown)
     rendered_sections: list[str] = []
+    subtitle = "Narrativa corporativa centrada en datos. Una historia, una evidencia, cero dashboards."
 
     for heading, lines in sections:
         css_class = "section"
         normalized = heading.lower()
+        if normalized == "opening_hook":
+            subtitle = plain_section_text(lines) or subtitle
+            continue
         if "evidencia" in normalized:
             css_class += " evidence"
+        if normalized in {"visual_clue", "student_question", "jargon_translation", "analytical_twist"}:
+            css_class += " clue"
+        if normalized in {"weak_decision", "robust_decision"}:
+            css_class += " decision"
         if "tragicómico" in normalized or "tragicomico" in normalized:
             css_class += " tragicomic"
+        if normalized in {"tragicomic_ending"}:
+            css_class += " tragicomic"
+        if normalized in {"transferable_rule", "pregunta de transferencia"}:
+            css_class += " rule"
+        display_heading = DISPLAY_HEADINGS.get(normalized, heading)
         rendered_sections.append(
             f'<section class="{css_class}">\n'
-            f"  <h2>{html.escape(heading)}</h2>\n"
+            f"  <h2>{html.escape(display_heading)}</h2>\n"
             f"  {render_lines(lines)}\n"
             "</section>"
         )
@@ -168,7 +211,7 @@ def render_case(markdown: str) -> str:
   <main>
     <header>
       <h1>{html.escape(title)}</h1>
-      <p class="muted">Narrativa corporativa centrada en datos. Una historia, una evidencia, cero dashboards.</p>
+      <p class="muted">{html.escape(subtitle)}</p>
     </header>
     {''.join(rendered_sections)}
   </main>
@@ -193,4 +236,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

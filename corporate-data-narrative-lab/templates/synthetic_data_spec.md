@@ -4,6 +4,15 @@
 
 Qué historia deben sostener los datos.
 
+## Historia que deben permitir investigar
+
+- official_story:
+- hidden_story:
+- visual_clue:
+- analytical_twist:
+- weak_decision que debe parecer tentadora:
+- robust_decision que los datos deben justificar:
+
 ## Nivel analítico y técnica mínima suficiente
 
 - nivel:

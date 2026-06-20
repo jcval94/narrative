@@ -1,18 +1,29 @@
 # Checklist
 
 - [ ] ¿Tesis clara?
+- [ ] ¿Intriga inicial antes que contexto?
+- [ ] ¿Protagonista, narrador o rol del alumno?
+- [ ] ¿Misterio central?
 - [ ] ¿Nivel analítico declarado?
 - [ ] ¿Técnica mínima suficiente declarada?
 - [ ] ¿Conflicto realista?
 - [ ] ¿Evidencia visual mínima?
+- [ ] ¿Visualización como escena del crimen?
+- [ ] ¿Pista visual explícita?
+- [ ] ¿Pregunta activa para el alumno?
+- [ ] ¿Jerga traducida?
 - [ ] ¿Narrativa entendible?
 - [ ] ¿Giro plausible?
 - [ ] ¿Solución robusta?
 - [ ] ¿Solución débil?
 - [ ] ¿Piloto medible?
-- [ ] ¿Humor dosificado?
+- [ ] ¿Humor integrado y dosificado?
+- [ ] ¿Cierre tragicómico?
+- [ ] ¿Regla transferible y pregunta de transferencia?
 - [ ] ¿HTML simple?
 - [ ] ¿Cero dashboard?
+- [ ] ¿Sin KPI cards de monitoreo?
+- [ ] ¿Tarjetas narrativas permitidas solo para pista, contraste, cálculo o regla?
 - [ ] ¿Datos sintéticos?
 - [ ] ¿Sin sobreingeniería técnica?
 - [ ] ¿Sin subingeniería técnica?
