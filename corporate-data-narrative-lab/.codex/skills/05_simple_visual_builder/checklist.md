@@ -4,6 +4,9 @@
 - [ ] ¿Hay una sola visualización central?
 - [ ] ¿La visualización revela una segunda capa?
 - [ ] ¿Hay anotación mínima?
+- [ ] ¿Hay `visual_clue` explícita?
+- [ ] ¿Hay lectura guiada paso a paso?
+- [ ] ¿La evidencia distingue `official_story` de `hidden_story`?
 - [ ] ¿Se puede entender sin filtros?
 - [ ] ¿Se evita cualquier patrón de dashboard?
 - [ ] ¿La gráfica está al servicio de la historia?
@@ -12,6 +15,7 @@
 - [ ] ¿No hay filtros?
 - [ ] ¿No hay tabs?
 - [ ] ¿No hay KPI cards?
+- [ ] ¿Las tarjetas, si existen, son narrativas y no de monitoreo?
 - [ ] ¿El título dice qué se está viendo?
 - [ ] ¿Hay ejes claros?
 - [ ] ¿Hay texto breve de lectura?

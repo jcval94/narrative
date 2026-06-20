@@ -6,11 +6,11 @@
 
 ## Qué hace
 
-Agrega humor tragicómico corporativo con control editorial.
+Integra humor tragicómico corporativo con control editorial dentro de la historia.
 
 ## Qué no hace
 
-No crea memes, no exagera el caso, no ridiculiza personas y no usa humor para tapar una tesis débil.
+No crea memes, no exagera el caso, no ridiculiza personas, áreas reales ni grupos vulnerables, y no usa humor para tapar una tesis débil.
 
 ## Conexión con las demás skills
 
@@ -29,18 +29,21 @@ Detente si el humor supera cuatro frases, si aparece en métricas o riesgos, o s
 
 ## Salida esperada
 
-- Caso editado con máximo 3 o 4 frases de humor.
+- Caso editado con máximo 3 o 4 frases de humor integradas.
 - Humor seco, inteligente y resignado.
 - Sin pérdida de rigor.
+- Cierre cómico o tragicómico que refuerza la regla transferible.
 
 Proporción objetivo: 70% análisis serio, 20% narrativa y 10% humor.
 
 ## Procedimiento
 
 1. Localiza momentos donde el absurdo organizacional ya existe.
-2. Inserta frases breves después de la decisión, giro o cierre.
-3. Revisa que ninguna frase ridiculice a un área.
-4. Elimina cualquier chiste que compita con el análisis.
+2. Usa nombres de archivo, frases de comité, celebraciones prematuras, contradicciones administrativas o comentarios secos.
+3. Inserta frases breves después de la decisión, giro o cierre.
+4. Revisa que ninguna frase ridiculice a un área, persona real o grupo vulnerable.
+5. Conecta el cierre tragicómico con la regla transferible.
+6. Elimina cualquier chiste que compita con el análisis.
 
 ## Errores a evitar
 
@@ -48,6 +51,8 @@ Proporción objetivo: 70% análisis serio, 20% narrativa y 10% humor.
 - Usar humor durante explicación técnica.
 - Convertir a Negocio en villano.
 - Agregar más de cuatro frases.
+- Pegar un remate final que no nace de la historia.
+- Hacer que el humor sea más recordable que el aprendizaje.
 
 ## Criterios de aceptación
 
@@ -55,3 +60,4 @@ Proporción objetivo: 70% análisis serio, 20% narrativa y 10% humor.
 - El análisis sigue siendo dominante.
 - El tono es seco, no cruel.
 - Las frases podrían existir en una crónica corporativa real.
+- El cierre tragicómico ayuda a recordar la regla transferible.

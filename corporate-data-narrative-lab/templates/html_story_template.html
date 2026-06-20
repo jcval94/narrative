@@ -11,6 +11,7 @@
       --muted: #5f6878;
       --line: #d8dee8;
       --accent: #3568a8;
+      --clue: #2f7d68;
       --warn: #a84f35;
       --bg: #f7f8fa;
       --paper: #ffffff;
@@ -50,10 +51,24 @@
       border-radius: 8px;
       padding: 18px;
     }
+    .story-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+    .comparison {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
     .note {
       border-left: 4px solid var(--accent);
       padding-left: 14px;
       color: var(--muted);
+    }
+    .clue {
+      border-left-color: var(--clue);
     }
     .warning {
       border-left-color: var(--warn);
@@ -64,60 +79,73 @@
   <main>
     <header>
       <h1>[Título]</h1>
-      <p class="subtitle">[Subtítulo]</p>
+      <p class="subtitle">[opening_hook: escena, anomalía, contradicción o pregunta incómoda. No contexto breve.]</p>
     </header>
     <section>
-      <h2>Nivel analítico</h2>
-      <p>[Nivel y técnica mínima suficiente]</p>
+      <h2>Tu rol en la investigación</h2>
+      <p>[protagonist_or_student_role]</p>
     </section>
-    <section>
-      <h2>Contexto breve</h2>
-      <p>[Contexto]</p>
+    <section class="story-card">
+      <h2>El misterio</h2>
+      <p>[central_mystery]</p>
     </section>
     <section class="evidence">
       <h2>Evidencia visual</h2>
       <div id="chart">[Gráfica central]</div>
-      <p class="note">[Qué debería notar el alumno]</p>
+      <p class="note clue">[visual_clue: qué debería notar el alumno]</p>
+      <p>[guided_reading: lectura visual paso a paso]</p>
+    </section>
+    <section class="comparison">
+      <div class="story-card">
+        <h2>Lo que parece</h2>
+        <p>[official_story]</p>
+      </div>
+      <div class="story-card">
+        <h2>Lo que realmente pasa</h2>
+        <p>[hidden_story]</p>
+      </div>
     </section>
     <section>
-      <h2>Qué parece</h2>
-      <p>[Lectura superficial]</p>
+      <h2>Pregunta activa</h2>
+      <p>[student_question]</p>
     </section>
     <section>
-      <h2>Qué revela</h2>
-      <p>[Lectura correcta]</p>
+      <h2>Nivel analítico</h2>
+      <p>[Nivel, técnica principal y técnica mínima suficiente explicados en lenguaje humano primero]</p>
     </section>
     <section>
-      <h2>Giro</h2>
-      <p>[Giro después de algunos meses]</p>
+      <h2>Traducción de jerga</h2>
+      <p>[jargon_translation]</p>
     </section>
     <section>
-      <h2>Acción robusta</h2>
-      <p>[Solución robusta]</p>
+      <h2>Giro analítico</h2>
+      <p>[analytical_twist]</p>
     </section>
-    <section>
-      <h2>Acción débil</h2>
-      <p>[Solución superficial]</p>
-    </section>
-    <section>
-      <h2>Decisión de negocio</h2>
-      <p>[Decisión imperfecta]</p>
+    <section class="comparison">
+      <div class="story-card">
+        <h2>Decisión cómoda</h2>
+        <p>[weak_decision]</p>
+      </div>
+      <div class="story-card">
+        <h2>Acción robusta</h2>
+        <p>[robust_decision]</p>
+      </div>
     </section>
     <section>
       <h2>Piloto</h2>
       <p>[Piloto medible]</p>
     </section>
     <section>
-      <h2>Comentario tragicómico</h2>
-      <p class="note warning">[Humor seco y breve]</p>
+      <h2>Cierre tragicómico</h2>
+      <p class="note warning">[tragicomic_ending]</p>
     </section>
     <section>
-      <h2>Preguntas</h2>
-      <p>[Preguntas para alumno]</p>
+      <h2>Regla transferible</h2>
+      <p>[transferable_rule]</p>
     </section>
     <section>
-      <h2>Respuesta esperada</h2>
-      <p>[Respuesta esperada]</p>
+      <h2>Pregunta de transferencia</h2>
+      <p>[transfer_question]</p>
     </section>
   </main>
 </body>

@@ -6,11 +6,11 @@
 
 ## Qué hace
 
-Construye una visualización HTML mínima que funciona como evidencia dentro de una historia.
+Construye una visualización HTML mínima que funciona como evidencia dentro de una historia y como pista de investigación para el alumno.
 
 ## Qué no hace
 
-No crea dashboards, filtros, cards, drilldowns, tabs, tablas exploratorias, comparadores complejos, layouts de BI ni widgets de self-service.
+No crea dashboards, filtros, KPI cards de monitoreo, drilldowns, tabs, tablas exploratorias, comparadores complejos, layouts de BI ni widgets de self-service. Sí puede usar tarjetas narrativas si explican pista, contraste, mini cálculo, glosario visual o regla.
 
 ## Conexión con las demás skills
 
@@ -25,6 +25,9 @@ Detente si la visualización necesita interacción para entenderse, si la gráfi
 - Visual evidence spec.
 - Datos o valores agregados.
 - Lectura superficial y lectura correcta.
+- `visual_clue`.
+- `student_question`.
+- `official_story` y `hidden_story`.
 
 ## Salida esperada
 
@@ -33,14 +36,17 @@ Detente si la visualización necesita interacción para entenderse, si la gráfi
 - Excepcionalmente dos si la historia lo exige.
 - Título, ejes, leyenda mínima y una o dos anotaciones.
 - Texto breve debajo con qué notar.
+- Lectura guiada de 2 a 4 pasos.
+- Comparación "lo que parece / lo que realmente pasa" si ayuda a interpretar.
 
 ## Procedimiento
 
 1. Elige Chart.js, SVG o Canvas.
 2. Crea una página o bloque visual sobrio.
 3. Usa color solo para distinguir evidencia.
-4. Añade anotaciones mínimas.
-5. Verifica que no haya filtros, tabs, KPI cards ni navegación.
+4. Añade anotaciones, callouts o mini cálculos solo si guían la lectura.
+5. Escribe qué debe sospechar el alumno al mirar la imagen.
+6. Verifica que no haya filtros, tabs, KPI cards de monitoreo ni navegación.
 
 ## Errores a evitar
 
@@ -49,10 +55,14 @@ Detente si la visualización necesita interacción para entenderse, si la gráfi
 - Mostrar tablas de datos.
 - Usar muchas series sin necesidad.
 - Hacer que el diseño sea más importante que la señal.
+- Usar tarjetas con números grandes como panel ejecutivo.
+- Requerir interacción para descubrir la pista.
 
 ## Criterios de aceptación
 
 - La visualización se entiende sin interacción.
 - La gráfica sostiene la tesis.
+- La pista visual está explícita.
+- La pregunta activa se puede responder mirando la evidencia.
 - El HTML es autocontenido.
 - La composición es sobria y legible.
