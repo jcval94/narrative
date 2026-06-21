@@ -1,0 +1,23 @@
+title: "Dónde fueron a trabajar las horas libres"
+central_visualization: "barras antes/después de uso del tiempo"
+data_used: [activity_group, hours, period]
+story_entry: "Leo pega el destino de las horas sobre el memo de beneficios."
+dangerous_conclusion: "Automatizar 2,000 horas equivale a ahorrar 2,000 horas de costo."
+robust_conclusion: "1,760 horas se reasignaron y 240 quedaron capturadas o disponibles."
+reading_guide: "Sigue la reducción manual y localiza dónde reaparece el área equivalente."
+marks:
+  - "manual antes: 2,400"
+  - "manual después: 400"
+  - "reportes y revisión después: 1,760"
+  - "capacidad capturada: 240"
+annotation: "La hora cambió de asunto, no de calendario"
+reader_question: "¿Se redujo trabajo o se elevó producción?"
+system_evidence:
+  system_cause: "Licencia justificada con ahorro monetizado."
+  technical_shortcut: "Convertir capacidad potencial en costo eliminado."
+  decision_exposed: "No declarar retorno sin destino y resultado."
+chart:
+  type: grouped_bar
+  before: {manual: 2400, review: 600, new_reports: 0, available: 0}
+  after: {manual: 400, review: 710, new_reports: 1050, available: 240}
+constraints: {filters: false, tabs: false, external_assets: false, max_visualizations: 1}

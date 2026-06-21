@@ -1,0 +1,20 @@
+title: "El terreno detrás del trofeo"
+central_visualization: "barras apiladas de dificultad con tasa ajustada"
+data_used: [branch, severity, resolved, reopened_14d]
+story_entry: "Omar voltea el diploma y proyecta la mezcla de expedientes."
+dangerous_conclusion: "Norte es la sucursal más eficiente por su tasa bruta."
+robust_conclusion: "Norte recibe mayoría simple; Sur lidera severos y la comparación ajustada."
+reading_guide: "Compara primero los colores dentro de cada barra y luego el resultado ajustado."
+marks:
+  - "simple, medio y severo por sucursal"
+  - "punto negro: resultado ajustado"
+annotation: "68% simple frente a 61% severo"
+reader_question: "¿Comparamos desempeño o mezcla?"
+system_evidence:
+  system_cause: "Asignador optimizado para vaciar cola inmediata."
+  technical_shortcut: "Enviar lo fácil a quien responde rápido."
+  decision_exposed: "No pagar bono con promedio bruto."
+chart:
+  type: stacked_bar
+  branches: [{name: Norte, simple: 68, medium: 24, severe: 8, adjusted: 82}, {name: Sur, simple: 14, medium: 25, severe: 61, adjusted: 85}, {name: Centro, simple: 35, medium: 40, severe: 25, adjusted: 81}]
+constraints: {filters: false, tabs: false, external_assets: false, max_visualizations: 1}

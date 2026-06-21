@@ -1,0 +1,23 @@
+title: "El día que las quejas encontraron una pared"
+central_visualization: "serie temporal doble"
+data_used: [date, registered_complaints, abandoned_attempts]
+story_entry: "Paula adjunta dos líneas al ticket 8841 antes del comunicado."
+dangerous_conclusion: "Las quejas bajaron 40%, por tanto hay menos problemas."
+robust_conclusion: "Bajó el registro y subió el abandono tras cambiar la ruta."
+reading_guide: "Sigue ambas líneas desde la marca vertical del rediseño."
+marks:
+  - "línea azul: quejas registradas"
+  - "línea roja: intentos abandonados"
+  - "marca vertical: botón movido"
+annotation: "La caída y el abandono cambian el mismo día"
+reader_question: "¿Qué dato pedirías antes de celebrar?"
+system_evidence:
+  system_cause: "Meta de menor fricción interpretada como menor contacto."
+  technical_shortcut: "Ocultar acciones secundarias tras tres pantallas."
+  decision_exposed: "No comunicar mejora sin medir intentos y canales alternos."
+chart:
+  type: line
+  labels: [D-4, D-3, D-2, D-1, Cambio, D+1, D+2, D+3]
+  registered: [98, 101, 95, 96, 72, 63, 59, 58]
+  abandoned: [29, 31, 33, 32, 51, 70, 82, 88]
+constraints: {filters: false, tabs: false, external_assets: false, max_visualizations: 1}

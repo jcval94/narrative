@@ -1,0 +1,27 @@
+scenario: complaint_capture_channel_change
+seed: 101
+rows: 180
+objective: "Mostrar que las quejas registradas caen cuando la ruta se vuelve difícil, aunque aumenten intentos abandonados."
+story_format: "ticket de soporte intervenido"
+motif: "botón"
+analytic_level: 4
+minimum_sufficient_technique: "serie antes/después por canal"
+variables:
+  - {name: date, type: date, description: "día de observación", example: "2026-02-14"}
+  - {name: portal_version, type: category, description: "ruta visible o ruta de tres pantallas", example: "three_step"}
+  - {name: registered_complaints, type: integer, description: "quejas que llegaron al registro", example: 58}
+  - {name: complaint_attempts, type: integer, description: "visitas que iniciaron la ruta de queja", example: 146}
+  - {name: abandoned_attempts, type: integer, description: "intentos sin formulario enviado", example: 88}
+  - {name: alternate_channel_contacts, type: integer, description: "contactos por teléfono o redes", example: 41}
+sample_values:
+  - {period: before, registered: 96, attempts: 128, abandoned: 32, alternate: 18}
+  - {period: after, registered: 58, attempts: 146, abandoned: 88, alternate: 41}
+assumptions:
+  - "Los intentos se cuentan de forma consistente en ambas versiones."
+  - "Los canales alternos pueden vincularse por día, no por identidad."
+teaching_mechanism: "La serie registrada baja al mismo tiempo que abandonos y contactos alternos suben."
+limitations:
+  - "No demuestra cuántas quejas eran válidas."
+  - "No identifica causalidad individual entre abandono y contacto alterno."
+must_not_conclude: "Que toda reducción observada provino del botón o que el rediseño no aportó ningún beneficio."
+synthetic_data: true

@@ -1,0 +1,28 @@
+scenario: model_temporal_leakage
+seed: 103
+rows: 2400
+objective: "Mostrar que una variable posterior al incidente infla la validación del modelo."
+story_format: "postmortem de modelo"
+motif: "reloj"
+analytic_level: 18
+minimum_sufficient_technique: "auditoría de disponibilidad y reentrenamiento temporal"
+variables:
+  - {name: event_id, type: string, description: "evento operativo sintético", example: "EV-220"}
+  - {name: decision_time, type: datetime, description: "momento real de predicción", example: "2026-03-04T14:00"}
+  - {name: workload_1340, type: number, description: "carga disponible antes de decidir", example: 82.4}
+  - {name: shift_type, type: category, description: "turno conocido al inicio", example: "afternoon"}
+  - {name: incident_time, type: nullable_datetime, description: "momento del resultado", example: "2026-03-04T14:25"}
+  - {name: supervisor_review, type: category, description: "dictamen cargado tras revisión", example: "high_risk"}
+  - {name: supervisor_review_time, type: datetime, description: "disponibilidad del dictamen", example: "2026-03-04T18:00"}
+sample_values:
+  - {model: with_review, validation_accuracy: 0.97}
+  - {model: predecision_only, validation_accuracy: 0.71}
+assumptions:
+  - "Todas las variables tienen sello de disponibilidad confiable."
+  - "La división temporal respeta el orden de eventos."
+teaching_mechanism: "La línea de tiempo ubica la variable dominante cuatro horas después de la decisión."
+limitations:
+  - "La precisión no basta para evaluar utilidad o calibración."
+  - "Retirar fuga no garantiza estabilidad futura."
+must_not_conclude: "Que toda evaluación humana es inválida o que 71% es suficiente para desplegar."
+synthetic_data: true

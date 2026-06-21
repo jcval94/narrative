@@ -1,0 +1,27 @@
+scenario: branch_assignment_bias
+seed: 104
+rows: 3600
+objective: "Separar desempeño de la mezcla de dificultad asignada a cada sucursal."
+story_format: "acta de asignación comentada"
+motif: "pendiente"
+analytic_level: 11
+minimum_sufficient_technique: "comparación por severidad"
+variables:
+  - {name: case_id, type: string, description: "caso sintético", example: "C-701"}
+  - {name: branch, type: category, description: "sucursal asignada", example: "North"}
+  - {name: severity, type: category, description: "dificultad simple, media o severa", example: "severe"}
+  - {name: resolution_hours, type: number, description: "horas hasta resolución", example: 31.5}
+  - {name: resolved, type: boolean, description: "resolución confirmada", example: true}
+  - {name: reopened_14d, type: boolean, description: "reapertura en 14 días", example: false}
+sample_values:
+  - {branch: North, simple_pct: 68, severe_pct: 8, raw_resolution_pct: 91, adjusted_pct: 82}
+  - {branch: South, simple_pct: 14, severe_pct: 61, raw_resolution_pct: 74, adjusted_pct: 85}
+assumptions:
+  - "La severidad se define antes de asignar."
+  - "Las reglas de severidad son comunes entre sucursales."
+teaching_mechanism: "Las barras apiladas explican el ranking bruto; la comparación interna cambia el orden."
+limitations:
+  - "El ajuste no captura todas las diferencias de contexto."
+  - "Especialización puede ser valiosa y no debe eliminarse automáticamente."
+must_not_conclude: "Que Norte no tiene buenas prácticas o que Sur debe recibir todos los casos severos."
+synthetic_data: true

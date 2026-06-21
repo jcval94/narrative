@@ -1,0 +1,21 @@
+title: "La mochila detrás de cada punto"
+central_visualization: "scatter de complejidad y resoluciones"
+data_used: [complexity_score, resolutions_per_day, quality_score]
+story_entry: "Mónica pone la mochila junto al ranking y Data enciende los puntos."
+dangerous_conclusion: "Los puntos más altos son las personas más productivas."
+robust_conclusion: "La velocidad cae con complejidad; calidad distingue desempeño dentro de carga."
+reading_guide: "Compara puntos vecinos en complejidad y luego revisa su calidad."
+marks:
+  - "x: complejidad promedio"
+  - "y: resoluciones por día"
+  - "tamaño: calidad sin reapertura"
+annotation: "Sara: 4.6 de complejidad, 94% de calidad"
+reader_question: "¿Quién parece eficiente y quién sostiene lo difícil?"
+system_evidence:
+  system_cause: "Bono simple basado en velocidad."
+  technical_shortcut: "Contar resoluciones sin carga asignada."
+  decision_exposed: "No pagar antes de ajustar y auditar selección."
+chart:
+  type: scatter
+  points: [{name: Sara, x: 4.6, y: 5.2, quality: 94}, {name: Luis, x: 1.8, y: 11.4, quality: 86}, {name: Ana, x: 3.2, y: 7.8, quality: 91}, {name: Joel, x: 2.1, y: 10.6, quality: 83}, {name: Mei, x: 4.2, y: 6.1, quality: 96}]
+constraints: {filters: false, tabs: false, external_assets: false, max_visualizations: 1}

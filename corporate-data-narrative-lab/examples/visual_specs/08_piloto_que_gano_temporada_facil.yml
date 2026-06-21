@@ -1,0 +1,25 @@
+title: "Tres inviernos y una diapositiva"
+central_visualization: "serie temporal estacional con periodo piloto"
+data_used: [month, incidents_per_1000, region, pilot_active]
+story_entry: "Iván amplía la línea de tres meses a tres años."
+dangerous_conclusion: "La caída de 25% pertenece completa al piloto."
+robust_conclusion: "El control baja 18% en la misma temporada; la diferencia adicional estimada es menor."
+reading_guide: "Busca valles repetidos y compara las dos regiones dentro del área marcada."
+marks:
+  - "línea tratada"
+  - "línea comparable"
+  - "banda verde: piloto"
+  - "marcas anuales de diciembre"
+annotation: "El valle ya tenía cita en el calendario"
+reader_question: "¿Qué habría pasado sin piloto?"
+system_evidence:
+  system_cause: "Caso de éxito exigido antes del cierre anual."
+  technical_shortcut: "Comparar contra trimestre previo."
+  decision_exposed: "No imponer meta anual con una caída estacional."
+chart:
+  type: line
+  labels: [Ene23, Abr23, Ago23, Dic23, Ene24, Abr24, Ago24, Dic24, Ene25, Abr25, Ago25, Dic25]
+  pilot_region: [82, 101, 114, 80, 84, 103, 116, 81, 83, 102, 112, 75]
+  comparison_region: [85, 99, 111, 82, 86, 101, 113, 83, 84, 100, 110, 82]
+  pilot_indices: [10, 11]
+constraints: {filters: false, tabs: false, external_assets: false, max_visualizations: 1}

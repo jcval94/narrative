@@ -1,0 +1,22 @@
+title: "La cola que siguió creciendo en verde"
+central_visualization: "distribución de tiempos con percentiles"
+data_used: [service_minutes, period, complexity]
+story_entry: "Celia extiende el recibo 0098 junto a la distribución."
+dangerous_conclusion: "El servicio mejoró porque la media bajó a 14 minutos."
+robust_conclusion: "La mayoría acelera, pero p95 sube a 121 minutos."
+reading_guide: "Mira el centro y después sigue la cola roja hasta p95."
+marks:
+  - "masa principal entre 2 y 8 minutos"
+  - "línea mediana: 7"
+  - "línea p95: 121"
+annotation: "El 5% peor espera más del doble"
+reader_question: "¿Qué métrica defendería a los más afectados?"
+system_evidence:
+  system_cause: "Plantilla ejecutiva de una cifra y reducción de guardia."
+  technical_shortcut: "Usar media como decisión de capacidad."
+  decision_exposed: "No reducir cobertura sin guardas de cola."
+chart:
+  type: distribution
+  bins: [{x: 5, count: 340}, {x: 10, count: 240}, {x: 20, count: 130}, {x: 40, count: 70}, {x: 80, count: 35}, {x: 120, count: 24}, {x: 180, count: 12}]
+  metrics: {mean: 14, median: 7, p90: 38, p95: 121}
+constraints: {filters: false, tabs: false, external_assets: false, max_visualizations: 1}
