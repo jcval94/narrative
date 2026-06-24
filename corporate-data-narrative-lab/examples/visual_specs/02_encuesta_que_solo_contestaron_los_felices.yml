@@ -1,22 +1,10 @@
-title: "La voz que se angostó antes de responder"
-central_visualization: "embudo de cobertura de encuesta"
-data_used: [last_stage, survey_invited, survey_responded]
-story_entry: "Data reenvía el correo con cuatro conteos en lugar de una puntuación."
-dangerous_conclusion: "72 puntos representan a todos los clientes."
-robust_conclusion: "La puntuación describe 1,500 respuestas de completadores; 3,800 abandonos nunca fueron invitados."
-reading_guide: "Observa dónde desaparece población antes de que exista una pregunta."
-marks:
-  - "10,000 iniciaron"
-  - "6,200 completaron"
-  - "6,000 invitados"
-  - "1,500 respuestas"
-annotation: "3,800 voces salen antes del envío"
-reader_question: "¿A quién dejó de escuchar la encuesta?"
-system_evidence:
-  system_cause: "Meta trimestral y disparador técnico cómodo."
-  technical_shortcut: "Enviar solo después de completar."
-  decision_exposed: "No publicar satisfacción sin cobertura y respuesta por etapa."
-chart:
-  type: funnel
-  stages: [{label: Iniciaron, value: 10000}, {label: Completaron, value: 6200}, {label: Invitados, value: 6000}, {label: Respondieron, value: 1500}]
-constraints: {filters: false, tabs: false, external_assets: false, max_visualizations: 1}
+title: "La encuesta que llegaba después del problema"
+case_id: "02"
+chart_type: "funnel"
+question_answered: "¿Quién tuvo oportunidad de responder?"
+comfortable_read: "La satisfacción subió a 72."
+missing_context: "3,800 abandonos nunca recibieron encuesta."
+correct_read: "El score representa a completadores que respondieron."
+decision_changed: "Reportar cobertura y escuchar abandonos."
+annotations: ["10,000 inicios", "6,200 completos", "1,500 respuestas"]
+synthetic_data: true

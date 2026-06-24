@@ -1,116 +1,109 @@
-# Caso: El piloto que contrató a diciembre
+# El piloto que ganó en diciembre
 
-<!-- suspense_spine
-format: presentación de cierre con calendario
-cold_open: Un piloto presume 25% menos incidencias y Planeación pregunta qué suele hacer diciembre.
-setting: Presentación anual de operaciones.
-moment: Viernes 11:50, diez minutos antes de cerrar el portafolio.
-protagonist: Iván de Planeación compara calendarios.
-opposing_forces: Patrocinio necesita caso de éxito; Planeación necesita separar temporada e intervención.
-recurring_object: El mes de diciembre con gafete de consultor.
-motif: diciembre
-pressure: El piloto debe justificar presupuesto antes del cierre anual.
-comfortable_explanation: La nueva rutina redujo incidencias 25%.
-first_anomaly: Los mismos meses bajan cada año aunque no haya piloto.
-false_lead: La caída actual podría ser mayor que la estacional histórica.
-visual_evidence: Serie de tres años marca valles repetidos y el piloto sobre el valle esperado.
-reader_question: Qué habría pasado sin piloto en esos meses.
-analytical_twist: Gran parte de la mejora coincide con la temporada fácil.
-consequence: El presupuesto se atribuye una caída que probablemente habría ocurrido.
-weak_decision: Comparar piloto contra los meses inmediatamente anteriores.
-robust_decision: Usar mismo periodo histórico y grupo comparable con diferencia adicional.
-tragicomic_payoff: Diciembre pide honorarios por haber hecho la mitad del caso de éxito.
-transferable_rule: No confundas una buena temporada con una buena intervención.
-final_image: Diciembre firma la diapositiva como coautor del piloto.
-analytic_level: 10
-minimum_sufficient_technique: Serie estacional y comparación con mismo periodo y grupo.
-pilot: Repetición fuera de temporada o grupo comparable con criterio de impacto adicional.
-risks: No negar mejoras reales ni elegir históricos atípicos para desacreditar el piloto.
+<!-- story
+concept: estacionalidad y comparación temporal inválida
+characters: Jiménez, Rodríguez, Iván, la directora
+situation: un piloto presume 25% menos incidencias durante diciembre y enero
+bad_logic: comparar meses de temporada alta contra meses de temporada baja atribuye toda la caída al piloto
+escalation: se aprueba expansión, se fija una meta anual y agosto parece fracaso
+data_turn: Iván abre tres años de historia y una región sin piloto
+chart: serie estacional con grupo comparable
+decision: separar baja esperada de efecto adicional y repetir fuera de temporada fácil
+punchline: El piloto funcionó; la presentación fue la que se emocionó de más.
+rule: no confundas una buena temporada con una buena intervención
 synthetic_data: true
-worker_context: Operaciones lanzó el piloto cuando tuvo capacidad, justo en temporada baja.
-corporate_pressure: Patrocinio necesitaba un caso de éxito antes de liberar presupuesto anual.
-reasonable_shortcut: Comparar contra los tres meses previos era rápido y coincidía con el calendario del piloto.
-absurd_validation: La caída se presentó como impacto completo y el equipo recibió expansión inmediata.
-systemic_critique: El calendario de aprobación decidió el grupo de comparación y luego fingió neutralidad.
-time_jump: Un año después, la solución se había escalado y las incidencias volvieron con la temporada alta.
-institutional_defense: No podía reabrirse el caso porque ya figuraba en el informe anual.
-human_cost: Operación heredó una meta anual basada en meses fáciles.
-blame_target: governance
-satirical_payoff: Diciembre terminó acreditado como consultor no contratado del proyecto.
 -->
 
-<!-- suspense:cold-open -->
-## Diapositiva 19 — reducción confirmada
+## El veinticinco por ciento
 
-> "Veinticinco por ciento menos incidencias. Cerramos con éxito", dijo Patrocinio.
+> **La directora:** "El piloto bajó las incidencias veinticinco por ciento en diciembre y enero. Lo escalamos."
+>
+> **Jiménez:** "¿Contra qué meses lo compararon?"
+>
+> **Iván:** "Contra septiembre, octubre y noviembre."
+>
+> **Rodríguez:** "¿Y normalmente qué pasa de diciembre a enero?"
+>
+> **Iván:** "Bajan las incidencias."
+>
+> **Jiménez:** "Ah. Entonces hubiera bajado incluso si no hubiéramos hecho nada."
+>
+> **Iván:** "Sí, así mero."
+>
+> **Jiménez:** "¿Y cuánto nos costó hacer el análisis?"
+>
+> **Rodríguez:** "Pues lo que le pagan a Jiménez en el mes."
+>
+> **Jiménez:** "No manches, tampoco fue tan barato."
+>
+> **La directora:** "Bueno, menos mal. Pero de todos modos tenemos que hacer algo."
 
-> "¿Y qué suele hacer diciembre?", preguntó Iván. El mes, desde la esquina del calendario, no contestó porque todavía no estaba en la reunión.
+El piloto sí había cambiado rutinas y corregido alertas. El problema no era
+decir que ayudó. Era cobrarle al proyecto toda una caída que diciembre llevaba
+años haciendo gratis.
+Cada año.
 
-<!-- satire:pressure -->
-Faltaban diez minutos para cerrar el portafolio anual. El presupuesto siguiente necesitaba un caso de éxito y Operaciones había lanzado cuando por fin tuvo capacidad: en temporada baja.
+## La meta de agosto
 
-<!-- satire:shortcut -->
-Comparar los tres meses del piloto contra los tres anteriores era natural, rápido y fácil de explicar. También colocaba temporada alta a la izquierda y baja a la derecha.
+> **La directora:** "La meta anual será mantener el veinticinco por ciento."
+>
+> **Iván:** "En temporada alta no vamos a ver el mismo nivel."
+>
+> **Rodríguez:** "Entonces en agosto vamos a parecer peor aunque el proceso funcione."
+>
+> **La directora:** "No pongamos `peor`. Pongamos `oportunidad de adopción`."
+>
+> **Jiménez:** "¿Eso baja incidencias?"
+>
+> **La directora:** "No, pero baja el tono del correo."
+>
+> **Iván:** "Necesitamos saber cuánto baja todos los años y cuánto bajó de más ahora."
+>
+> **La directora:** "¿Y cómo se ve la historia?"
+>
+> **Rodríguez:** "Porque si agosto sale mal, van a decir que Operación dejó de creer en el piloto."
+>
+> **Jiménez:** "Y Operación va a seguir creyendo. Nada más desde una llamada de atención."
 
-<!-- satire:validation -->
-La caída recibió sello de impacto. El equipo ganó expansión inmediata y una meta anual basada en sus mejores meses.
+## Tres años completos
 
-<!-- suspense:false-lead -->
-## Una mejora posible
+> **Iván:** "Cada diciembre hay una caída parecida. La región sin piloto bajó dieciocho por ciento."
+>
+> **Jiménez:** "Entonces el piloto pudo aportar siete puntos, no veinticinco."
+>
+> **Rodríguez:** "Sigue siendo bueno."
+>
+> **Jiménez:** "Sí. Nada más ya no alcanza para ponerle capa."
 
-La rutina podía funcionar. Había estandarizado revisiones, corregido alertas y reducido errores repetidos. Incluso dentro de temporada baja, la caída actual podía ser mayor que otros años. Iván no buscaba quitar mérito; buscaba medir cuánto pertenecía al piloto.
+<svg data-chart="central" viewBox="0 0 720 310" role="img" aria-label="Serie de incidencias con valles estacionales y comparación entre región tratada y región sin piloto">
+  <rect width="720" height="310" fill="#fff"/>
+  <text x="35" y="30" font-size="18" font-weight="bold">Incidencias mensuales, tres años</text>
+  <line x1="60" y1="255" x2="680" y2="255" stroke="#777"/>
+  <line x1="60" y1="55" x2="60" y2="255" stroke="#777"/>
+  <polyline points="70,90 95,105 120,158 145,190 170,112 195,94 220,101 245,121 270,163 295,193 320,116 345,96 370,104 395,126 420,168 445,197 470,120 495,98 520,106 545,132 570,174 595,204 620,124 650,102" fill="none" stroke="#6d7780" stroke-width="4"/>
+  <polyline points="520,106 545,132 570,174 595,204 620,124" fill="none" stroke="#2f79a2" stroke-width="7"/>
+  <polyline points="520,100 545,122 570,156 595,180 620,116" fill="none" stroke="#c64e36" stroke-width="4"/>
+  <text x="72" y="280" font-size="13">Año 1</text><text x="285" y="280" font-size="13">Año 2</text><text x="510" y="280" font-size="13">Año 3</text>
+  <text x="430" y="70" font-size="14" fill="#2f79a2">región con piloto: -25%</text>
+  <text x="430" y="90" font-size="14" fill="#c64e36">región sin piloto: -18%</text>
+  <text x="220" y="225" font-size="13" fill="#9f3625">los valles de diciembre-enero se repiten</text>
+</svg>
 
-> "No dejemos que el calendario se robe el trabajo del equipo", pidió Operaciones.
+<!-- learning:pause -->
+> **Jiménez:** "Antes de atribuirle todo al piloto, ¿qué habría pasado en esos mismos meses sin hacer nada?"
 
-<!-- satire:time-jump -->
-Un año después, la solución estaba en todas las regiones. Las incidencias regresaron con la temporada alta y la meta no: seguía esperando comportamiento de **diciembre** durante agosto.
+**Lo que muestra:** El histórico y la región sin piloto sugieren una baja
+cercana a 18% por temporada. La diferencia adicional ronda siete puntos. La
+comparación anterior confundía estacionalidad con efecto del piloto.
 
-<!-- suspense:humor -->
-El informe clasificó el regreso como oportunidad de adopción, una estación corporativa sin fecha fija.
+## Menos grande, más cierto
 
-<!-- suspense:evidence -->
-## Tres inviernos en una sola línea
+> **La directora:** "Cambiamos el informe: caída total veinticinco, baja esperada dieciocho, efecto adicional estimado siete."
+>
+> **Rodríguez:** "¿Y repetimos la prueba fuera de diciembre?"
+>
+> **Iván:** "Sí, antes de convertir enero en meta de agosto."
+>
+> **Jiménez:** "El piloto funcionó; la presentación fue la que se emocionó de más."
 
-Data encendió 36 meses. Cada noviembre-enero formaba un valle. El piloto, marcado en verde, caía dentro del tercero. La región comparable sin intervención bajaba 18%; la tratada, 25%. El calendario explicaba buena parte, no toda.
-
-<!-- suspense:reader-question -->
-<!-- learning:question correct="B" -->
-> ¿Qué habría pasado sin piloto en esos mismos meses?
-> A. Nada habría cambiado porque el piloto coincidió con la caída.
-> B. El histórico y la región comparable sugieren una reducción cercana a 18% aun sin intervención.
-> C. Habría ocurrido exactamente la caída del año anterior.
-<!-- learning:answer -->
-**B.** Usa dos referencias para estimar la temporada sin fingir certeza perfecta. A y C eran tentadoras porque niegan o fijan demasiado el efecto, pero los datos solo sostienen una expectativa comparable. **Regla:** construye el escenario sin intervención con periodos y grupos semejantes.
-<!-- learning:end -->
-
-<!-- suspense:reveal -->
-## El coautor del resultado
-
-La reducción bruta era 25 puntos relativos frente al trimestre anterior, pero 18 se observaban también sin piloto. La mejora adicional era mucho menor y todavía valiosa. El error era atribuir al proyecto todo el invierno.
-
-<!-- suspense:technique -->
-Primero se compararon los mismos meses de otros años y una región sin intervención. Después se llamó **estacionalidad** al patrón que vuelve con el calendario. Una serie y una comparación paralela bastaban; el caso no necesitaba un modelo sofisticado para reconocer diciembre.
-
-<!-- suspense:decision -->
-## Nota del presentador
-
-Conservar el 25% era fotogénico. La decisión robusta reportaba caída total, caída esperada y diferencia adicional, y repetía el piloto fuera del valle o con un grupo comparable antes de imponer meta anual.
-
-<!-- satire:institutional-defense -->
-Patrocinio recordó que el 25% ya estaba en el informe anual. Iván propuso añadir a **diciembre** como coautor; Legal pidió contrato y el calendario pidió honorarios.
-
-<!-- learning:question correct="C" -->
-> ¿Qué evidencia justificaría expansión anual?
-> A. Repetir la comparación contra los meses inmediatamente anteriores.
-> B. Mostrar únicamente el mejor mes del piloto.
-> C. Observar diferencia adicional contra mismo periodo o grupo comparable en otra temporada.
-<!-- learning:answer -->
-**C.** Prueba que el efecto sobrevive al calendario. A y B eran tentadoras porque preservan una narrativa simple y alta, pero repiten la comparación inválida. **Regla:** exige que una intervención gane fuera de la temporada que ya jugaba a favor.
-<!-- learning:end -->
-
-<!-- suspense:payoff -->
-## Créditos de cierre
-
-La diapositiva final cambió `25% causado` por `7 puntos adicionales estimados`. El proyecto siguió, con una prueba nueva. **Diciembre** apareció en letra pequeña como consultor no contratado y solicitó visibilidad, porque honorarios ya no quedaban.
-
-**Regla que queda:** no confundas una buena temporada con una buena intervención.
+**Regla:** No confundas una buena temporada con una buena intervención.

@@ -1,11 +1,7 @@
 # Anti-Patterns
 
-- Aprobar por esfuerzo.
-- Permitir dashboard "porque se ve útil".
-- Ignorar que la gráfica no prueba el texto.
-- Aceptar piloto sin métrica.
-- Confundir humor con calidad narrativa.
-- Dejar pasar datos sensibles.
-- Aprobar sobreingeniería técnica.
-- Aprobar subingeniería técnica.
-- Aprobar casos sin habilidad transferible.
+- Aprobar por cantidad de campos.
+- Contar `Ah.` como humor suficiente.
+- Ignorar frases que no responden.
+- Aceptar remates clonados.
+- Priorizar el HTML sobre la historia.

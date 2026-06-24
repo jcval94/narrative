@@ -1,147 +1,72 @@
 from __future__ import annotations
 
 import argparse
+import html
+import math
 import re
 import sys
 import unicodedata
+from collections import Counter
 from pathlib import Path
 
 
-LEGACY_REQUIRED_SECTIONS = [
-    "Tesis del caso",
-    "Nivel analítico del caso",
-    "Técnica principal",
-    "Técnica mínima suficiente",
-    "Por qué no usar una solución más compleja",
-    "Por qué no usar una solución más simple",
-    "Resumen ejecutivo",
-    "Contexto",
-    "Áreas involucradas",
-    "Evidencia visual",
-    "Qué parece a simple vista",
-    "Qué está pasando realmente",
-    "Giro después de 3 meses",
-    "Decisión incorrecta de negocio",
-    "Acción robusta desde Data",
-    "Acción débil sin expertise en datos",
-    "Piloto propuesto",
-    "Comentario tragicómico del narrador",
-    "Aprendizajes",
-    "Preguntas para el alumno",
-    "Respuesta esperada",
-    "Riesgos éticos / privacidad / sesgo",
-    "Checklist de calidad",
+REQUIRED_STORY_FIELDS = [
+    "concept",
+    "characters",
+    "situation",
+    "bad_logic",
+    "escalation",
+    "data_turn",
+    "chart",
+    "decision",
+    "punchline",
+    "rule",
+    "synthetic_data",
 ]
 
-NARRATIVE_LEARNING_REQUIRED_SECTIONS = [
-    "opening_hook",
-    "protagonist_or_student_role",
-    "central_mystery",
-    "Tesis del caso",
-    "Nivel analítico del caso",
-    "Técnica principal",
-    "Técnica mínima suficiente",
-    "official_story",
-    "hidden_story",
-    "visual_clue",
-    "student_question",
-    "jargon_translation",
-    "Evidencia visual",
-    "Qué parece a simple vista",
-    "Qué está pasando realmente",
-    "analytical_twist",
-    "weak_decision",
-    "robust_decision",
-    "Piloto propuesto",
-    "tragicomic_ending",
-    "transferable_rule",
-    "Pregunta de transferencia",
-    "Respuesta esperada",
-    "Riesgos éticos / privacidad / sesgo",
-    "Checklist de calidad",
-]
-
-
-FORBIDDEN_DASHBOARD_TERMS = [
-    "filtro",
-    "filtros",
-    "pestaña",
-    "pestañas",
-    "kpi card",
-    "kpi cards",
-    "drilldown",
-    "drilldowns",
-    "self-service",
-    "explorador",
-    "exploradores",
-    "navegación compleja",
-    "dashboard interactivo",
-    "tabla exploratoria",
-    "tablas exploratorias",
-    "scorecard",
-    "panel ejecutivo",
-]
-
-FORBIDDEN_CREATION_PATTERNS = [
-    r"\b(crea|crear|construye|construir|agrega|agregar|incluye|incluir|usa|usar|permite|permitir)\b.{0,45}\b(dashboard|filtros?|pestañas?|tabs?|kpi cards?|drilldowns?|self-service|exploradores?|tabla exploratoria|tablas exploratorias)\b",
-    r"\b(dashboard|filtros?|pestañas?|tabs?|kpi cards?|drilldowns?|self-service|exploradores?|tabla exploratoria|tablas exploratorias)\b.{0,45}\b(interactivo|exploratorio|self-service|descargable)\b",
-]
-
-NEGATION_MARKERS = ("no ", "sin ", "cero ", "evita ", "evitar ", "prohibir ", "prohíbe ")
-
-NARRATIVE_LEARNING_MARKERS = {
-    normalize
-    for normalize in [
-        "opening_hook",
-        "protagonist_or_student_role",
-        "central_mystery",
-        "official_story",
-        "hidden_story",
-        "visual_clue",
-        "student_question",
-        "jargon_translation",
-        "analytical_twist",
-        "weak_decision",
-        "robust_decision",
-        "tragicomic_ending",
-        "transferable_rule",
-    ]
+BANNED_DIALOGUE_PATTERNS = {
+    r"\bslide\b": "use 'presentacion', not 'slide'.",
+    r"\bdeck\b": "use 'presentacion', not 'deck'.",
+    r"\btrae comparables\b": "ask what happened in other periods or groups.",
+    r"\bincrementalidad\b": "explain additional impact before naming the term.",
+    r"\bescalaciones\b": "use casos complicados, reclamos or folios atorados.",
+    r"\bdata llego con una grafica\b": "give the chart an entrance specific to the scene.",
+    r"\beso explica mucho y arregla poco\b": "remove the canned punchline.",
+    r"\bperfecto, entonces ya tenemos otro problema\b": "remove the canned punchline.",
+    r"\bno le regalemos todo al calendario\b": "use direct temporal language.",
+    r"\bla formula no pesa\b": "use direct metric language.",
 }
 
-WEAK_OPENING_PATTERNS = [
-    r"^(contexto|resumen ejecutivo)\b",
-    r"^(este caso|en este caso|el objetivo de este caso)\b",
-    r"^breve contexto\b",
-]
-
-ACTIVE_QUESTION_MARKERS = [
-    "?",
-    "que mirarias",
-    "que mirarías",
-    "que mirar",
-    "conclusion peligrosa",
-    "conclusión peligrosa",
-    "dato falta",
-    "hipotesis",
-    "hipótesis",
-    "que paso",
-    "qué pasó",
-]
-
-JARGON_TRANSLATIONS = {
-    "sla": ["casos resueltos a tiempo", "tiempo comprometido"],
-    "denominador": ["grupo de casos", "grupo que si cuenta", "grupo que sí cuenta"],
-    "uplift": ["mejora adicional", "atribuible a la accion", "atribuible a la acción"],
-    "drift": ["comportamiento de los datos cambia", "datos cambia con el tiempo"],
-    "cohorte": ["grupo comparable", "grupo de clientes", "grupo de casos"],
-    "umbral": ["linea de corte", "línea de corte"],
-    "ventana temporal": ["periodo observado", "período observado"],
-    "incrementalidad": ["no habria ocurrido", "no habría ocurrido", "sin la intervencion", "sin la intervención"],
+METRIC_CONTEXT_WORDS = {
+    "queja",
+    "quejas",
+    "incidencia",
+    "incidencias",
+    "satisfaccion",
+    "puntos",
+    "precision",
+    "minutos",
+    "horas",
+    "clientes",
+    "casos",
+    "folios",
+    "ventas",
+    "ahorro",
+    "millones",
+    "por ciento",
+    "promedio",
+    "tiempo",
+    "rotacion",
+    "fraude",
+    "reaperturas",
+    "conversion",
+    "alertas",
+    "resoluciones",
+    "muestra",
+    "personas",
+    "tramites",
+    "respuestas",
 }
-
-
-def normalize_heading(value: str) -> str:
-    return re.sub(r"\s+", " ", value.strip().lower())
 
 
 def fold_text(value: str) -> str:
@@ -150,188 +75,189 @@ def fold_text(value: str) -> str:
     return re.sub(r"\s+", " ", ascii_text).strip()
 
 
-def extract_headings(markdown: str) -> set[str]:
-    headings: set[str] = set()
-    for line in markdown.splitlines():
-        match = re.match(r"^#{1,6}\s+(.+?)\s*$", line)
-        if match:
-            headings.add(normalize_heading(match.group(1)))
-    return headings
+def strip_comments(markdown: str) -> str:
+    return re.sub(r"<!--.*?-->", " ", markdown, flags=re.DOTALL)
 
 
-def extract_section_map(markdown: str) -> dict[str, str]:
-    sections: dict[str, list[str]] = {}
-    current_heading: str | None = None
+def strip_svg(markdown: str) -> str:
+    return re.sub(r"<svg\b.*?</svg>", " ", markdown, flags=re.DOTALL | re.IGNORECASE)
 
-    for line in markdown.splitlines():
-        match = re.match(r"^#{1,6}\s+(.+?)\s*$", line)
-        if match:
-            current_heading = normalize_heading(match.group(1))
-            sections.setdefault(current_heading, [])
+
+def visible_text(markdown: str) -> str:
+    text = strip_svg(strip_comments(markdown))
+    text = re.sub(r"^#{1,6}\s+", "", text, flags=re.MULTILINE)
+    text = re.sub(r"^>\s*", "", text, flags=re.MULTILINE)
+    text = re.sub(r"[*_`]", "", text)
+    return re.sub(r"\s+", " ", html.unescape(text)).strip()
+
+
+def parse_story(markdown: str) -> dict[str, str]:
+    match = re.search(r"<!--\s*story\s*(.*?)-->", markdown, re.DOTALL | re.IGNORECASE)
+    if not match:
+        return {}
+    fields: dict[str, str] = {}
+    for line in match.group(1).splitlines():
+        if ":" not in line:
             continue
-        if current_heading is not None:
-            sections[current_heading].append(line)
-
-    return {heading: "\n".join(lines).strip() for heading, lines in sections.items()}
-
-
-def first_body_text(markdown: str) -> str:
-    for line in markdown.splitlines():
-        stripped = line.strip()
-        if stripped and not stripped.startswith("#"):
-            return stripped
-    return ""
+        key, value = line.split(":", 1)
+        fields[key.strip().lower()] = value.strip()
+    return fields
 
 
-def uses_narrative_learning_standard(headings: set[str]) -> bool:
-    return bool(headings.intersection(NARRATIVE_LEARNING_MARKERS))
+def dialogue_lines(markdown: str) -> list[tuple[str, str]]:
+    result: list[tuple[str, str]] = []
+    pattern = re.compile(r'^>\s+\*\*([^*]+):\*\*\s+"(.+)"\s*$', re.MULTILINE)
+    for match in pattern.finditer(strip_comments(markdown)):
+        result.append((match.group(1).strip(), match.group(2).strip()))
+    return result
 
 
-def has_negation_before(line: str, term: str) -> bool:
-    index = line.find(term)
-    if index < 0:
-        return False
-    prefix = line[max(0, index - 35) : index]
-    return any(marker in prefix for marker in NEGATION_MARKERS)
+def body_lines(markdown: str) -> list[str]:
+    cleaned = strip_comments(markdown)
+    lines = []
+    for raw in cleaned.splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#") or line.startswith("<svg") or line.startswith("</svg"):
+            continue
+        if line.startswith("<") and not line.startswith(">"):
+            continue
+        lines.append(line)
+    return lines
 
 
-def find_dashboard_violations(markdown: str) -> list[str]:
-    violations: list[str] = []
-    for line in markdown.lower().splitlines():
-        for pattern in FORBIDDEN_CREATION_PATTERNS:
-            if re.search(pattern, line) and not any(marker in line for marker in NEGATION_MARKERS):
-                violations.append(f"Potential dashboard creation pattern: {line.strip()}")
-                break
-        for term in FORBIDDEN_DASHBOARD_TERMS:
-            if term in line and not has_negation_before(line, term):
-                if "dashboard no mentía" in line or "dashboard no mentia" in line:
-                    continue
-                if line.strip().startswith("- no ") or line.strip().startswith("- sin "):
-                    continue
-                violations.append(f"Potential dashboard term without guardrail: {term}")
-    return violations
+def word_count(value: str) -> int:
+    return len(re.findall(r"\b[\wáéíóúüñÁÉÍÓÚÜÑ]+\b", value, flags=re.UNICODE))
 
 
-def find_untranslated_jargon(markdown: str) -> list[str]:
-    folded = fold_text(markdown)
-    untranslated: list[str] = []
-    for term, translations in JARGON_TRANSLATIONS.items():
-        folded_term = fold_text(term)
-        if folded_term in folded and not any(fold_text(translation) in folded for translation in translations):
-            untranslated.append(term)
-    return untranslated
-
-
-def validate_narrative_learning_standard(markdown: str) -> list[str]:
+def validate_metric_context(dialogue: list[tuple[str, str]]) -> list[str]:
     errors: list[str] = []
-    sections = extract_section_map(markdown)
-
-    opening = sections.get("opening_hook", "") or first_body_text(markdown)
-    folded_opening = fold_text(opening[:300])
-    if not opening:
-        errors.append("Missing opening intrigue.")
-    elif any(re.search(pattern, folded_opening) for pattern in WEAK_OPENING_PATTERNS):
-        errors.append("Weak opening: start with intrigue, not context or executive summary.")
-
-    student_question = sections.get("student_question", "")
-    folded_question = fold_text(student_question)
-    if not any(fold_text(marker) in folded_question for marker in ACTIVE_QUESTION_MARKERS):
-        errors.append("Missing active student question: ask what to inspect, suspect, test, or reject.")
-
-    visual_clue = sections.get("visual_clue", "")
-    folded_visual = fold_text(visual_clue + "\n" + sections.get("evidencia visual", ""))
-    if not any(marker in folded_visual for marker in ["pista", "sospech", "contraste", "anotacion", "anotacion", "lo que parece"]):
-        errors.append("Missing visual clue or guided visual-reading language.")
-
-    jargon_section = sections.get("jargon_translation", "")
-    untranslated = find_untranslated_jargon(markdown)
-    if untranslated and len(jargon_section.strip()) < 20:
-        errors.append("Missing jargon_translation content for technical terms.")
-    for term in untranslated[:4]:
-        errors.append(f"Potential untranslated jargon: {term}")
-
-    transferable_rule = sections.get("transferable_rule", "")
-    if len(transferable_rule.strip()) < 20:
-        errors.append("Missing transferable rule.")
-
-    transfer_question = sections.get("pregunta de transferencia", "")
-    if "?" not in transfer_question:
-        errors.append("Missing transfer question.")
-
-    ending = sections.get("tragicomic_ending", "")
-    if len(ending.strip()) < 20:
-        errors.append("Missing tragicomic ending.")
-
+    for index, (_, line) in enumerate(dialogue):
+        folded = fold_text(line)
+        if not re.search(r"\b\d+(?:[.,]\d+)?\b|%", folded):
+            continue
+        window = " ".join(
+            fold_text(item[1]) for item in dialogue[max(0, index - 1) : index + 1]
+        )
+        if not any(term in window for term in METRIC_CONTEXT_WORDS):
+            errors.append(f"Metric without conversational context: {line}")
     return errors
 
 
-def validate_markdown(markdown: str, narrative_learning_standard: bool = False) -> list[str]:
-    headings = extract_headings(markdown)
+def validate_markdown(markdown: str) -> list[str]:
     errors: list[str] = []
-    should_use_learning_standard = narrative_learning_standard or uses_narrative_learning_standard(headings)
-    required_sections = (
-        NARRATIVE_LEARNING_REQUIRED_SECTIONS
-        if should_use_learning_standard
-        else LEGACY_REQUIRED_SECTIONS
-    )
+    story = parse_story(markdown)
+    if not story:
+        errors.append("Missing <!-- story --> contract.")
+    for field in REQUIRED_STORY_FIELDS:
+        if not story.get(field):
+            errors.append(f"Missing story field: {field}")
+    if story and fold_text(story.get("synthetic_data", "")) not in {"true", "yes", "si"}:
+        errors.append("synthetic_data must be true.")
 
-    for section in required_sections:
-        if normalize_heading(section) not in headings:
-            errors.append(f"Missing section: {section}")
+    clean = strip_comments(markdown)
+    body = body_lines(markdown)
+    if not body or not body[0].startswith(">"):
+        errors.append("The first visible story content must be dialogue.")
 
-    lowered = markdown.lower()
-    visual_count = len(re.findall(r"\b(gráfica|grafica|visualización|visualizacion)\b", lowered))
-    if visual_count > 18:
-        errors.append(
-            "Potential over-visualization: many visual references found. Confirm this is not a dashboard."
-        )
+    headings = re.findall(r"^##\s+(.+)$", clean, re.MULTILINE)
+    if not 3 <= len(headings) <= 5:
+        errors.append("Stories need three to five visible scenes.")
 
-    errors.extend(find_dashboard_violations(markdown))
+    dialogue = dialogue_lines(markdown)
+    raw_quotes = re.findall(r"^>\s+.+$", clean, re.MULTILINE)
+    if len(dialogue) != len(raw_quotes):
+        errors.append("Every dialogue intervention must use **Character:** \"Line\".")
+    if len(dialogue) < 14:
+        errors.append("Stories need at least fourteen dialogue interventions.")
 
-    if "piloto" not in lowered:
-        errors.append("Missing pilot language.")
+    visible = visible_text(markdown)
+    total_words = word_count(visible)
+    if not 400 <= total_words <= 750:
+        errors.append(f"Story length must be 400-750 words; found {total_words}.")
+    dialogue_words = sum(word_count(line) for _, line in dialogue)
+    if total_words and dialogue_words / total_words < 0.45:
+        errors.append("Dialogue must contain at least 45% of visible words.")
 
-    if "sintético" not in lowered and "sintetico" not in lowered:
-        errors.append("Missing explicit synthetic-data language.")
+    svg_count = len(re.findall(r"<svg\b", markdown, re.IGNORECASE))
+    if svg_count != 1:
+        errors.append(f"Story needs exactly one SVG chart; found {svg_count}.")
+    if markdown.lower().count("<!-- learning:pause -->") != 1:
+        errors.append("Story needs exactly one <!-- learning:pause -->.")
+    if len(re.findall(r"^\*\*Lo que muestra:\*\*", clean, re.MULTILINE | re.IGNORECASE)) != 1:
+        errors.append("Story needs exactly one **Lo que muestra:** explanation.")
+    if len(re.findall(r"^\*\*Regla:\*\*", clean, re.MULTILINE | re.IGNORECASE)) != 1:
+        errors.append("Story needs exactly one **Regla:** ending.")
 
-    if "técnica mínima suficiente" not in lowered and "tecnica minima suficiente" not in lowered:
-        errors.append("Missing minimum-sufficient-technique language.")
+    dialogue_text = "\n".join(fold_text(line) for _, line in dialogue)
+    for pattern, message in BANNED_DIALOGUE_PATTERNS.items():
+        if re.search(pattern, dialogue_text):
+            errors.append(f"Unnatural dialogue: {message}")
+    if re.search(r"(?:^|\n)\s*[ABC][.)]\s+", clean):
+        errors.append("Visible A/B/C questions are not allowed.")
 
-    if "nivel analítico" not in lowered and "nivel analitico" not in lowered:
-        errors.append("Missing analytic-level language.")
+    long_lines = [line for _, line in dialogue if word_count(line) > 32]
+    if len(long_lines) > 2:
+        errors.append("Too many written-sounding dialogue lines longer than 32 words.")
+    errors.extend(validate_metric_context(dialogue))
+    return errors
 
-    if should_use_learning_standard:
-        errors.extend(validate_narrative_learning_standard(markdown))
 
+def validate_collection(cases: dict[str, str]) -> list[str]:
+    errors: list[str] = []
+    punchlines: dict[str, list[str]] = {}
+    openings: dict[str, list[str]] = {}
+    characters: Counter[str] = Counter()
+
+    for name, markdown in cases.items():
+        story = parse_story(markdown)
+        punchline = fold_text(story.get("punchline", ""))
+        if punchline and punchline != "ah":
+            punchlines.setdefault(punchline, []).append(name)
+        dialogue = dialogue_lines(markdown)
+        if dialogue:
+            opening = " ".join(fold_text(dialogue[0][1]).split()[:7])
+            openings.setdefault(opening, []).append(name)
+        for character in {fold_text(person) for person, _ in dialogue}:
+            characters[character] += 1
+
+    for punchline, names in punchlines.items():
+        if len(names) > 1:
+            errors.append(f"Repeated punchline '{punchline}': {', '.join(names)}")
+    for opening, names in openings.items():
+        if opening and len(names) > 1:
+            errors.append(f"Repeated opening '{opening}': {', '.join(names)}")
+
+    max_character_reuse = max(6, math.ceil(len(cases) * 0.6))
+    for character, count in characters.items():
+        if character not in {"el jefe", "la jefa"} and count > max_character_reuse:
+            errors.append(f"Character '{character}' appears in {count} cases; vary the cast.")
     return errors
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Validate a narrative case markdown file.")
-    parser.add_argument(
-        "--narrative-learning-standard",
-        action="store_true",
-        help="Apply the Narrative Learning Experience Standard for new or regenerated cases.",
-    )
-    parser.add_argument("case_path", type=Path)
+    parser = argparse.ArgumentParser(description="Validate office comedy data stories.")
+    parser.add_argument("--collection", action="store_true")
+    parser.add_argument("case_paths", nargs="+", type=Path)
     args = parser.parse_args()
 
-    if not args.case_path.exists():
-        print(f"ERROR: file not found: {args.case_path}", file=sys.stderr)
+    missing = [path for path in args.case_paths if not path.exists()]
+    if missing:
+        for path in missing:
+            print(f"ERROR: file not found: {path}", file=sys.stderr)
         return 2
 
-    markdown = args.case_path.read_text(encoding="utf-8")
-    errors = validate_markdown(
-        markdown,
-        narrative_learning_standard=args.narrative_learning_standard,
-    )
+    cases = {str(path): path.read_text(encoding="utf-8") for path in args.case_paths}
+    errors: list[str] = []
+    for name, markdown in cases.items():
+        errors.extend(f"{name}: {error}" for error in validate_markdown(markdown))
+    if args.collection:
+        errors.extend(validate_collection(cases))
 
     if errors:
         print("NEEDS_REVISION")
         for error in errors:
             print(f"- {error}")
         return 1
-
     print("PASS")
     return 0
 

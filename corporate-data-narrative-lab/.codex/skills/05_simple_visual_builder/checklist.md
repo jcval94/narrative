@@ -1,22 +1,6 @@
 # Checklist
 
-- [ ] ¿Hay una sola gráfica central?
-- [ ] ¿Hay una sola visualización central?
-- [ ] ¿La visualización revela una segunda capa?
-- [ ] ¿Hay anotación mínima?
-- [ ] ¿Hay `visual_clue` explícita?
-- [ ] ¿Hay lectura guiada paso a paso?
-- [ ] ¿La evidencia distingue `official_story` de `hidden_story`?
-- [ ] ¿Se puede entender sin filtros?
-- [ ] ¿Se evita cualquier patrón de dashboard?
-- [ ] ¿La gráfica está al servicio de la historia?
-- [ ] ¿La gráfica enseña la técnica mínima suficiente?
-- [ ] ¿Hay máximo dos visualizaciones?
-- [ ] ¿No hay filtros?
-- [ ] ¿No hay tabs?
-- [ ] ¿No hay KPI cards?
-- [ ] ¿Las tarjetas, si existen, son narrativas y no de monitoreo?
-- [ ] ¿El título dice qué se está viendo?
-- [ ] ¿Hay ejes claros?
-- [ ] ¿Hay texto breve de lectura?
-- [ ] ¿El HTML es autocontenido?
+- [ ] ¿Hay una sola grafica?
+- [ ] ¿Tiene unidades y etiquetas?
+- [ ] ¿Marca el dato que cambia la conclusion?
+- [ ] ¿Funciona sin JavaScript ni recursos externos?

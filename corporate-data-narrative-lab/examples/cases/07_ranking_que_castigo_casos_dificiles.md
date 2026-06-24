@@ -1,116 +1,117 @@
-# Caso: La mochila invisible del ranking
+# El ranking donde convenía hacerse menso
 
-<!-- suspense_spine
-format: guía de premiación intervenida
-cold_open: Una asesora experta queda última y pregunta si el ranking pesa las mochilas.
-setting: Capacitación para explicar el bono diario.
-moment: Martes 09:10, antes de publicar resultados individuales.
-protagonist: Mónica, formadora que revisa el caso de Sara.
-opposing_forces: Compensación necesita una regla simple; especialistas necesitan que la dificultad cuente.
-recurring_object: Una mochila cargada de expedientes complejos.
-motif: mochila
-pressure: El bono entra en nómina esa semana.
-comfortable_explanation: Más resoluciones por día significa mayor productividad.
-first_anomaly: Quienes reciben mayor complejidad aparecen sistemáticamente abajo.
-false_lead: Especialistas podrían ser más lentos por hábitos menos eficientes.
-visual_evidence: Scatter muestra menos resoluciones conforme sube complejidad y destaca calidad alta.
-reader_question: Quién parece eficiente y quién sostiene el problema difícil.
-analytical_twist: El ranking premia velocidad sin considerar carga asignada.
-consequence: Asesores evitan casos complejos y la especialización pierde incentivo.
-weak_decision: Añadir un bono fijo a especialistas.
-robust_decision: Comparar dentro de complejidad con calidad y resolución sostenida.
-tragicomic_payoff: La mochila entra al escenario y pesa más que el trofeo.
-transferable_rule: Una métrica de velocidad sin dificultad premia evitar lo complicado.
-final_image: El ranking se imprime sobre una báscula con la mochila encima.
-analytic_level: 12
-minimum_sufficient_technique: Scatter, grupos de complejidad y tasa ajustada.
-pilot: Seis semanas con puntuación por grupo, calidad, reapertura y monitoreo de selección.
-risks: Evitar etiquetas permanentes de personas y manipulación de complejidad.
+<!-- story
+concept: métrica de velocidad sin ajuste por complejidad
+characters: Mónica, Sara, Luis, el gerente
+situation: Sara queda última en resoluciones diarias porque atiende los casos más complicados
+bad_logic: una regla igual para todos es justa aunque el trabajo asignado sea distinto
+escalation: especialistas pierden bono, los casos fáciles se pelean y los difíciles terminan con quien no los abandona
+data_turn: Mónica cruza dificultad, velocidad, calidad y reaperturas
+chart: dispersión de complejidad contra resoluciones
+decision: comparar dentro de dificultad y premiar calidad sostenida
+punchline: Luis ganó el bono y Sara resolvió lo que hacía posible pagarlo.
+rule: una métrica de velocidad sin dificultad premia evitar lo complicado
 synthetic_data: true
-worker_context: Especialistas recibían escalaciones difíciles y además apoyaban a compañeros.
-corporate_pressure: Compensación necesitaba una fórmula comprensible para nómina.
-reasonable_shortcut: Resoluciones por día era observable, estable y fácil de auditar.
-absurd_validation: La rapidez se premió y los casos difíciles se reasignaron a quienes no perseguían el bono.
-systemic_critique: La organización declaró valorar conocimiento mientras pagaba el comportamiento de esquivarlo.
-time_jump: Tres ciclos después, especialistas estaban al fondo y la cola compleja crecía.
-institutional_defense: La regla debía permanecer porque todos podían entenderla.
-human_cost: Especialistas perdieron bono y absorbieron trabajo invisible de apoyo.
-blame_target: incentive
-satirical_payoff: La mochila recibió una categoría de bono después de cargar tres ciclos sin aparecer.
 -->
 
-<!-- suspense:cold-open -->
-## Guía rápida para entender tu posición
+## El último lugar
 
-> "Sara quedó última otra vez", dijo Mónica durante la capacitación.
+> **El gerente:** "Sara volvió a quedar última en el ranking. Cinco casos resueltos por día."
+>
+> **Mónica:** "¿Qué casos le mandan?"
+>
+> **Luis:** "Los que llegan con reclamo previo, fraude o documentos incompletos."
+>
+> **Sara:** "Los que nadie quiere tomar, pues."
+>
+> **El gerente:** "La regla es igual para todos."
+>
+> **Mónica:** "La regla sí. El trabajo que les cae no."
+>
+> **Luis:** "Yo cierro doce diarios."
+>
+> **Sara:** "Cambios de correo y desbloqueos."
+>
+> **Luis:** "También requieren compromiso."
+>
+> **Sara:** "Sí, Luis. Sobre todo cuando el cliente olvidó la contraseña dos veces."
 
-> "Es que tarda mucho", respondió Compensación. Sara levantó la **mochila** con doce escalaciones: "También tarda en subir una montaña con equipaje".
+El bono se calculaba esa semana. Resoluciones por día era una métrica fácil de
+entender, fácil de auditar y muy fácil de aprender a jugar. Cuando se creó, casi
+todos atendían lo mismo. Luego aparecieron especialistas, pero la fórmula no se
+enteró porque nadie le mandó el cambio por correo.
 
-<!-- satire:pressure -->
-El bono entraba en nómina esa semana. La fórmula debía ser entendible, auditable y suficientemente corta para una hoja de capacitación.
+## La nueva forma de colaborar
 
-<!-- satire:shortcut -->
-Resoluciones por día cumplía todo: una cifra observable y estable. Cuando nació, todos atendían casos parecidos. Después llegaron especialistas, escalaciones y apoyo entre compañeros; la fórmula conservó su juventud.
+> **El gerente:** "Si alguien termina sus casos simples, puede apoyar a Sara."
+>
+> **Luis:** "Claro. ¿Eso cuenta en mi ranking?"
+>
+> **El gerente:** "No, porque el caso queda a nombre de Sara."
+>
+> **Luis:** "Entonces mejor le doy orientación."
+>
+> **Sara:** "¿Qué orientación?"
+>
+> **Luis:** "Ánimo."
+>
+> **Mónica:** "No manches."
+>
+> **El gerente:** "También valoramos el trabajo en equipo."
+>
+> **Sara:** "¿En el bono?"
+>
+> **El gerente:** "En la cultura."
 
-<!-- satire:validation -->
-Quienes cerraban rápido recibieron reconocimiento. Los casos complejos se reasignaron a quienes no podían dejarlos caer y, por tanto, cerraban menos.
+Tres ciclos después, la gente revisaba la cola antes de tomar un folio. Los
+casos fáciles duraban segundos sin dueño. Los complicados podían pasar veinte
+minutos disponibles hasta que Sara o alguien de su equipo los recogía.
 
-<!-- suspense:false-lead -->
-## Velocidad como disciplina
+## Velocidad con dificultad
 
-Podía existir una diferencia real de hábitos. Algunas personas documentaban de más, esperaban confirmaciones innecesarias o evitaban cerrar. La complejidad no debía convertirse en escudo automático. Mónica necesitaba comprobar si el ranking castigaba dificultad o si la especialización escondía ineficiencia.
+> **Mónica:** "Crucé resoluciones con dificultad, calidad y reaperturas."
+>
+> **El gerente:** "¿Sara sigue abajo?"
+>
+> **Mónica:** "En velocidad bruta sí. Entre casos parecidos, está arriba y reabre menos."
 
-> "La calidad importa", decía la guía en una nota sin efecto sobre el bono.
+<svg data-chart="central" viewBox="0 0 720 310" role="img" aria-label="Relación entre complejidad de casos y resoluciones diarias">
+  <rect width="720" height="310" fill="#fff"/>
+  <text x="35" y="30" font-size="18" font-weight="bold">Velocidad según dificultad del trabajo</text>
+  <line x1="70" y1="255" x2="665" y2="255" stroke="#777"/>
+  <line x1="70" y1="55" x2="70" y2="255" stroke="#777"/>
+  <text x="280" y="290" font-size="14">dificultad promedio</text>
+  <text x="17" y="190" font-size="14" transform="rotate(-90 17 190)">casos resueltos por día</text>
+  <line x1="130" y1="82" x2="620" y2="225" stroke="#8a929a" stroke-dasharray="6 5"/>
+  <circle cx="155" cy="78" r="12" fill="#2f77a1"/><text x="115" y="62" font-size="13">Luis: 12</text>
+  <circle cx="230" cy="104" r="9" fill="#5692b3"/>
+  <circle cx="355" cy="150" r="9" fill="#d69a42"/>
+  <circle cx="500" cy="196" r="9" fill="#c7654b"/>
+  <circle cx="590" cy="215" r="14" fill="#4c8b63"/><text x="525" y="190" font-size="13">Sara: 5, calidad 94%</text>
+  <text x="90" y="275" font-size="13" fill="#9f3625">El ranking bruto mezcla velocidad con tipo de caso.</text>
+</svg>
 
-<!-- satire:time-jump -->
-Tres ciclos después, especialistas ocupaban el fondo. La **mochila** crecía y la cola compleja también. La guía conservaba una página: eficiencia documental impecable.
+<!-- learning:pause -->
+> **Sara:** "Si me comparan con quien recibe lo fácil, ¿cómo saben si soy lenta o si el caso simplemente tarda más?"
 
-<!-- suspense:humor -->
-Calidad era un valor corporativo; velocidad tenía cuenta bancaria.
+**Lo que muestra:** A mayor dificultad, menos cierres diarios. Para evaluar
+desempeño hay que comparar trabajo semejante y revisar calidad y reaperturas.
+La métrica estaba confundiendo complejidad con eficiencia.
 
-<!-- suspense:evidence -->
-## El mapa de la carga
+## El bono corregido
 
-Data proyectó un scatter: eje horizontal, complejidad promedio; vertical, resoluciones diarias. La pendiente descendía. Sara estaba abajo en velocidad, arriba en complejidad y en 94% de resolución sin reapertura. Dos líderes del ranking resolvían mucho, casi todo simple.
+> **El gerente:** "Probamos seis semanas con grupos de dificultad y calidad mínima."
+>
+> **Luis:** "¿Entonces mis doce ya no valen?"
+>
+> **Mónica:** "Sí valen. Nada más ya no valen el doble que resolver un fraude."
+>
+> **Sara:** "¿Y el trabajo en equipo?"
+>
+> **El gerente:** "Ahora sí entra al bono."
+>
+> **Sara:** "Mira. La cultura aprendió Excel."
+>
+> **Mónica:** "Luis ganó el bono y Sara resolvió lo que hacía posible pagarlo."
 
-<!-- suspense:reader-question -->
-<!-- learning:question correct="B" -->
-> ¿Quién parece eficiente y quién sostiene el problema difícil?
-> A. Solo quien aparece arriba en resoluciones diarias.
-> B. Hay que comparar personas con complejidad semejante y revisar calidad y reapertura.
-> C. Toda persona especialista debe considerarse automáticamente superior.
-<!-- learning:answer -->
-**B.** El scatter muestra que carga y velocidad están relacionadas; calidad distingue resolución de cierre rápido. A y C eran tentadoras porque ofrecen un ganador claro, pero ignoran terreno o desempeño real. **Regla:** compara dentro de dificultad y exige calidad en todos los grupos.
-<!-- learning:end -->
-
-<!-- suspense:reveal -->
-## La fórmula enseñó a elegir
-
-La métrica no solo castigaba a especialistas. Enseñaba a buscar casos simples y transferir lo difícil. Quien sostenía escalaciones perdía velocidad; quien protegía el bono perdía complejidad. El sistema había convertido selección de trabajo en productividad.
-
-<!-- suspense:technique -->
-Primero se agruparon casos por dificultad observable y se comparó velocidad dentro de cada grupo. Después se construyó una tasa ajustada con calidad y reapertura. No era necesario ocultar la fórmula: era necesario reconocer la **mochila**.
-
-<!-- suspense:decision -->
-## Enmienda al bono
-
-Un pago fijo a especialistas reconocía el rol pero dejaba incentivos dentro de cada grupo. La salida robusta probaba seis semanas de comparación por complejidad, resolución sostenida y apoyo, vigilando que nadie inflara etiquetas.
-
-<!-- satire:institutional-defense -->
-Compensación recordó que la regla actual era fácil de entender. Mónica puso la mochila sobre la mesa: también era fácil de entender; solo no cabía en una celda.
-
-<!-- learning:question correct="C" -->
-> ¿Qué cambio evita castigar a quien recibe lo difícil?
-> A. Mantener velocidad y publicar una felicitación a especialistas.
-> B. Multiplicar todos los casos complejos por un peso fijo sin validar etiquetas.
-> C. Comparar dentro de grupos, incorporar calidad y auditar selección de casos.
-<!-- learning:answer -->
-**C.** Alinea pago con dificultad y resultado mientras controla manipulación. A y B eran tentadoras por bajo costo o fórmula rápida, pero no corrigen el incentivo completo. **Regla:** ajusta la métrica y vigila la conducta que el ajuste puede crear.
-<!-- learning:end -->
-
-<!-- suspense:payoff -->
-## Peso oficial
-
-Sara no ganó el ranking siguiente; dejó de quedar última por cargar escalaciones. En la ceremonia, la **mochila** ocupó una silla y pesó más que el trofeo. Compensación pidió registrarla como concepto variable, porque hasta el absurdo necesita clave de nómina.
-
-**Regla que queda:** una métrica de velocidad sin dificultad premia evitar lo complicado.
+**Regla:** Una métrica de velocidad sin dificultad premia evitar lo complicado.

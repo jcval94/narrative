@@ -1,22 +1,10 @@
-title: "El dato que llegó cuatro horas tarde"
-central_visualization: "línea de tiempo de disponibilidad"
-data_used: [decision_time, incident_time, supervisor_review_time]
-story_entry: "Abril dibuja el reloj antes de aceptar el 97%."
-dangerous_conclusion: "La variable dominante predice el incidente."
-robust_conclusion: "La variable contiene una revisión posterior y no existe al decidir."
-reading_guide: "Clasifica cada dato a la izquierda o derecha de las 14:00."
-marks:
-  - "13:40 carga disponible"
-  - "14:00 decisión"
-  - "14:25 incidente"
-  - "18:00 evaluación del supervisor"
-annotation: "La variable estrella nace después de la respuesta"
-reader_question: "¿Qué variable no podía existir al momento de decidir?"
-system_evidence:
-  system_cause: "Promesa ejecutiva de precisión antes de auditar columnas."
-  technical_shortcut: "Entrenar sobre la tabla final consolidada."
-  decision_exposed: "No desplegar hasta reconstruir el corte temporal."
-chart:
-  type: timeline
-  events: [{time: "13:40", label: Señales}, {time: "14:00", label: Decisión}, {time: "14:25", label: Incidente}, {time: "18:00", label: Revisión}]
-constraints: {filters: false, tabs: false, external_assets: false, max_visualizations: 1}
+title: "El modelo de 97% que llegaba cuatro horas tarde"
+case_id: "03"
+chart_type: "availability_timeline"
+question_answered: "¿Qué información existía al decidir?"
+comfortable_read: "El modelo alcanza 97%."
+missing_context: "La variable principal aparece a las 18:00."
+correct_read: "La validación usa información futura."
+decision_changed: "Reconstruir cortes a las 14:00."
+annotations: ["14:00 decisión", "18:00 evaluación"]
+synthetic_data: true

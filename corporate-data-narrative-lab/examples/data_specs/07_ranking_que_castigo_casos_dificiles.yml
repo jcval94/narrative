@@ -1,27 +1,9 @@
-scenario: advisor_complexity_adjustment
+case_id: "07"
+title: "El ranking donde convenía hacerse menso"
+concept: "velocidad sin ajuste por complejidad"
+scenario: "agent_difficulty_ranking"
 seed: 107
-rows: 2800
-objective: "Mostrar cómo velocidad bruta castiga a quienes reciben casos complejos."
-story_format: "guía de premiación intervenida"
-motif: "mochila"
-analytic_level: 12
-minimum_sufficient_technique: "scatter y comparación por complejidad"
-variables:
-  - {name: advisor_id, type: string, description: "asesor sintético", example: "A-17"}
-  - {name: case_id, type: string, description: "caso asignado", example: "K-880"}
-  - {name: complexity_score, type: number, description: "dificultad definida antes de asignar, 1 a 5", example: 4.7}
-  - {name: resolutions_per_day, type: number, description: "resoluciones diarias", example: 5.2}
-  - {name: quality_score, type: number, description: "calidad auditada, 0 a 100", example: 94}
-  - {name: reopened_7d, type: boolean, description: "reapertura en siete días", example: false}
-sample_values:
-  - {advisor: Sara, complexity: 4.6, resolutions: 5.2, quality: 94}
-  - {advisor: Luis, complexity: 1.8, resolutions: 11.4, quality: 86}
-assumptions:
-  - "Complejidad se determina antes del trabajo."
-  - "Calidad usa muestra comparable."
-teaching_mechanism: "El scatter revela pendiente negativa y permite comparar calidad sobre cargas distintas."
-limitations:
-  - "La puntuación de complejidad puede manipularse."
-  - "Apoyo a compañeros requiere medición separada."
-must_not_conclude: "Que toda persona rápida evita trabajo difícil o que especialistas siempre rinden mejor."
+observations: 3200
+variables: [agent, case_difficulty, resolutions_per_day, quality_rate, reopen_rate]
+key_values: {sara_resolutions: 5, sara_quality: 0.94, luis_resolutions: 12}
 synthetic_data: true

@@ -1,13 +1,114 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>La IA que llegaba después del incidente</title>
-<style>:root{--ink:#171a1f;--paper:#f8f8f6;--blue:#3157a4;--red:#c4473b;--lime:#96b850;--line:#b8bcc2}*{box-sizing:border-box}body{margin:0;background:#222831;color:var(--ink);font:16px/1.58 "Segoe UI",Arial,sans-serif}.postmortem{width:min(1020px,calc(100% - 24px));margin:24px auto;background:var(--paper);border:1px solid #434b55}.postmortem>*{padding:28px 6%;margin:0}h1{font-size:3rem;line-height:1.04;margin:8px 0 18px;letter-spacing:0}h2{font-size:1.45rem;letter-spacing:0}.code{font:700 .78rem Consolas,monospace;color:var(--blue)}blockquote{margin:10px 0;padding:10px 14px;border-left:4px solid var(--blue);background:#e8ebf3;font-weight:700}.model-defense{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.model-defense span{display:block}.timeline-evidence{background:#141a22;color:#fff}svg{width:100%;height:auto}.track{stroke:#d6dbe2;stroke-width:4}.future{stroke:var(--red);stroke-width:4;stroke-dasharray:8 6}.dot{fill:var(--lime)}.late{fill:var(--red)}.lab{font:13px Arial;fill:#eef2f5}.ann{font:700 15px Arial;fill:#ff8c7e}.time-check{background:#dce5f6}.time-check ol{padding-left:22px}.answer{margin-top:14px;font-weight:700}.leak-finding{border-left:12px solid var(--red)}.audit-note{background:#e8efda}.corrective-actions{border-top:4px solid var(--blue)}.clock-credit{background:#242b35;color:#fff}.rule{font-weight:800;color:#b8d875}[hidden]{display:none}@media(max-width:650px){.postmortem>*{padding:22px 20px}h1{font-size:2.1rem}}</style></head><body>
-<article class="postmortem" data-narrative-standard="suspense-driven" data-satire-standard="corporate-systemic" data-format="postmortem de modelo" data-motif="reloj">
-<header class="postmortem-open" data-beat="cold-open"><div class="code">INCIDENTE IA-97 · 19:26</div><h1>La IA que llegaba después del incidente</h1><blockquote>“97%. ¿Le ponemos predictivo o cognitivo?”</blockquote><blockquote>“Primero pongámosle hora. ¿Cuándo nace la variable estrella?”</blockquote><span data-satire-beat="pressure" hidden></span><span data-satire-beat="shortcut" hidden></span><span data-satire-beat="validation" hidden></span><p>La demo era a las ocho. Entrenar con la tabla final permitió explorar rápido; la exploración recibió logo y fecha de despliegue antes de recibir un <strong>reloj</strong>.</p></header>
-<section class="model-defense" data-beat="false-lead"><h2>Hipótesis inicial: experiencia codificada</h2><p>La evaluación del supervisor podía condensar señales tempranas valiosas. Quitarla sin revisar también podía destruir conocimiento operativo real.</p><blockquote>“El modelo aprendió del experto.”</blockquote><span data-satire-beat="time-jump" hidden></span><p>Cuatro meses después, producción entregaba esa columna a las 18:00 para una alerta requerida a las 14:00.</p></section>
-<aside class="code" data-beat="humor">CAPACIDAD DECLARADA: anticipar el incidente después de su revisión.</aside>
-<section class="timeline-evidence" data-beat="evidence"><h2>El minuto que partió el modelo</h2><p>La línea roja marca el momento real de decisión.</p><svg data-system-link="postevent-feature" viewBox="0 0 840 300" role="img" aria-label="Línea de tiempo de disponibilidad de variables"><line x1="80" y1="150" x2="760" y2="150" class="track"/><line x1="300" y1="55" x2="300" y2="245" class="future"/><circle cx="150" cy="150" r="13" class="dot"/><circle cx="300" cy="150" r="13" class="dot"/><circle cx="420" cy="150" r="13" class="late"/><circle cx="700" cy="150" r="16" class="late"/><text x="110" y="190" class="lab">13:40 señales</text><text x="265" y="115" class="lab">14:00 decisión</text><text x="380" y="190" class="lab">14:25 incidente</text><text x="650" y="115" class="ann">18:00 revisión</text><text x="325" y="70" class="ann">el futuro empieza aquí</text></svg></section>
-<aside class="time-check" data-beat="reader-question"><div data-learning-question data-correct="C"><strong>¿Qué variable no podía existir al decidir?</strong><ol><li>Carga acumulada a las 13:40.</li><li>Turno conocido al inicio.</li><li>Evaluación cargada a las 18:00.</li></ol><div class="answer" data-learning-answer>La opción C aparece después de decisión e incidente. Las otras eran tentadoras porque pueden correlacionarse con riesgo, pero sí estaban disponibles. La regla es asignar a cada predictor una hora de nacimiento anterior al momento de acción.</div></div></aside>
-<section class="leak-finding" data-beat="reveal"><h2>Causa raíz</h2><p>El modelo aprendió el dictamen posterior, no una señal disponible. La validación veía una respuesta que producción todavía no tenía.</p></section>
-<section class="audit-note" data-beat="technique"><h2>Control preventivo</h2><p>Se reconstruye qué sabía el sistema a las 14:00. Después se llama fuga de información, o leakage. Cada fila debe cortarse en el momento real de decisión.</p></section>
-<section class="corrective-actions" data-beat="decision"><span data-satire-beat="institutional-defense" hidden></span><h2>Acciones correctivas</h2><p>Consultoría recordó que la variable era el principal hallazgo. Abril señaló que también era el principal hallazgo del supervisor, solo varias horas después.</p><div data-learning-question data-correct="B"><strong>¿Qué validación representa producción?</strong><ol><li>División aleatoria de la tabla final.</li><li>Variables disponibles antes de las 14:00 y periodos posteriores separados.</li><li>Ocultar la variable en la explicación.</li></ol><div class="answer" data-learning-answer>La opción B reproduce información y orden reales. Las otras eran tentadoras porque preservan precisión o presentación, pero permiten que el futuro entre. La regla es validar desde el momento de decisión, no desde la tabla terminada.</div></div></section>
-<footer class="clock-credit" data-beat="payoff"><h2>Crédito al componente ausente</h2><p>La nueva versión bajó a 71% y pudo correr a tiempo. El <strong>reloj</strong> no recibió presupuesto de IA; solo evitó que el futuro volviera a entrar.</p><p class="rule">Un modelo no debe saber el futuro, aunque en validación se vea brillante.</p></footer>
-</article></body></html>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>El modelo de 97% que llegaba cuatro horas tarde</title>
+  <style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #f4f1ea;
+  color: #1d242b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+main {
+  width: min(760px, calc(100% - 28px));
+  margin: 0 auto;
+  padding: 32px 0 64px;
+}
+h1 { font-size: clamp(2rem, 7vw, 3.4rem); line-height: 1.02; margin: 0 0 30px; }
+h2 { font-size: 1.25rem; margin: 0 0 18px; }
+section { border-top: 2px solid #1d242b; padding: 24px 0 12px; }
+p { line-height: 1.6; }
+blockquote {
+  margin: 10px 0;
+  padding: 12px 14px;
+  background: #fff;
+  border-left: 5px solid #32726c;
+  line-height: 1.45;
+}
+blockquote strong { display: block; margin-bottom: 3px; color: #255b57; }
+.learning-pause { border-left-color: #bd4d32; background: #fff7ef; }
+.explanation { background: #fff; padding: 14px; border: 1px solid #cfc8bb; }
+.rule { font-size: 1.08rem; border-top: 2px solid #bd4d32; padding-top: 16px; }
+svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 22px 0;
+  background: #fff;
+  border: 1px solid #cfc8bb;
+}
+@media (max-width: 520px) {
+  main { width: min(100% - 20px, 760px); padding-top: 22px; }
+  blockquote { margin: 8px 0; }
+}
+</style>
+</head>
+<body data-story-standard="absurd-office-data" data-punchline="La inteligencia artificial sí sabía el futuro; nada más esperaba a que ya hubiera pasado.">
+  <main>
+<h1>El modelo de 97% que llegaba cuatro horas tarde</h1>
+<section>
+<h2>La demo de las ocho</h2>
+<blockquote><strong>La directora:</strong><span>El modelo dio 97% de precisión. ¿Ya podemos decir que usa inteligencia artificial?</span></blockquote>
+<blockquote><strong>Abril:</strong><span>Sí usa. Lo que no sé es si adivina.</span></blockquote>
+<blockquote><strong>Sergio:</strong><span>La variable más importante es la evaluación del supervisor.</span></blockquote>
+<blockquote><strong>Abril:</strong><span>¿A qué hora se carga?</span></blockquote>
+<blockquote><strong>Sergio:</strong><span>Está en la tabla.</span></blockquote>
+<blockquote><strong>Abril:</strong><span>Te pregunté la hora.</span></blockquote>
+<blockquote><strong>Sergio:</strong><span>Como a las seis de la tarde.</span></blockquote>
+<blockquote><strong>Iván:</strong><span>¿Y la alerta para cuándo la necesitamos?</span></blockquote>
+<blockquote><strong>Sergio:</strong><span>A las dos.</span></blockquote>
+<blockquote><strong>Iván:</strong><span>No manches. El modelo llega cuando ya recogieron las sillas.</span></blockquote>
+<p>Eran las siete y veinte. La demo era a las ocho. El 97% ya estaba en la presentación, en el correo y en una solicitud de presupuesto que describía el resultado como “capacidad predictiva superior”.</p>
+</section>
+<section>
+<h2>Una solución rápida</h2>
+<blockquote><strong>La directora:</strong><span>A ver, quizá el supervisor detecta cosas que sí estaban pasando.</span></blockquote>
+<blockquote><strong>Abril:</strong><span>Puede ser. Pero necesitamos las señales que veía antes de las dos, no su evaluación de las seis.</span></blockquote>
+<blockquote><strong>Sergio:</strong><span>En producción ponemos esa columna en cero hasta que llegue.</span></blockquote>
+<blockquote><strong>Iván:</strong><span>¿Y el modelo qué hace con el cero?</span></blockquote>
+<blockquote><strong>Sergio:</strong><span>Aprende que todavía no sabemos.</span></blockquote>
+<blockquote><strong>Abril:</strong><span>No aprendió incertidumbre. Aprendió el dictamen del supervisor.</span></blockquote>
+<blockquote><strong>La directora:</strong><span>¿Cuánto baja si quitamos esa columna?</span></blockquote>
+<blockquote><strong>Sergio:</strong><span>La precisión baja a 71%.</span></blockquote>
+<blockquote><strong>La directora:</strong><span>Qué feo se ve el presente cuando le quitas el futuro.</span></blockquote>
+<p>La propuesta de rellenar con cero sobrevivió doce minutos porque conservaba la fecha de demo. Murió cuando Iván preguntó si también podían poner en cero el incidente mientras llegaba la evaluación.</p>
+</section>
+<section>
+<h2>A qué hora existe cada dato</h2>
+<blockquote><strong>Abril:</strong><span>Ordené las columnas por la hora en que realmente aparecen.</span></blockquote>
+<blockquote><strong>La directora:</strong><span>Enséñame.</span></blockquote>
+<blockquote><strong>Abril:</strong><span>La variable estrella nace cuatro horas después de la decisión.</span></blockquote>
+<svg data-chart="central" viewBox="0 0 720 280" role="img" aria-label="Línea de tiempo de señales, decisión, incidente y evaluación del supervisor">
+  <rect width="720" height="280" fill="#fff"/>
+  <text x="36" y="30" font-size="18" font-weight="bold">Cuándo existe la información</text>
+  <line x1="70" y1="145" x2="660" y2="145" stroke="#737b83" stroke-width="4"/>
+  <line x1="285" y1="62" x2="285" y2="225" stroke="#c4432e" stroke-width="5"/>
+  <text x="250" y="52" font-size="14" fill="#c4432e">14:00 decisión</text>
+  <circle cx="160" cy="145" r="11" fill="#286d9b"/>
+  <text x="104" y="178" font-size="14">13:40 señales</text>
+  <circle cx="355" cy="145" r="11" fill="#d58b2f"/>
+  <text x="322" y="178" font-size="14">14:25 incidente</text>
+  <circle cx="510" cy="145" r="11" fill="#68727d"/>
+  <text x="465" y="178" font-size="14">17:30 revisión</text>
+  <circle cx="615" cy="145" r="12" fill="#c4432e"/>
+  <text x="570" y="120" font-size="14">18:00 evaluación</text>
+  <text x="415" y="92" font-size="14" fill="#9f3625">no disponible al decidir</text>
+</svg>
+<blockquote class="learning-pause"><strong>Iván:</strong><span>Si a las dos todavía no existe la evaluación, ¿con qué información tendría que entrenarse el modelo?</span></blockquote>
+<p class="explanation"><strong>Lo que muestra:</strong> Solo puede usar señales disponibles antes de las 14:00. La evaluación de las 18:00 contiene información posterior y hace que la validación parezca brillante. El problema se llama fuga de información temporal.</p>
+</section>
+<section>
+<h2>Menos mágico, más útil</h2>
+<blockquote><strong>La directora:</strong><span>Quitamos lo posterior, reconstruimos cada caso como se veía a las dos y corremos un mes en sombra.</span></blockquote>
+<blockquote><strong>Sergio:</strong><span>Entonces ya no podemos presumir 97% de precisión.</span></blockquote>
+<blockquote><strong>Abril:</strong><span>Podemos presumir que funciona antes del incidente.</span></blockquote>
+<blockquote><strong>Iván:</strong><span>La inteligencia artificial sí sabía el futuro; nada más esperaba a que ya hubiera pasado.</span></blockquote>
+<p class="rule"><strong>Regla:</strong> Un modelo solo puede usar información disponible antes de la decisión.</p>
+</section>
+  </main>
+</body>
+</html>

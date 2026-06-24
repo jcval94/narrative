@@ -1,116 +1,118 @@
-# Caso: Las dos mil horas que cambiaron de reunión
+# Las dos mil horas que regresaron como juntas
 
-<!-- suspense_spine
-format: memo de automatización con notas
-cold_open: Automatización celebra 2,000 horas y una analista pregunta por qué nadie sale antes.
-setting: Revisión de beneficios del programa AutomateNow.
-moment: Viernes 18:36, cierre de beneficios anual.
-protagonist: Leo de Transformación sigue el destino de cada hora.
-opposing_forces: Programa necesita capturar ahorro; equipos necesitan capacidad real.
-recurring_object: Una hora con sello AHORRADA.
-motif: hora
-pressure: El business case prometió 2,000 horas liberadas.
-comfortable_explanation: Menos trabajo manual produjo productividad inmediata.
-first_anomaly: Bajan tareas originales y suben reportes, revisiones y reuniones.
-false_lead: Las nuevas actividades podrían representar trabajo de mayor valor.
-visual_evidence: Barras de uso del tiempo muestran que 1,760 horas reaparecen en nuevas demandas.
-reader_question: Si la automatización redujo trabajo o creó espacio para pedir más.
-analytical_twist: Se liberaron tareas, pero la organización rellenó casi toda la capacidad.
-consequence: El beneficio financiero se declara sin resultado ni capacidad capturada.
-weak_decision: Monetizar todas las horas teóricas como ahorro.
-robust_decision: Seguir destino, costo y resultado de horas liberadas.
-tragicomic_payoff: La hora ahorrada recibe invitación recurrente a la junta de ahorro.
-transferable_rule: Automatizar tareas no equivale a capturar valor si el sistema rellena el hueco con más tareas.
-final_image: Una hora sellada como ahorro aparece ocupada en un calendario.
-analytic_level: 8
-minimum_sufficient_technique: Balance antes/después de uso del tiempo y resultados.
-pilot: Un trimestre con trazabilidad de capacidad, resultados y carga percibida.
-risks: No convertir seguimiento en más burocracia ni asumir que toda reasignación carece de valor.
+<!-- story
+concept: métrica proxy y productividad aparente
+characters: Leo, Jiménez, Karla, la directora
+situation: una automatización presume dos mil horas ahorradas
+bad_logic: toda hora eliminada de una tarea equivale a ahorro capturado por la empresa
+escalation: se crean más reportes, revisiones y juntas hasta ocupar casi todo el tiempo liberado
+data_turn: Leo sigue el destino de las horas después de automatizar
+chart: barras apiladas de uso del tiempo antes y después
+decision: separar horas liberadas, reasignadas y realmente capturadas
+punchline: La primera hora ahorrada apareció en el calendario como junta semanal.
+rule: automatizar una tarea no captura valor si el sistema llena el espacio con más trabajo
 synthetic_data: true
-worker_context: Equipos automatizaron mientras sostenían operación y reportes ejecutivos.
-corporate_pressure: El programa debía justificar licencias con 2,000 horas monetizadas.
-reasonable_shortcut: Horas por tarea multiplicadas por frecuencia estimaron capacidad liberada.
-absurd_validation: El ahorro teórico se anunció antes de decidir qué trabajo dejaría de hacerse.
-systemic_critique: La eficiencia fue absorbida como permiso para elevar producción sin reconocer capacidad ni descanso.
-time_jump: Un año después, había más entregables y la jornada promedio no había bajado.
-institutional_defense: Las horas debían conservarse porque ya financiaban la renovación enterprise.
-human_cost: Equipos produjeron más artefactos con la misma plantilla y sin ahorro experimentado.
-blame_target: incentive
-satirical_payoff: Cada hora ahorrada terminó ocupada documentando el ahorro.
 -->
 
-<!-- suspense:cold-open -->
-## MEMO BN-2000 — beneficio capturado
+## El caso de éxito
 
-> "Dos mil horas ahorradas. ¿Ya calculamos el retorno?", preguntó Transformación.
+> **La directora:** "La automatización ahorró dos mil horas al año. Esto sí hay que presumirlo."
+>
+> **Jiménez:** "¿Dónde están?"
+>
+> **Karla:** "¿Cómo que dónde?"
+>
+> **Jiménez:** "Las horas. ¿La gente sale antes, hay menos costo o hacemos más ventas?"
+>
+> **Karla:** "Ya no copian datos a mano."
+>
+> **Leo:** "Eso sí pasó."
+>
+> **La directora:** "Entonces ahí están las dos mil horas."
+>
+> **Jiménez:** "Yo tampoco estoy copiando datos ahorita y no por eso aparecieron dos mil horas."
+>
+> **Karla:** "No compliquemos un beneficio bastante claro."
 
-> "Sí", dijo Leo. "Falta calcular por qué todos siguen conectados a las siete."
+El cálculo era correcto: cien personas dejaban de invertir veinte horas al año
+en copiar tablas. La parte no calculada empezó al lunes siguiente, cuando cada
+área descubrió que podía pedir un reporte nuevo “porque ahora ya salía solo”.
 
-<!-- satire:pressure -->
-El cierre anual era esa tarde. Las licencias enterprise se renovaban con un business case que ya había convertido minutos teóricos en ahorro financiero.
+## La capacidad disponible
 
-<!-- satire:shortcut -->
-Multiplicar tiempo manual por frecuencia era una estimación razonable de capacidad liberada. Servía para priorizar automatizaciones. El salto ocurrió cuando capacidad potencial se registró como costo eliminado sin eliminar costo, tarea ni demanda.
+> **La directora:** "Como acabaron rápido, podemos agregar una revisión semanal."
+>
+> **Leo:** "¿De qué?"
+>
+> **La directora:** "De los reportes nuevos."
+>
+> **Jiménez:** "¿Cuáles reportes nuevos?"
+>
+> **Karla:** "Los que aprovechamos que ya había capacidad."
+>
+> **Leo:** "Entonces la capacidad ya no está disponible."
+>
+> **Karla:** "Está aprovechada."
+>
+> **Jiménez:** "Qué bonito. El ahorro duró menos que el correo donde lo anunciaron."
+>
+> **Leo:** "¿Alguien preguntó si los reportes nuevos cambian una decisión?"
+>
+> **Karla:** "Todavía no. Primero queríamos asegurar que salieran."
 
-<!-- satire:validation -->
-El programa anunció 2,000 horas y recibió una expansión regional. Los equipos eficientes recibieron más entregables porque ahora, oficialmente, tenían tiempo.
+Un año después había once reportes nuevos, dos revisiones por reporte y una
+reunión mensual para revisar si las revisiones semanales estaban alineadas. El
+equipo seguía conectado a las siete, pero ahora producía evidencia de que tenía
+tiempo libre.
+Oficialmente.
 
-<!-- suspense:false-lead -->
-## Trabajo de mayor valor
+## A dónde se fueron
 
-No toda hora reasignada era pérdida. Revisar excepciones, analizar resultados y preparar decisiones podía valer más que copiar datos. La automatización quizá no debía reducir jornada; podía elevar calidad y capacidad. Leo necesitaba distinguir relleno burocrático de trabajo nuevo con resultado.
+> **Leo:** "Seguí las horas después de la automatización."
+>
+> **La directora:** "¿Sí se ahorraron o no?"
+>
+> **Leo:** "Se liberaron dos mil. Solo doscientas cuarenta quedaron como capacidad real."
 
-> "No son más juntas; son espacios de alineación habilitados por automatización", aclaró el memo.
+<svg data-chart="central" viewBox="0 0 720 300" role="img" aria-label="Destino de las horas antes y después de automatizar">
+  <rect width="720" height="300" fill="#fff"/>
+  <text x="35" y="30" font-size="18" font-weight="bold">Horas anuales del proceso</text>
+  <text x="55" y="90" font-size="15">Antes</text>
+  <rect x="120" y="62" width="430" height="42" fill="#2e739e"/>
+  <rect x="550" y="62" width="105" height="42" fill="#687581"/>
+  <text x="135" y="88" font-size="14" fill="#fff">trabajo manual 2,400</text>
+  <text x="560" y="88" font-size="14" fill="#fff">revisión 600</text>
+  <text x="55" y="180" font-size="15">Después</text>
+  <rect x="120" y="152" width="72" height="42" fill="#2e739e"/>
+  <rect x="192" y="152" width="190" height="42" fill="#d59232"/>
+  <rect x="382" y="152" width="128" height="42" fill="#c54d36"/>
+  <rect x="510" y="152" width="43" height="42" fill="#4c8b63"/>
+  <text x="202" y="178" font-size="13">reportes 1,050</text>
+  <text x="390" y="178" font-size="13" fill="#fff">juntas 710</text>
+  <text x="564" y="178" font-size="13">240 libres</text>
+  <text x="120" y="235" font-size="14" fill="#9f3625">1,760 horas regresaron como trabajo nuevo.</text>
+</svg>
 
-<!-- satire:time-jump -->
-Un año después, existían once reportes nuevos, dos revisiones por reporte y una junta para consolidar aprendizajes. La **hora** ahorrada tenía calendario completo.
+<!-- learning:pause -->
+> **Jiménez:** "Entonces, ¿automatizamos trabajo o nada más abrimos espacio para pedir más cosas?"
 
-<!-- suspense:humor -->
-PowerPoint fue el principal beneficiario no humano del programa.
+**Lo que muestra:** La herramienta sí eliminó dos mil horas de captura manual,
+pero casi todas se reasignaron. Horas liberadas son una medida de actividad,
+no ahorro financiero automático. La métrica proxy estaba sustituyendo al valor.
 
-<!-- suspense:evidence -->
-## Destino de las horas
+## El beneficio con apellido
 
-Data comparó usos: antes, 2,400 horas manuales y 600 de revisión. Después, 400 manuales, 1,050 en nuevos reportes, 710 en revisiones y reuniones, y solo 240 realmente disponibles o retiradas. De las 2,000 liberadas, 1,760 reaparecieron con otro asunto de calendario.
+> **La directora:** "Reportamos dos mil horas liberadas, mil setecientas sesenta reasignadas y doscientas cuarenta capturadas."
+>
+> **Karla:** "Va a parecer menos exitoso."
+>
+> **Leo:** "Va a parecer lo que pasó."
+>
+> **Jiménez:** "¿Cancelamos la junta para validar el ahorro?"
+>
+> **La directora:** "No. Esa ya es recurrente."
+>
+> **Jiménez:** "La primera hora ahorrada apareció en el calendario como junta semanal."
 
-<!-- suspense:reader-question -->
-<!-- learning:question correct="B" -->
-> ¿La automatización redujo trabajo o creó espacio para pedir más?
-> A. Redujo exactamente 2,000 horas porque esa era la tarea automatizada.
-> B. Liberó 2,000 horas de una tarea, pero solo 240 quedaron como capacidad o costo capturado.
-> C. No produjo ningún valor porque surgieron nuevas actividades.
-<!-- learning:answer -->
-**B.** Sigue el destino completo y separa liberación técnica de beneficio capturado. A y C eran tentadoras porque celebran todo o niegan todo, pero ignoran reasignación y resultado. **Regla:** rastrea cada hora liberada hasta capacidad, costo o valor observable.
-<!-- learning:end -->
-
-<!-- suspense:reveal -->
-## El hueco duró una semana
-
-La automatización sí eliminó trabajo manual. La organización usó casi todo el espacio para aumentar producción documental. Eso podía tener valor, pero no era ahorro financiero automático ni capacidad disponible; era una decisión de reasignación que nunca se declaró.
-
-<!-- suspense:technique -->
-Primero se hizo un balance: de dónde salieron horas y a dónde fueron. Después se habló de **métrica proxy**: horas teóricas como sustituto de valor. Comparar tiempo, entregables, resultados y costo bastaba para no confundir tarea eliminada con beneficio.
-
-<!-- suspense:decision -->
-## Nota manuscrita al beneficio
-
-Monetizar las 2,000 horas preservaba el caso de licencia. La salida robusta reportaba 2,000 liberadas, 1,760 reasignadas y 240 capturadas, con resultado de los nuevos entregables y carga percibida durante un trimestre.
-
-<!-- satire:institutional-defense -->
-Compras recordó que las 2,000 horas financiaban la renovación. Leo preguntó si el proveedor aceptaría 1,760 horas en formato PowerPoint.
-
-<!-- learning:question correct="C" -->
-> ¿Qué tablero de beneficios sería honesto sin volverse otro trabajo de tiempo completo?
-> A. Solo horas teóricas multiplicadas por salario.
-> B. Número de automatizaciones publicadas.
-> C. Horas liberadas, destino agregado, costo evitado y resultado de negocio.
-<!-- learning:answer -->
-**C.** Conecta actividad técnica con capacidad y valor sin rastrear cada minuto individual. A y B eran tentadoras porque son simples y favorables, pero no prueban captura. **Regla:** mide suficiente trazabilidad para decidir, no tanta que el seguimiento consuma el ahorro.
-<!-- learning:end -->
-
-<!-- suspense:payoff -->
-## Invitación recurrente
-
-La siguiente revisión duró una **hora**. En el calendario aparecía `validar ahorro de tiempo`, frecuencia semanal. Leo la dejó como evidencia: era la primera hora ahorrada que podía localizar con precisión, aunque no estaba libre.
-
-**Regla que queda:** automatizar tareas no equivale a capturar valor si el sistema rellena el hueco con más tareas.
+**Regla:** Automatizar una tarea no captura valor si el sistema llena el espacio
+con más trabajo.

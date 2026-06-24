@@ -1,27 +1,9 @@
-scenario: seasonal_pilot_comparison
+case_id: "08"
+title: "El piloto que ganó en diciembre"
+concept: "estacionalidad y comparación temporal inválida"
+scenario: "seasonal_pilot"
 seed: 108
-rows: 36
-objective: "Separar caída estacional de mejora adicional durante un piloto."
-story_format: "presentación de cierre con calendario"
-motif: "diciembre"
-analytic_level: 10
-minimum_sufficient_technique: "serie estacional y grupo comparable"
-variables:
-  - {name: month, type: date, description: "mes observado", example: "2025-12-01"}
-  - {name: region, type: category, description: "región piloto o comparable", example: "pilot"}
-  - {name: incidents_per_1000, type: number, description: "incidencias por mil operaciones", example: 75}
-  - {name: pilot_active, type: boolean, description: "periodo de intervención", example: true}
-  - {name: season, type: category, description: "alta, media o baja histórica", example: "low"}
-sample_values:
-  - {comparison: previous_quarter, reduction_pct: 25}
-  - {comparison: same_season_control, reduction_pct: 18}
-  - {comparison: additional_estimate, percentage_points: 7}
-assumptions:
-  - "La región comparable no recibió una intervención equivalente."
-  - "La definición de incidencia es estable durante 36 meses."
-teaching_mechanism: "Los valles se repiten cada año y el control baja durante el mismo periodo."
-limitations:
-  - "La diferencia simple no controla todos los cambios concurrentes."
-  - "Tres años pueden contener anomalías."
-must_not_conclude: "Que el piloto no tuvo efecto o que exactamente 18 puntos siempre corresponden a temporada."
+observations: 72
+variables: [month, region, incident_count, pilot_active, season]
+key_values: {treated_drop: 0.25, comparison_drop: 0.18, additional_points: 7}
 synthetic_data: true

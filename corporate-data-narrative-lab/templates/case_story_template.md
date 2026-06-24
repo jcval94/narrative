@@ -1,103 +1,48 @@
-# Caso: [Título intrigante que no revele el truco]
+# [Titulo concreto]
 
-## opening_hook
+<!-- story
+concept:
+characters:
+situation:
+bad_logic:
+escalation:
+data_turn:
+chart:
+decision:
+punchline:
+rule:
+synthetic_data: true
+-->
 
-[Escena, anomalía, contradicción o pregunta incómoda. No abrir con contexto breve.]
+## [Escena 1]
 
-## protagonist_or_student_role
+> **Personaje:** "Pregunta cotidiana con contexto."
+>
+> **Personaje:** "Respuesta practica."
+>
+> **Personaje:** "Contradiccion."
 
-[Quién investiga: protagonista, narrador o rol del alumno. Debe tener una responsabilidad concreta.]
+[Narracion breve sobre la presion.]
 
-## central_mystery
+## [Escena 2]
 
-[Qué pasó y por qué la explicación cómoda no alcanza.]
+[La mala logica escala mediante dialogo y una consecuencia concreta.]
 
-## Tesis del caso
+## [Escena 3]
 
-[Verdad incómoda, específica y transferible.]
+[Una persona abre la evidencia.]
 
-## Nivel analítico del caso
+<svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="[descripcion]">
+  <!-- Grafica autocontenida -->
+</svg>
 
-## Técnica principal
+<!-- learning:pause -->
+> **Personaje:** "Pregunta natural que obliga a mirar la grafica."
 
-## Técnica mínima suficiente
+**Lo que muestra:** [Explicacion breve y humana. Nombra la tecnica al final.]
 
-## Por qué no usar una solución más compleja
+## [Escena final]
 
-## Por qué no usar una solución más simple
+[Decision y remate especifico.]
 
-## official_story
-
-[Lo que la gráfica parece decir a simple vista.]
-
-## hidden_story
-
-[Lo que realmente está pasando y qué señal lo revela.]
-
-## visual_clue
-
-[Pista visual que el alumno debe notar en una sola imagen.]
-
-## student_question
-
-[Pregunta activa: qué mirarías primero, qué conclusión sería peligrosa, qué dato falta o qué hipótesis explica mejor la gráfica.]
-
-## jargon_translation
-
-| Lenguaje humano primero | Término técnico si hace falta |
-| --- | --- |
-| [casos resueltos a tiempo] | [SLA] |
-
-## Áreas involucradas
-
-## Evidencia visual
-
-[Gráfica como escena del crimen: pista, contraste, anotación y lectura guiada.]
-
-## Qué parece a simple vista
-
-## Qué está pasando realmente
-
-## analytical_twist
-
-[Giro analítico que cambia la decisión.]
-
-## Consecuencia de negocio
-
-## weak_decision
-
-[Decisión cómoda pero peligrosa.]
-
-## robust_decision
-
-[Acción robusta desde Data/negocio sin sobreingeniería.]
-
-## Acción débil sin expertise en datos
-
-## Piloto propuesto
-
-## Humor integrado
-
-[Humor seco dentro de la historia: archivo, frase de comité, contradicción o comentario breve. No chiste aislado.]
-
-## tragicomic_ending
-
-[Consecuencia cómica o tragicómica que cierre la historia.]
-
-## transferable_rule
-
-[Regla práctica aplicable a otro problema.]
-
-## Pregunta de transferencia
-
-[Pregunta para aplicar la regla en otro contexto.]
-
-## Aprendizajes
-
-## Preguntas para el alumno
-
-## Respuesta esperada
-
-## Riesgos éticos / privacidad / sesgo
-
-## Checklist de calidad
+**Regla:** [Regla transferible.]

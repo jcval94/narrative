@@ -1,26 +1,9 @@
-scenario: misleading_average_service_tail
+case_id: "05"
+title: "El promedio de 14 minutos y el folio de seis horas"
+concept: "media engañosa y cola de distribución"
+scenario: "service_time_long_tail"
 seed: 105
-rows: 8000
-objective: "Mostrar una media mejor junto con un percentil 95 mucho peor."
-story_format: "junta de guardia con recibos"
-motif: "cola"
-analytic_level: 3
-minimum_sufficient_technique: "media, mediana y percentiles"
-variables:
-  - {name: interaction_id, type: string, description: "atención sintética", example: "0098"}
-  - {name: period, type: category, description: "antes o después de priorización", example: "after"}
-  - {name: service_minutes, type: number, description: "minutos hasta resolución", example: 361}
-  - {name: complexity, type: category, description: "simple, media o crítica", example: "critical"}
-  - {name: shift, type: category, description: "turno de atención", example: "night"}
-sample_values:
-  - {period: before, mean: 18, median: 11, p90: 34, p95: 52}
-  - {period: after, mean: 14, median: 7, p90: 38, p95: 121}
-assumptions:
-  - "Los tiempos usan la misma definición de inicio y fin."
-  - "Hay suficientes casos para percentiles estables."
-teaching_mechanism: "Muchos casos rápidos mueven el centro mientras la cola roja se alarga."
-limitations:
-  - "Percentiles no explican por sí solos la causa."
-  - "Un caso de seis horas no representa toda la cola."
-must_not_conclude: "Que la mayoría empeoró o que optimizar tiempos simples carece de valor."
+observations: 9000
+variables: [case_id, wait_minutes, reopened, queue_age]
+key_values: {mean_minutes: 14, median_minutes: 8, over_one_hour: 112, extreme_hours: 6}
 synthetic_data: true

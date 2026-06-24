@@ -1,26 +1,9 @@
-scenario: automation_proxy_productivity
+case_id: "06"
+title: "Las dos mil horas que regresaron como juntas"
+concept: "métrica proxy y productividad aparente"
+scenario: "automation_capacity_recapture"
 seed: 106
-rows: 52
-objective: "Rastrear horas liberadas hasta reasignación, capacidad o costo realmente capturado."
-story_format: "memo de automatización con notas"
-motif: "hora"
-analytic_level: 8
-minimum_sufficient_technique: "balance antes/después de uso del tiempo"
-variables:
-  - {name: week, type: date, description: "semana observada", example: "2026-W12"}
-  - {name: activity_group, type: category, description: "manual, reporte, revisión o disponible", example: "new_reports"}
-  - {name: hours, type: number, description: "horas sintéticas agregadas", example: 1050}
-  - {name: business_output, type: nullable_number, description: "resultado vinculado si existe", example: 12}
-  - {name: cost_removed, type: number, description: "costo efectivamente retirado", example: 18000}
-sample_values:
-  - {period: before, manual: 2400, review: 600, new_reports: 0, available: 0}
-  - {period: after, manual: 400, review: 710, new_reports: 1050, available: 240}
-assumptions:
-  - "Las categorías de tiempo son mutuamente excluyentes a nivel agregado."
-  - "Horas liberadas no se monetizan sin costo retirado."
-teaching_mechanism: "Las barras muestran que 1,760 de 2,000 horas reaparecen como nueva demanda."
-limitations:
-  - "La reasignación puede generar valor no capturado por la muestra."
-  - "Las horas son estimaciones, no vigilancia individual."
-must_not_conclude: "Que la automatización fracasó o que todo trabajo nuevo es burocracia."
+observations: 3000
+variables: [activity, before_hours, after_hours, value_captured]
+key_values: {released_hours: 2000, reassigned_hours: 1760, captured_hours: 240}
 synthetic_data: true

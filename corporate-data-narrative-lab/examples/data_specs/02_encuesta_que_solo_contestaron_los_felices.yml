@@ -1,29 +1,9 @@
-scenario: survey_nonresponse_funnel
+case_id: "02"
+title: "La encuesta que llegaba después del problema"
+concept: "sesgo de cobertura y no respuesta"
+scenario: "survey_completion_funnel"
 seed: 102
-rows: 10000
-objective: "Evidenciar que la satisfacción representa solo a quienes completaron y respondieron."
-story_format: "correo de encuesta reenviado"
-motif: "silencio"
-analytic_level: 7
-minimum_sufficient_technique: "embudo por etapa y tasa de respuesta"
-variables:
-  - {name: journey_id, type: string, description: "recorrido sintético", example: "J-0042"}
-  - {name: last_stage, type: category, description: "última etapa alcanzada", example: "completed"}
-  - {name: survey_invited, type: boolean, description: "si tuvo oportunidad de contestar", example: true}
-  - {name: survey_responded, type: boolean, description: "si envió respuesta", example: false}
-  - {name: satisfaction_score, type: nullable_integer, description: "puntuación de 0 a 10 si respondió", example: 9}
-  - {name: abandonment_reason, type: nullable_category, description: "motivo declarado en muestra de salida", example: "identity_check"}
-sample_values:
-  - {stage: initiated, people: 10000}
-  - {stage: completed, people: 6200}
-  - {stage: invited, people: 6000}
-  - {stage: responded, people: 1500}
-assumptions:
-  - "El disparador de encuesta ocurre después de completar."
-  - "La muestra de abandono usa consentimiento separado."
-teaching_mechanism: "El embudo hace visible que 3,800 abandonos nunca entran al universo invitado."
-limitations:
-  - "No respuesta no equivale a insatisfacción."
-  - "Una encuesta de salida también puede tener selección."
-must_not_conclude: "Que todos los abandonos estaban insatisfechos o que la puntuación de completadores es falsa."
+observations: 10000
+variables: [started, completed, invited, responded, satisfaction_score]
+key_values: {started: 10000, completed: 6200, invited: 6000, responded: 1500, score: 72}
 synthetic_data: true
