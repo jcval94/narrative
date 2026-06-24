@@ -5,200 +5,155 @@ import html
 import re
 from pathlib import Path
 
+try:
+    from tools.validate_case_structure import parse_story
+except ModuleNotFoundError:  # Direct script execution from the repository root.
+    from validate_case_structure import parse_story
+
 
 CSS = """
-:root {
-  --ink: #1d2433;
-  --muted: #5e697a;
-  --line: #d7dde7;
-  --paper: #ffffff;
-  --bg: #f6f7f9;
-  --accent: #3568a8;
-  --warn: #a84f35;
-}
+:root { color-scheme: light; }
 * { box-sizing: border-box; }
 body {
   margin: 0;
+  background: #f4f1ea;
+  color: #1d242b;
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--ink);
-  background: var(--bg);
-  line-height: 1.58;
 }
 main {
-  width: min(920px, calc(100% - 32px));
+  width: min(760px, calc(100% - 28px));
   margin: 0 auto;
-  padding: 42px 0 60px;
+  padding: 32px 0 64px;
 }
-header {
-  margin-bottom: 34px;
+h1 { font-size: clamp(2rem, 7vw, 3.4rem); line-height: 1.02; margin: 0 0 30px; }
+h2 { font-size: 1.25rem; margin: 0 0 18px; }
+section { border-top: 2px solid #1d242b; padding: 24px 0 12px; }
+p { line-height: 1.6; }
+blockquote {
+  margin: 10px 0;
+  padding: 12px 14px;
+  background: #fff;
+  border-left: 5px solid #32726c;
+  line-height: 1.45;
 }
-h1 {
-  margin: 0 0 10px;
-  font-size: clamp(2rem, 5vw, 3.25rem);
-  line-height: 1.05;
+blockquote strong { display: block; margin-bottom: 3px; color: #255b57; }
+.learning-pause { border-left-color: #bd4d32; background: #fff7ef; }
+.explanation { background: #fff; padding: 14px; border: 1px solid #cfc8bb; }
+.rule { font-size: 1.08rem; border-top: 2px solid #bd4d32; padding-top: 16px; }
+svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 22px 0;
+  background: #fff;
+  border: 1px solid #cfc8bb;
 }
-h2 {
-  margin: 0 0 10px;
-  font-size: 1.25rem;
-}
-section {
-  margin: 0 0 24px;
-}
-p, li {
-  color: var(--ink);
-}
-.section {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 18px 20px;
-}
-.muted {
-  color: var(--muted);
-}
-.evidence {
-  border-left: 4px solid var(--accent);
-}
-.clue {
-  border-left: 4px solid #2f7d68;
-}
-.decision {
-  border-left: 4px solid #7a5a1f;
-}
-.tragicomic {
-  border-left: 4px solid var(--warn);
-}
-.rule {
-  border-left: 4px solid #4a6f2c;
+@media (max-width: 520px) {
+  main { width: min(100% - 20px, 760px); padding-top: 22px; }
+  blockquote { margin: 8px 0; }
 }
 """
 
 
-DISPLAY_HEADINGS = {
-    "opening_hook": "Apertura",
-    "protagonist_or_student_role": "Tu rol en la investigación",
-    "central_mystery": "El misterio",
-    "official_story": "Lo que parece",
-    "hidden_story": "Lo que realmente pasa",
-    "visual_clue": "Pista visual",
-    "student_question": "Pregunta activa",
-    "jargon_translation": "Traducción de jerga",
-    "analytical_twist": "Giro analítico",
-    "weak_decision": "Decisión cómoda",
-    "robust_decision": "Acción robusta",
-    "tragicomic_ending": "Cierre tragicómico",
-    "transferable_rule": "Regla transferible",
-}
+def inline_markup(value: str) -> str:
+    escaped = html.escape(value, quote=False)
+    return re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", escaped)
 
 
-def split_sections(markdown: str) -> tuple[str, list[tuple[str, list[str]]]]:
-    title = "Caso"
-    sections: list[tuple[str, list[str]]] = []
-    current_heading: str | None = None
-    current_lines: list[str] = []
-
-    for raw_line in markdown.splitlines():
-        title_match = re.match(r"^#\s+(.+?)\s*$", raw_line)
-        section_match = re.match(r"^##\s+(.+?)\s*$", raw_line)
-
-        if title_match:
-            title = title_match.group(1)
-            continue
-
-        if section_match:
-            if current_heading is not None:
-                sections.append((current_heading, current_lines))
-            current_heading = section_match.group(1)
-            current_lines = []
-            continue
-
-        if current_heading is not None:
-            current_lines.append(raw_line)
-
-    if current_heading is not None:
-        sections.append((current_heading, current_lines))
-
-    return title, sections
+def strip_story_comment(markdown: str) -> str:
+    return re.sub(r"<!--\s*story\s*.*?-->", "", markdown, flags=re.DOTALL | re.IGNORECASE)
 
 
-def render_inline(text: str) -> str:
-    escaped = html.escape(text)
-    escaped = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", escaped)
-    escaped = re.sub(r"`(.+?)`", r"<code>\1</code>", escaped)
-    return escaped
-
-
-def render_lines(lines: list[str]) -> str:
-    blocks: list[str] = []
+def render_markdown(markdown: str) -> str:
+    content = strip_story_comment(markdown)
+    lines = content.splitlines()
+    output: list[str] = []
     paragraph: list[str] = []
-    list_items: list[str] = []
+    section_open = False
+    next_dialogue_is_pause = False
 
     def flush_paragraph() -> None:
-        nonlocal paragraph
-        if paragraph:
-            blocks.append(f"<p>{render_inline(' '.join(paragraph))}</p>")
-            paragraph = []
+        if not paragraph:
+            return
+        text = " ".join(item.strip() for item in paragraph)
+        css_class = ""
+        if text.lower().startswith("**lo que muestra:**"):
+            css_class = ' class="explanation"'
+        elif text.lower().startswith("**regla:**"):
+            css_class = ' class="rule"'
+        output.append(f"<p{css_class}>{inline_markup(text)}</p>")
+        paragraph.clear()
 
-    def flush_list() -> None:
-        nonlocal list_items
-        if list_items:
-            rendered = "".join(f"<li>{render_inline(item)}</li>" for item in list_items)
-            blocks.append(f"<ul>{rendered}</ul>")
-            list_items = []
-
-    for line in lines:
+    index = 0
+    while index < len(lines):
+        line = lines[index].rstrip()
         stripped = line.strip()
         if not stripped:
             flush_paragraph()
-            flush_list()
+            index += 1
             continue
-        if stripped.startswith("- "):
+        if stripped == "<!-- learning:pause -->":
             flush_paragraph()
-            list_items.append(stripped[2:])
-        else:
-            flush_list()
-            paragraph.append(stripped)
+            next_dialogue_is_pause = True
+            index += 1
+            continue
+        if stripped.startswith("# "):
+            flush_paragraph()
+            output.append(f"<h1>{html.escape(stripped[2:].strip())}</h1>")
+            index += 1
+            continue
+        if stripped.startswith("## "):
+            flush_paragraph()
+            if section_open:
+                output.append("</section>")
+            output.append("<section>")
+            output.append(f"<h2>{html.escape(stripped[3:].strip())}</h2>")
+            section_open = True
+            index += 1
+            continue
+        if stripped.startswith("> "):
+            flush_paragraph()
+            match = re.match(r'>\s+\*\*([^*]+):\*\*\s+"(.+)"\s*$', stripped)
+            if match:
+                css = ' class="learning-pause"' if next_dialogue_is_pause else ""
+                output.append(
+                    f"<blockquote{css}><strong>{html.escape(match.group(1))}:</strong>"
+                    f"<span>{html.escape(match.group(2))}</span></blockquote>"
+                )
+                next_dialogue_is_pause = False
+            index += 1
+            continue
+        if stripped == ">":
+            flush_paragraph()
+            index += 1
+            continue
+        if stripped.lower().startswith("<svg"):
+            flush_paragraph()
+            svg_lines = [line]
+            while "</svg>" not in lines[index].lower():
+                index += 1
+                svg_lines.append(lines[index])
+            output.append("\n".join(svg_lines))
+            index += 1
+            continue
+        if stripped.startswith("<!--"):
+            index += 1
+            continue
+        paragraph.append(stripped)
+        index += 1
 
     flush_paragraph()
-    flush_list()
-    return "\n".join(blocks)
+    if section_open:
+        output.append("</section>")
+    return "\n".join(output)
 
 
-def plain_section_text(lines: list[str]) -> str:
-    return " ".join(line.strip().lstrip("- ") for line in lines if line.strip())
-
-
-def render_case(markdown: str) -> str:
-    title, sections = split_sections(markdown)
-    rendered_sections: list[str] = []
-    subtitle = "Narrativa corporativa centrada en datos. Una historia, una evidencia, cero dashboards."
-
-    for heading, lines in sections:
-        css_class = "section"
-        normalized = heading.lower()
-        if normalized == "opening_hook":
-            subtitle = plain_section_text(lines) or subtitle
-            continue
-        if "evidencia" in normalized:
-            css_class += " evidence"
-        if normalized in {"visual_clue", "student_question", "jargon_translation", "analytical_twist"}:
-            css_class += " clue"
-        if normalized in {"weak_decision", "robust_decision"}:
-            css_class += " decision"
-        if "tragicómico" in normalized or "tragicomico" in normalized:
-            css_class += " tragicomic"
-        if normalized in {"tragicomic_ending"}:
-            css_class += " tragicomic"
-        if normalized in {"transferable_rule", "pregunta de transferencia"}:
-            css_class += " rule"
-        display_heading = DISPLAY_HEADINGS.get(normalized, heading)
-        rendered_sections.append(
-            f'<section class="{css_class}">\n'
-            f"  <h2>{html.escape(display_heading)}</h2>\n"
-            f"  {render_lines(lines)}\n"
-            "</section>"
-        )
-
+def build_html(markdown: str) -> str:
+    title_match = re.search(r"^#\s+(.+)$", markdown, re.MULTILINE)
+    title = title_match.group(1).strip() if title_match else "Historia con datos"
+    story = parse_story(markdown)
+    punchline = story.get("punchline", "")
+    body = render_markdown(markdown)
     return f"""<!doctype html>
 <html lang="es">
 <head>
@@ -207,13 +162,9 @@ def render_case(markdown: str) -> str:
   <title>{html.escape(title)}</title>
   <style>{CSS}</style>
 </head>
-<body>
+<body data-story-standard="absurd-office-data" data-punchline="{html.escape(punchline, quote=True)}">
   <main>
-    <header>
-      <h1>{html.escape(title)}</h1>
-      <p class="muted">{html.escape(subtitle)}</p>
-    </header>
-    {''.join(rendered_sections)}
+{body}
   </main>
 </body>
 </html>
@@ -221,15 +172,15 @@ def render_case(markdown: str) -> str:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Render a case markdown file to simple HTML.")
+    parser = argparse.ArgumentParser(description="Render a canonical Markdown story as simple HTML.")
     parser.add_argument("case_path", type=Path)
     parser.add_argument("output_path", type=Path)
     args = parser.parse_args()
 
     markdown = args.case_path.read_text(encoding="utf-8")
-    html_output = render_case(markdown)
+    result = build_html(markdown)
     args.output_path.parent.mkdir(parents=True, exist_ok=True)
-    args.output_path.write_text(html_output, encoding="utf-8")
+    args.output_path.write_text(result, encoding="utf-8")
     print(f"Wrote {args.output_path}")
     return 0
 

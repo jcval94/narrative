@@ -1,101 +1,42 @@
 # Data Science Curriculum
 
-Mapa curricular para variar casos desde aritmética básica hasta ética, gobernanza y monitoreo. Cada caso debe elegir la técnica mínima suficiente para revelar una verdad de negocio.
+Mapa para elegir la técnica mínima suficiente y una mala lógica de oficina que
+pueda dramatizarse. La columna de comedia no contiene remates; contiene la
+decisión absurda de la que debe salir el humor.
 
-Este repositorio no crea dashboards. Crea narrativas con evidencia visual.
-
-La solución correcta no es la más sofisticada. Es la mínima solución robusta que resuelve el problema sin destruir la interpretación de negocio.
-
-La técnica mínima suficiente manda. No uses modelos si una tasa resuelve el caso. No uses una tasa si el comportamiento se adapta y requiere monitoreo.
-
-## Mapa 0-24
-
-| Nivel | Bloque | Técnicas | Tipo de problema de negocio | Tipo de narrativa posible | Visual HTML simple recomendada | Acción robusta | Acción débil | Riesgo de sobreingeniería | Riesgo de subingeniería |
-| ---: | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 0 | Aritmética de negocio | Regla de 3, porcentajes, tasas simples | Impacto extrapolado con base equivocada | Negocio multiplica una mejora local como si aplicara a toda la base | Barra simple o cálculo narrativo | Separar población elegible, tasa real y alcance | Multiplicar por todo el universo | Simular escenarios complejos sin corregir la base | Aceptar el número ejecutivo sin revisar denominador |
-| 1 | Conteos y agregaciones | Conteos, sumas, promedios, medianas | Un promedio oculta extremos o segmentos críticos | El promedio mejora mientras una cola se deteriora | Barras o boxplot simple | Reportar mediana, percentiles y segmentos afectados | Mantener solo promedio | Modelar distribución cuando basta percentil | Ignorar outliers que son el fenómeno |
-| 2 | Ratios y KPIs | Conversión, cancelación, contacto, efectividad | KPI sube porque cambió denominador | Se celebra una mejora creada por exclusiones | Línea antes/después | Versionar definición y medir comparable | Mantener definición que se ve mejor | Crear score complejo para tapar gobernanza | No auditar exclusiones |
-| 3 | Comparación de segmentos | Segmentación básica, cohortes, control simple | Segmento parece malo por mezcla de clientes | Un canal es acusado aunque recibe casos más difíciles | Barras comparativas | Comparar segmentos ajustando mezcla mínima | Castigar al segmento bruto | Usar causalidad avanzada sin necesidad | Comparar peras con comités |
-| 4 | Distribuciones | Histogramas, percentiles, outliers, colas | Pico pequeño revela manipulación o incentivo perverso | Movimientos mínimos activan una regla | Histograma | Redefinir comportamiento legítimo con señales múltiples | Umbral fijo | Modelo opaco cuando basta ver la distribución inicial | Descartar picos como ruido |
-| 5 | Ventanas temporales | Lookback, maduración, censura temporal | Recortar historia oculta fenómeno real | Una herramienta solo ve tres meses, pero el problema madura en seis | Línea temporal | Mantener ventana completa y crear consulta táctica simple | Recortar datos a la plataforma | Construir plataforma grande antes de resolver decisión | Medir solo lo visible |
-| 6 | Calidad de datos | Duplicados, nulos, captura inconsistente, etiquetas pobres | Definición de origen rota | El análisis falla porque el dato fue capturado para operar, no para explicar | Barras de calidad | Corregir captura, ownership y reglas mínimas | Limpiar manualmente cada entrega | Data quality framework gigante antes del caso | Modelar basura con entusiasmo |
-| 7 | Reglas de negocio | Umbrales, reglas parametrizables, scorecards simples | Regla fija se vuelve instructivo para evadirla | La operación aprende exactamente dónde termina la alerta | Distribución con umbral | Parametrizar, monitorear y revisar patrones adaptativos | Subir el umbral | Motor de reglas excesivo | Regla única que todos memorizan |
-| 8 | Estadística básica | Variabilidad, desviación estándar, intervalos | Ruido normal se trata como tendencia | Un mes malo activa una reorganización innecesaria | Línea con banda simple | Usar bandas, histórico y criterio de variación | Reaccionar al último punto | Forecast complejo sin volumen suficiente | Confundir fluctuación con señal |
-| 9 | Pruebas de hipótesis | A/B test, significancia, tamaño de muestra | Campaña ganadora sin evidencia suficiente | Un lift pequeño se vende como revolución | Barras con intervalo | Definir muestra, métrica y criterio antes de lanzar | Declarar ganador temprano | Bayesianismo teatral sin mejorar decisión | Ignorar incertidumbre |
-| 10 | Causalidad básica | Correlación vs causalidad, confusores | Métrica se mueve por estacionalidad | Acción comercial recibe crédito por una temporada que iba a subir | Línea comparativa | Comparar con control o contrafactual simple | Atribuir todo al proyecto | DAG ceremonial sin datos útiles | Confundir correlación con causalidad |
-| 11 | Experimentos | A/B testing, holdout, piloto controlado | Escalar sin piloto medible | El piloto salió bien porque no tenía cómo fallar | Control/tratamiento | Diseñar holdout, duración y reversa | Piloto sin grupo comparable | Plataforma experimental pesada para una prueba pequeña | Lanzar a todos y llamar medición al reporte |
-| 12 | Clasificación supervisada | Regresión logística, árboles, random forest | Detectar fraude, mala venta o riesgo | Señales tempranas predicen casos que una regla fija no ve | Matriz de confusión simple | Modelo interpretable, umbrales revisables y revisión humana | Alerta por un solo criterio | Modelo complejo sin explicación operativa | Regla frágil ante adaptación |
-| 13 | Regresión | Predicción de monto, tiempo o severidad | Estimar impacto esperado | No todos los casos valen lo mismo aunque cuenten igual | Dispersión con línea | Estimar severidad y priorizar capacidad | Promedio global | Modelo sofisticado con falsas precisiones | Tratar severidad como binario |
-| 14 | Interpretabilidad | Coeficientes, SHAP, reglas de árbol, Inside Forest | Convertir modelo en definición operativa | El modelo no es el producto; la definición aprendida sí | Barras de importancia | Traducir señales a reglas auditables y monitoreables | Presentar ranking de variables sin acción | Explicar cada árbol hasta perder negocio | Usar modelo sin entender señales |
-| 15 | Anomalías | Isolation forest, z-score, reglas robustas | Comportamientos raros cambian tras alerta | La anomalía aprende a parecer normal | Histograma o scatter simple | Monitorear desplazamientos y revisar falsos positivos | Bloquear patrón actual | Sistema antifraude sobredimensionado | Cazar solo la anomalía vieja |
-| 16 | Series de tiempo | Tendencia, estacionalidad, forecast, drift | Estacionalidad confundida con mejora | Un proceso se atribuye una caída que ocurre cada año | Línea temporal | Descomponer tendencia y estacionalidad mínima | Comparar contra mes anterior | Forecast complejo sin decisión asociada | Ignorar calendario |
-| 17 | NLP | Clasificación de textos, clustering, embeddings | Tipificaciones pobres esconden motivos reales | Cinco etiquetas limpias esconden veinte problemas operativos | Barras de categorías | Mejorar taxonomía y validar etiquetas con negocio | Forzar todo a cinco categorías | Embeddings sin revisión semántica | Contar etiquetas contaminadas |
-| 18 | Grafos | Relaciones, comunidades, vínculos, centralidad | Red revela colusión o coordinación | Los casos aislados comparten intermediarios | Grafo SVG simple | Investigar comunidades con revisión humana | Bloquear nodos sueltos | Grafo interactivo sin hipótesis | Ignorar vínculos |
-| 19 | Optimización | Asignación, priorización, capacidad | Hay más casos buenos que capacidad | Operativa atiende primero lo fácil, no lo valioso | Ranking simple | Priorizar por valor, riesgo y capacidad | FIFO eterno | Solver innecesario sin restricciones reales | Ordenar por fecha y esperar milagros |
-| 20 | Uplift / incrementalidad | Uplift modeling, canibalización | Campaña vende, pero roba ventas que iban a ocurrir | El éxito bruto oculta cero incrementalidad | Barras de incrementalidad | Medir tratamiento contra control y segmentos persuadibles | Premiar ventas totales | Uplift model sin experimento | Confundir ventas con impacto |
-| 21 | Recomendadores | Next best action, propensión, diversidad | Se recomienda lo fácil, no lo valioso | El motor optimiza comodidad comercial | Barras de ranking | Balancear propensión, valor, diversidad y saturación | Top propensión | Recomendador complejo sin restricciones de negocio | Vender siempre lo obvio |
-| 22 | Monitoreo | Drift, estabilidad, performance temporal | Regla/modelo funcionó hasta que cambió conducta | La alerta envejece mientras todos la celebran | Línea de drift | Monitorear población, señal, desempeño y acciones | Culpar al modelo | Observabilidad gigante sin decisión de retraining | No mirar después de producción |
-| 23 | Gobernanza analítica | Versionado, definiciones, ownership | Nadie sabe qué versión del KPI llegó al comité | El mismo KPI tiene tres verdades según el archivo | Línea con cambio de definición | Versionar definiciones, dueños y notas de cambio | Confiar en final_v7 | Catálogo pesado sin adopción | Dejar definiciones en chats |
-| 24 | Riesgo y ética | Sesgo, falsos positivos, revisión humana | Alerta correcta puede accionar injustamente | Señal útil para investigar se usa para sancionar | Matriz simple de riesgo | Separar señal, investigación, decisión y apelación | Acción automática | Marco ético abstracto sin controles | Confundir probabilidad con culpabilidad |
-
-## Ficha De Control Por Nivel
-
-Usa esta tabla para verificar que cada nivel incluya técnica principal, técnica mínima suficiente, tipo de narrativa, visual simple, mala solución, riesgos y humor. Si el caso no cabe en una fila, quizá estás mezclando dos casos.
-
-| Nivel | Técnica principal | Técnica mínima suficiente | Tipo de narrativa | Visual simple | Mala solución típica | Riesgo de sobreingeniería | Riesgo de subingeniería | Humor tragicómico |
-| ---: | --- | --- | --- | --- | --- | --- | --- | --- |
-| 0 | Aritmética de negocio | Regla de 3 con población elegible | Extrapolación optimista | Barra o cálculo anotado | Multiplicar por todo el universo | Simulación compleja sin base correcta | Aceptar número ejecutivo | "La multiplicación era correcta. La realidad, lamentablemente, no estaba copiada en Excel." |
-| 1 | Agregación robusta | Mediana y percentiles | Promedio que esconde extremos | Boxplot o barras | Reportar solo promedio | Distribución modelada sin decisión | Ignorar colas | "El promedio salió presentable; la cola pidió anonimato." |
-| 2 | KPI comparable | Ratio con denominador versionado | Mejora por cambio de definición | Línea antes/después | Celebrar definición nueva | Score para tapar gobernanza | No auditar exclusiones | "El KPI no mejoró; adelgazó." |
-| 3 | Segmentación básica | Comparación por mezcla mínima | Segmento acusado por mezcla injusta | Barras comparativas | Ranking bruto | Ajuste causal innecesario | Comparar poblaciones distintas | "La sucursal perdió por atender lo que le mandaron." |
-| 4 | Distribución | Histograma con percentiles | Pico pequeño revela incentivo | Histograma | Descartar montos bajos | Modelo opaco para una señal visible | Tratar pico como ruido | "El monto era pequeño; el incentivo venía en tamaño comité." |
-| 5 | Ventana temporal | Curva por maduración | Plataforma recorta evidencia | Línea temporal | Medir solo lo visible | Plataforma nueva antes de decidir | Censurar historia | "Se resolvió el problema reduciendo dónde podía aparecer." |
-| 6 | Calidad de datos | Perfil de nulos, duplicados y etiquetas | Definición rota contamina análisis | Barras de calidad | Limpieza manual eterna | Data quality framework sin ownership | Modelar captura rota | "El Excel temporal pidió renovación anual." |
-| 7 | Reglas de negocio | Umbral con monitoreo adaptativo | Regla que enseña a evadir | Distribución con umbral | Subir umbral fijo | Motor de reglas excesivo | Regla única memorizable | "La regla era secreta hasta que se volvió capacitación." |
-| 8 | Variabilidad | Banda simple o desviación histórica | Ruido tratado como crisis | Línea con banda | Reaccionar al último punto | Forecast sin volumen | Confundir ruido con señal | "El ruido pidió junta y la consiguió." |
-| 9 | Inferencia básica | Intervalo y tamaño de muestra | Campaña ganadora sin evidencia | Barras con intervalo | Declarar ganador temprano | Estadística ceremonial | Ignorar incertidumbre | "Ganó por significancia emocional." |
-| 10 | Causalidad básica | Control simple o comparación temporal | Acción recibe crédito por estacionalidad | Línea comparativa | Atribuir todo al proyecto | DAG sin datos útiles | Correlación como causa | "Diciembre colaboró sin aparecer en la minuta." |
-| 11 | Experimento | Holdout y métrica predefinida | Piloto que quiere escalarse solo | Control vs tratamiento | Lanzar a todos | Plataforma experimental pesada | Piloto sin control | "El piloto fue exitoso porque no tenía cómo fallar." |
-| 12 | Clasificación supervisada | Modelo interpretable con matriz de confusión | Señal temprana de riesgo | Matriz simple | Umbral único | Modelo complejo sin explicación | Regla frágil | "La alerta detectó el fraude. El fraude detectó la alerta." |
-| 13 | Regresión | Relación simple con error | Severidad distinta escondida por conteo | Scatter con línea | Promedio global | Precisión falsa | Tratar severidad como binaria | "Todos los casos eran iguales, salvo por el dinero." |
-| 14 | Interpretabilidad | Coeficientes, reglas o SHAP si hace falta | Modelo convertido en definición operativa | Barras de importancia | Entregar ranking sin decisión | Explicación excesiva sin acción | Usar modelo como caja negra | "El modelo explicó su decisión mejor que la organización explicó su proceso." |
-| 15 | Anomalías | Regla robusta o isolation forest | Patrón raro cambia tras alerta | Histograma o scatter | Bloquear patrón actual | Antifraude sobredimensionado | Cazar anomalía vieja | "La anomalía leyó el manual antes que el comité." |
-| 16 | Series de tiempo | Tendencia y estacionalidad mínima | Mejora confundida con calendario | Línea temporal | Comparar contra mes anterior | Forecast sin decisión | Ignorar calendario | "La temporada alta fue ascendida a estrategia." |
-| 17 | NLP | Revisión de taxonomía y clasificación si procede | Etiquetas limpias esconden motivos | Barras de categorías | Forzar cinco categorías | Embeddings sin validación semántica | Contar etiquetas contaminadas | "Todo cabía en cinco categorías, incluyendo el problema." |
-| 18 | Grafos | Relaciones y comunidades simples | Vínculos revelan coordinación | Grafo SVG simple | Revisar casos aislados | Grafo interactivo sin hipótesis | Ignorar vínculos | "Casualmente, todos los casos casuales se conocían." |
-| 19 | Optimización | Ranking con capacidad y restricciones | Más casos buenos que capacidad | Ranking simple | FIFO | Solver sin restricciones reales | Ordenar por fecha | "Se atendió primero lo que llegó, no lo que dolía." |
-| 20 | Uplift | Incrementalidad con control | Campaña vende lo que ya iba a ocurrir | Barras de uplift | Premiar venta bruta | Uplift sin experimento | Confundir ventas con impacto | "La campaña convirtió a clientes ya convertidos." |
-| 21 | Recomendadores | Propensión con diversidad y valor | Se recomienda lo fácil | Barras de ranking | Top propensión | Recomendador sin restricciones | Vender siempre lo obvio | "El recomendador descubrió que lo obvio escala mejor." |
-| 22 | Monitoreo | Drift y estabilidad temporal | Regla/modelo envejece | Línea de drift | Culpar al modelo | Observabilidad sin decisión | No mirar producción | "El mundo cambió. El modelo no recibió la minuta." |
-| 23 | Gobernanza | Versionado y ownership | KPI con tres verdades | Línea con cambio de definición | Confiar en final_v7 | Catálogo sin adopción | Definiciones en chats | "La definición estaba en el definitivo final ahora sí." |
-| 24 | Ética y riesgo | Matriz de daño y revisión humana | Señal útil mal accionada | Matriz simple | Acción automática | Marco ético abstracto | Probabilidad como condena | "La señal servía para investigar, no para condenar." |
-
-## Ejemplos De Casos
-
-| Nivel | Caso posible | Técnica mínima suficiente | Mala solución típica | Humor posible |
+| Nivel | Concepto | Problema de negocio | Visual mínima | Mala lógica de oficina |
 | ---: | --- | --- | --- | --- |
-| 0 | Negocio estima ahorro multiplicando clientes por ahorro observado en un microsegmento | regla de 3 con población elegible | extrapolar a toda la base | "El ahorro era real. La población, lamentablemente, también." |
-| 1 | Tiempo promedio de atención mejora mientras crecen los casos extremos | mediana y percentiles | reportar solo promedio | "El promedio estaba tranquilo porque los percentiles cargaban con la realidad." |
-| 2 | KPI mejora al excluir casos complejos | denominador comparable | celebrar la nueva definición | "El proceso no mejoró; solo dejó de invitar a los casos difíciles." |
-| 3 | Sucursal parece peor porque recibe clientes más riesgosos | comparación por mezcla | ranking bruto | "La sucursal perdió el ranking por atender exactamente lo que le mandaron." |
-| 4 | Incentivo se activa con movimientos de un peso | histograma | descartar montos pequeños | "El monto era pequeño. La intención venía en tamaño corporativo." |
-| 5 | Cancelaciones relevantes aparecen después del mes 6 | ventana temporal | recortar a lo visible | "Se resolvió el problema reduciendo el área donde podía aparecer." |
-| 6 | Origen de venta tiene capturas inconsistentes | barras de calidad | limpiar a mano cada mes | "El Excel temporal cumplió su primer aniversario, con beneficios completos." |
-| 7 | Regla de alerta se evade justo arriba del umbral | distribución con umbral | subir el umbral | "La regla era secreta hasta que se volvió procedimiento operativo." |
-| 8 | Variación mensual normal dispara crisis | banda de variabilidad | reaccionar al último punto | "El ruido pidió junta y se la concedieron." |
-| 9 | Campaña se declara ganadora con muestra mínima | intervalo de confianza | cortar prueba temprano | "Ganó por significancia emocional." |
-| 10 | Ventas suben por temporada, no por campaña | comparación temporal | atribuir todo a campaña | "Diciembre colaboró con el proyecto sin aparecer en la minuta." |
-| 11 | Piloto sin control se escala | holdout | lanzar a todos | "El piloto fue exitoso: no había forma definida de fracasar." |
-| 12 | Fraude temprano requiere clasificación | modelo supervisado interpretable | umbral único | "La alerta detectó el fraude. El fraude detectó la alerta." |
-| 13 | Severidad promedio oculta pérdidas grandes | regresión simple | tratar todo igual | "Todos los casos eran iguales, salvo por el dinero." |
-| 14 | Modelo útil necesita convertirse en regla operativa | interpretabilidad | entregar SHAP sin decisión | "Se explicó el modelo tan bien que nadie supo qué hacer el lunes." |
-| 15 | Anomalía cambia tras alerta | monitoreo de anomalías | bloquear patrón actual | "La anomalía leyó el manual más rápido que el comité." |
-| 16 | Forecast confunde estacionalidad con mejora | serie temporal | comparar contra mes anterior | "La temporada alta fue ascendida a estrategia." |
-| 17 | NLP reduce demasiados motivos a cinco etiquetas | revisión de taxonomía | agrupar por comodidad | "Todo cabía en cinco categorías, incluyendo el problema." |
-| 18 | Red muestra intermediarios comunes | grafo simple | revisar casos aislados | "Casualmente, todos los casos casuales conocían al mismo intermediario." |
-| 19 | Operativa no puede atender todos los casos | priorización | FIFO | "Se atendió primero lo que llegó primero, no lo que dolía más." |
-| 20 | Campaña vende a quienes ya iban a comprar | uplift | premiar venta bruta | "La campaña convirtió a clientes que ya estaban convertidos." |
-| 21 | Recomendador ofrece siempre lo fácil | recomendación con diversidad | top propensión | "El recomendador descubrió que vender lo obvio es más cómodo que vender lo correcto." |
-| 22 | Modelo cae por drift de población | monitoreo | culpar al modelo | "El mundo cambió. El modelo no recibió la minuta." |
-| 23 | KPI sin versionado cambia cada comité | gobernanza | confiar en archivo final_v7 | "La definición estaba en el Excel definitivo, versión final, final ahora sí." |
-| 24 | Alerta útil genera falsos positivos sensibles | ética/riesgo | accionar automático | "La señal servía para investigar, no para condenar. Pequeña diferencia, enorme demanda." |
+| 0 | Aritmética y proporciones | Extrapolar desde una base equivocada | Barras de población | Multiplicar por todos porque el promedio sí estaba bien |
+| 1 | Agregaciones | Un promedio oculta casos graves | Histograma y percentiles | Compensar seis horas con muchos casos de dos minutos |
+| 2 | Ratios y KPIs | Cambia el denominador | Dos series versionadas | Conservar el nombre para fingir continuidad |
+| 3 | Segmentos | Mezcla distinta produce ranking injusto | Barras por dificultad | Premiar a quien recibe lo fácil |
+| 4 | Distribuciones | Picos revelan manipulación | Histograma con corte | Mover el límite cuando la gente aprende a evitarlo |
+| 5 | Ventanas temporales | La herramienta corta la historia | Línea por maduración | Medir solo los meses que caben en pantalla |
+| 6 | Calidad de datos | Etiquetas o captura no explican | Barras de calidad | Comprar un modelo antes de arreglar `Otros` |
+| 7 | Reglas de negocio | Una regla fija enseña evasión | Distribución con umbral | Publicar el límite en la capacitación |
+| 8 | Variabilidad | Ruido normal se trata como crisis | Línea con banda | Reorganizar por un solo mes malo |
+| 9 | Inferencia | Ganador con muestra pequeña | Efecto con intervalo | Detener la prueba en el primer minuto favorable |
+| 10 | Causalidad básica | Temporada recibe crédito de proyecto | Serie y comparación | Comparar meses altos contra meses bajos |
+| 11 | Experimentos | Piloto sin control | Tratamiento contra control | Lanzar a todos y luego preguntar qué habría pasado |
+| 12 | Clasificación | Alertas con falsos positivos | Matriz de confusión | Celebrar detección aunque Operación no pueda revisar |
+| 13 | Regresión | Casos con severidad distinta | Dispersión | Tratar todos los casos como si costaran lo mismo |
+| 14 | Interpretabilidad | Modelo sin acción clara | Importancia o reglas | Entregar variables importantes y dejar que otro decida |
+| 15 | Anomalías | El comportamiento se adapta | Histograma o dispersión | Bloquear el patrón viejo y declarar victoria |
+| 16 | Series de tiempo | Estacionalidad y tendencia | Línea temporal | Usar enero como meta de agosto |
+| 17 | NLP | Taxonomía pobre esconde motivos | Barras reclasificadas | Automatizar etiquetas que nadie entiende |
+| 18 | Grafos | Casos aislados comparten vínculos | Grafo simple | Revisar folios uno por uno para no mirar relaciones |
+| 19 | Optimización | Capacidad limitada | Ranking con restricciones | Atender primero lo fácil porque cierra más rápido |
+| 20 | Impacto incremental | Campaña toma crédito de ventas naturales | Barras con control | Contar toda compra posterior como causada |
+| 21 | Recomendación | Se ofrece lo cómodo, no lo valioso | Ranking comparado | Recomendar siempre lo que ya iba a comprarse |
+| 22 | Monitoreo | El modelo envejece | Desempeño y drift | Medir que el servicio está prendido, no que acierta |
+| 23 | Gobernanza | Varias versiones de un indicador | Barras por versión | Elegir la verdad por el nombre del archivo |
+| 24 | Riesgo y ética | Una señal se vuelve castigo | Errores con y sin revisión | Quitar a la persona porque el score ya dio un número |
+
+## Selección
+
+1. Elige la decisión que debe cambiar.
+2. Usa el concepto más simple que permita cambiarla.
+3. Diseña una sola gráfica.
+4. Convierte la mala lógica en una conversación, no en una moraleja.
+5. Si el comportamiento puede adaptarse, incluye monitoreo.
+6. Si la decisión afecta personas, incluye revisión y apelación.

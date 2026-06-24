@@ -1,152 +1,93 @@
 from __future__ import annotations
 
 import argparse
+import html
 import re
 import sys
 import unicodedata
 from pathlib import Path
 
 
-FORBIDDEN_HTML_PATTERNS = [
-    r"<select\b",
-    r"<nav\b",
-    r"filter",
-    r"filtro",
-    r"tablist",
-    r"role=[\"']tab",
-    r"kpi-card",
-    r"kpi card",
-    r"metric-card",
-    r"scorecard",
-    r"dashboard-grid",
-    r"filter-panel",
-    r"drilldown",
-    r"self-service",
-    r"data-table",
-    r"class=[\"'][^\"']*(dashboard|bi-layout|kpi-card|metric-card|scorecard|filter-panel|tab-panel)",
-]
-
-REQUIRED_TEXT = [
-    "nivel analítico",
-    "técnica",
-    "evidencia visual",
-    "qué parece",
-    "qué revela",
-    "giro",
-    "acción robusta",
-    "acción débil",
-    "piloto",
-    "comentario tragicómico",
-    "preguntas",
-]
-
-NARRATIVE_LEARNING_REQUIRED_TEXT = [
-    "misterio",
-    "evidencia visual",
-    "pista",
-    "lectura guiada",
-    "lo que parece",
-    "lo que realmente pasa",
-    "pregunta activa",
-    "traducción",
-    "giro",
-    "decisión cómoda",
-    "acción robusta",
-    "piloto",
-    "cierre tragicómico",
-    "regla transferible",
-    "pregunta de transferencia",
-]
-
-
-def visible_text(html: str) -> str:
-    text = re.sub(r"<script\b.*?</script>", " ", html, flags=re.IGNORECASE | re.DOTALL)
-    text = re.sub(r"<style\b.*?</style>", " ", text, flags=re.IGNORECASE | re.DOTALL)
-    text = re.sub(r"<[^>]+>", " ", text)
-    return re.sub(r"\s+", " ", text).strip().lower()
+BANNED = ("slide", "deck", "trae comparables", "escalaciones")
 
 
 def fold_text(value: str) -> str:
-    normalized = unicodedata.normalize("NFKD", value.lower())
-    ascii_text = "".join(ch for ch in normalized if not unicodedata.combining(ch))
-    return re.sub(r"\s+", " ", ascii_text).strip()
+    normalized = unicodedata.normalize("NFKD", html.unescape(value).lower())
+    return "".join(ch for ch in normalized if not unicodedata.combining(ch))
 
 
-def first_visible_words(html: str, limit: int = 60) -> str:
-    words = visible_text(html).split()
-    return " ".join(words[:limit])
-
-
-def validate_html(html: str, narrative_learning_standard: bool = False) -> list[str]:
-    lowered = html.lower()
+def validate_html(page: str) -> list[str]:
     errors: list[str] = []
+    lowered = page.lower()
+    if 'data-story-standard="absurd-office-data"' not in lowered:
+        errors.append("Missing data-story-standard contract.")
+    if "<script" in lowered:
+        errors.append("Simple story HTML must not use JavaScript.")
+    if re.search(r"(?:src|href)=[\"']https?://", lowered):
+        errors.append("Simple story HTML must not use external resources.")
+    if lowered.count("<svg") != 1:
+        errors.append("HTML must contain exactly one SVG chart.")
+    scenes = lowered.count("<section>")
+    if not 3 <= scenes <= 5:
+        errors.append("HTML must contain three to five story scenes.")
+    if len(re.findall(r"<blockquote(?:\s+[^>]*)?>", lowered)) < 14:
+        errors.append("HTML needs at least fourteen dialogue interventions.")
+    if lowered.count('class="learning-pause"') != 1:
+        errors.append("HTML must contain exactly one learning pause.")
+    if lowered.count('class="explanation"') != 1:
+        errors.append("HTML must contain exactly one chart explanation.")
+    if lowered.count('class="rule"') != 1:
+        errors.append("HTML must contain exactly one final rule.")
+    if "<strong>" not in lowered:
+        errors.append("Dialogue speakers are not visible.")
+    folded = fold_text(re.sub(r"<[^>]+>", " ", page))
+    for term in BANNED:
+        if term in folded:
+            errors.append(f"Forbidden dialogue vocabulary found: {term}")
+    return errors
 
-    for pattern in FORBIDDEN_HTML_PATTERNS:
-        if re.search(pattern, lowered):
-            errors.append(f"Forbidden dashboard/UI pattern found: {pattern}")
 
-    for text in REQUIRED_TEXT:
-        if text not in lowered:
-            errors.append(f"Missing narrative HTML section: {text}")
-
-    svg_count = lowered.count("<svg")
-    canvas_count = lowered.count("<canvas")
-    visual_count = svg_count + canvas_count
-    if visual_count == 0:
-        errors.append("Missing central visualization: no SVG or canvas found.")
-    if visual_count > 2:
-        errors.append(f"Too many visualizations: {visual_count}. Maximum is 2 with justification.")
-
-    if narrative_learning_standard:
-        text = visible_text(html)
-        folded_text = fold_text(text)
-        first_words = fold_text(first_visible_words(html))
-        if "contexto breve" in first_words or first_words.startswith("contexto"):
-            errors.append("Weak opening: HTML starts with context instead of intrigue.")
-
-        for required in NARRATIVE_LEARNING_REQUIRED_TEXT:
-            if fold_text(required) not in folded_text:
-                errors.append(f"Missing narrative learning HTML element: {required}")
-
-        if "?" not in text and "que mirar" not in folded_text:
-            errors.append("Missing active question for the student.")
-
-        paragraph_count = len(re.findall(r"<p\b", lowered))
-        word_count = len(text.split())
-        has_guided_visual_language = any(
-            marker in folded_text
-            for marker in ["pista", "lectura guiada", "lo que parece", "lo que realmente pasa"]
-        )
-        if word_count > 1500 and paragraph_count > 30 and not has_guided_visual_language:
-            errors.append("HTML appears too textual for the narrative learning standard.")
-
+def validate_collection(pages: dict[str, str]) -> list[str]:
+    errors: list[str] = []
+    punchlines: dict[str, list[str]] = {}
+    for name, page in pages.items():
+        match = re.search(r'data-punchline="([^"]*)"', page, re.IGNORECASE)
+        if not match:
+            errors.append(f"{name}: Missing data-punchline.")
+            continue
+        punchline = fold_text(match.group(1)).strip()
+        if punchline and punchline != "ah":
+            punchlines.setdefault(punchline, []).append(name)
+    for punchline, names in punchlines.items():
+        if len(names) > 1:
+            errors.append(f"Repeated HTML punchline '{punchline}': {', '.join(names)}")
     return errors
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Validate a simple narrative HTML story.")
-    parser.add_argument(
-        "--narrative-learning-standard",
-        action="store_true",
-        help="Apply the Narrative Learning Experience Standard for new or regenerated case HTML.",
-    )
-    parser.add_argument("html_path", type=Path)
+    parser = argparse.ArgumentParser(description="Validate simple linear story HTML.")
+    parser.add_argument("--collection", action="store_true")
+    parser.add_argument("html_paths", nargs="+", type=Path)
     args = parser.parse_args()
 
-    if not args.html_path.exists():
-        print(f"ERROR: file not found: {args.html_path}", file=sys.stderr)
+    missing = [path for path in args.html_paths if not path.exists()]
+    if missing:
+        for path in missing:
+            print(f"ERROR: file not found: {path}", file=sys.stderr)
         return 2
 
-    errors = validate_html(
-        args.html_path.read_text(encoding="utf-8"),
-        narrative_learning_standard=args.narrative_learning_standard,
-    )
+    pages = {str(path): path.read_text(encoding="utf-8") for path in args.html_paths}
+    errors: list[str] = []
+    for name, page in pages.items():
+        errors.extend(f"{name}: {error}" for error in validate_html(page))
+    if args.collection:
+        errors.extend(validate_collection(pages))
+
     if errors:
         print("NEEDS_REVISION")
         for error in errors:
             print(f"- {error}")
         return 1
-
     print("PASS")
     return 0
 

@@ -1,28 +1,8 @@
-# Codex Create Full Case
+# Crear un caso completo
 
-Crea un caso completo usando todas las fases de `CODEX_WORKFLOW.md`.
+Sigue `CODEX_WORKFLOW.md` y `ABSURD_OFFICE_COMEDY_DATA_STANDARD.md`.
 
-Empieza obligatoriamente con `00_curriculum_mapper`. Declara nivel analítico, técnica principal y técnica mínima suficiente antes de escribir historia, datos o HTML.
-
-Después diseña el `Narrative Learning Experience Standard` antes de renderizar: `opening_hook`, `protagonist_or_student_role`, `central_mystery`, `official_story`, `hidden_story`, `visual_clue`, `student_question`, `jargon_translation`, `analytical_twist`, `weak_decision`, `robust_decision`, `tragicomic_ending` y `transferable_rule`.
-
-Entrada:
-
-```text
-Tema: [tema]
-Restricción o área: [opcional]
-Nivel sugerido: [opcional]
-```
-
-Salida requerida:
-
-- `examples/cases/NN_nombre.md`
-- `examples/data_specs/NN_nombre.yml`
-- `examples/visual_specs/NN_nombre.yml`
-- `examples/html/NN_nombre.html`
-
-El caso debe abrir con intriga, no con contexto breve. Debe sentirse como investigación educativa, no como reporte expositivo.
-
-Antes de terminar, valida estructura y confirma que no hay dashboard.
-
-También confirma que no hay filtros, pestañas, KPI cards de monitoreo, exploradores, self-service ni navegación compleja. Usa las validaciones con `--narrative-learning-standard` cuando el caso use el nuevo estándar. Termina con `14_quality_gatekeeper`.
+Entrega Markdown canónico, data spec, visual spec y HTML generado. Usa el story
+spine corto, 3-5 escenas, 400-750 palabras, personajes explícitos, una gráfica
+SVG, una pausa educativa natural, un remate único y una regla. El humor nace de
+una mala lógica corporativa que escala. Valida archivos y colección.

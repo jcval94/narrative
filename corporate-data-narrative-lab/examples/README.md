@@ -1,19 +1,24 @@
-# Examples
+# Ejemplos
 
-Tres casos completos muestran el patrón del repositorio:
+La colección contiene 18 historias canónicas en Markdown, cada una con una
+gráfica SVG, un contrato de datos, un contrato visual y un HTML lineal.
 
-1. `01_movimientos_pequenos_incentivos.md`: incentivo manipulado por movimientos pequeños.
-2. `02_cancelaciones_ventana_temporal.md`: ventana temporal corta que oculta cancelaciones maduras.
-3. `03_kpi_que_mejoro_por_definicion.md`: KPI que mejora porque cambió el denominador.
-4. `04_ahorro_extrapolado_campana.md`: ahorro inflado por extrapolar sobre la base equivocada.
-5. `05_duplicados_productividad_operativa.md`: productividad inflada por duplicados y cambio de unidad de conteo.
-6. `06_campana_ventas_canibalizadas_uplift.md`: campaña con ventas brutas altas pero baja incrementalidad.
+| Casos | Cobertura |
+| --- | --- |
+| 01-08 | canal de captura, encuesta, leakage, asignación, colas, productividad, dificultad y estacionalidad |
+| 09-12 | extrapolación, definición de KPI, umbrales y calidad de taxonomía |
+| 13-18 | experimentos, fraude, drift, gobernanza, campañas y decisiones automáticas |
 
-Cada caso tiene:
+No existe carpeta de ejercicios. La única pausa educativa vive dentro de la
+historia, donde una persona de la escena hace la pregunta que obliga a mirar la
+gráfica.
 
-- markdown narrativo en `examples/cases/`;
-- HTML autocontenido en `examples/html/`;
-- especificación de datos sintéticos en `examples/data_specs/`;
-- especificación de evidencia en `examples/visual_specs/`.
+Los archivos comparten numeración:
 
-Las páginas HTML son verticales, sobrias y sin filtros. La evidencia no pretende explorar; pretende hacer visible una verdad incómoda.
+- `cases/NN_*.md`
+- `data_specs/NN_*.yml`
+- `visual_specs/NN_*.yml`
+- `html/NN_*.html`
+
+Veredicto editorial esperado: `PASS` solo si la conversación suena real, la
+mala lógica da risa y la gráfica enseña qué estaba mal.

@@ -1,8 +1,6 @@
 # Anti-Patterns
 
-- Preguntas de definición.
-- Actividades de construir dashboards.
-- Respuestas que solo repiten la tesis.
-- Evaluar por complejidad técnica.
-- Ignorar comunicación a negocio.
-
+- Opciones A/B/C.
+- Pregunta de definicion.
+- Explicacion que repite toda la historia.
+- Regla distinta para cada parrafo.

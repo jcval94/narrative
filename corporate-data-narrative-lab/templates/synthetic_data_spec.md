@@ -1,52 +1,16 @@
 # Synthetic Data Spec
 
-## Objetivo narrativo
+```yaml
+case_id:
+title:
+concept:
+scenario:
+seed:
+observations:
+variables: []
+key_values: {}
+synthetic_data: true
+```
 
-Qué historia deben sostener los datos.
-
-## Historia que deben permitir investigar
-
-- official_story:
-- hidden_story:
-- visual_clue:
-- analytical_twist:
-- weak_decision que debe parecer tentadora:
-- robust_decision que los datos deben justificar:
-
-## Nivel analítico y técnica mínima suficiente
-
-- nivel:
-- técnica principal:
-- técnica mínima suficiente:
-- por qué estos datos bastan:
-
-## Columnas
-
-| Columna | Tipo | Descripción | Justificación narrativa |
-| --- | --- | --- | --- |
-
-Regla: si una columna no ayuda a contar la historia, no existe.
-
-## Distribuciones
-
-Describe rangos, medias, proporciones y sesgos intencionales.
-
-## Segmentos
-
-Segmentos necesarios para que exista conflicto o comparación.
-
-## Ruido
-
-Ruido realista que evita que el caso parezca inventado con regla perfecta.
-
-## Variable temporal
-
-Fechas, meses desde evento, ventanas, antes/después o maduración.
-
-## Patrón intencional
-
-Señal que debe aparecer en la visualización.
-
-## Casos borde
-
-Casos que prueban que la solución débil falla.
+Cada variable debe aparecer en la gráfica o ser necesaria para sostener su
+comparación. `key_values` contiene los números que la historia menciona.
