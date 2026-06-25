@@ -1,6 +1,6 @@
 # Ejemplos
 
-La colección contiene 48 historias canónicas en Markdown, cada una con una
+La colección contiene 62 historias canónicas en Markdown, cada una con una
 gráfica SVG, un contrato de datos, un contrato visual y un HTML lineal.
 
 | Casos | Cobertura |
@@ -13,6 +13,9 @@ gráfica SVG, un contrato de datos, un contrato visual y un HTML lineal.
 | 30-34 | producto de datos, dueño operativo, métrica técnica, costo de error y evaluación por segmento |
 | 35-40 | Colab, rutas, VS Code, entornos virtuales, Git y reproducibilidad de datos |
 | 41-48 | README, branches, pull requests, asistentes de código, PRD, criterios de aceptación y tareas para agentes |
+| 49-54 | programación en Python, estructuras, automatización, funciones, errores y reto Minecraft |
+| 55-59 | SQL básico, joins, ventanas, ABT para ML, esquema y contexto |
+| 60-62 | lectura de archivos y APIs, pandas esencial y limpieza real |
 
 No existe carpeta de ejercicios. La única pausa educativa vive dentro de la
 historia, donde una persona de la escena hace la pregunta que obliga a mirar la
