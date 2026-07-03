@@ -14,6 +14,7 @@
 10. Cierra con decision, remate unico y regla.
 11. Genera el HTML lineal desde Markdown.
 12. Valida caso, HTML, YAML y coleccion.
+13. Regenera el sitio de GitHub Pages desde la coleccion canonica.
 
 ## Comandos
 
@@ -23,6 +24,7 @@ python tools/validate_case_structure.py examples/cases/NN_caso.md
 python tools/validate_case_structure.py --collection (Get-ChildItem examples/cases/*.md)
 python tools/validate_html_story.py examples/html/NN_caso.html
 python tools/validate_html_story.py --collection (Get-ChildItem examples/html/*.html)
+python tools/build_pages_site.py
 python -m pytest
 ```
 
