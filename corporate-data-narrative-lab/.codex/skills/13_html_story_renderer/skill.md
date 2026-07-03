@@ -5,6 +5,11 @@
 Convierte Markdown canonico en HTML lineal sin agregar, quitar ni reordenar
 contenido.
 
+## Limite
+
+No crea navegacion publica, indice, tarjetas, filtros ni experiencia de GitHub
+Pages. Esa responsabilidad pertenece a `15_pages_site_publisher`.
+
 ## Contrato
 
 - HTML autocontenido y responsive.

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>El groupby que perdio los lunes</title>
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-page="case">
+  <header class="case-header">
+    <nav class="topbar" aria-label="Navegacion principal">
+      <a class="brand" href="../index.html">Corporate Data Narrative Lab</a>
+      <a class="text-link" href="../index.html">Indice</a>
+    </nav>
+    <div class="case-kicker">
+      <span class="case-number">61</span>
+      <span class="topic-chip">Pandas esencial</span>
+    </div>
+    <h1>El groupby que perdio los lunes</h1>
+    <div class="case-summary">
+      <p><strong>Concepto:</strong> pandas esencial con filtros, joins, groupby y fechas</p>
+      <p><strong>Pregunta de la grafica:</strong> Que validaciones conviene hacer antes de usar filtros, joins y groupby en pandas.</p>
+      <p><strong>Lectura correcta:</strong> Se perdieron al filtrar texto como si fuera fecha.</p>
+      <p><strong>Decision que cambia:</strong> convertir tipos, filtrar explicitamente, unir con llaves y agrupar despues de validar</p>
+    </div>
+  </header>
+
+  <main class="story-shell">
+<h1>El groupby que perdio los lunes</h1>
+<section>
+<h2>La tabla bonita</h2>
+<blockquote><strong>Olga:</strong><span>El groupby ya resume ventas por dia.</span></blockquote>
+<blockquote><strong>Ivan:</strong><span>Pero faltan varios lunes.</span></blockquote>
+<blockquote><strong>Ceci:</strong><span>Tal vez esos dias no hubo ventas.</span></blockquote>
+<blockquote><strong>Olga:</strong><span>O la fecha no era fecha.</span></blockquote>
+<blockquote><strong>Ceci:</strong><span>Pandas no se quejo.</span></blockquote>
+<blockquote><strong>el mentor:</strong><span>Pandas no siempre se queja por ti.</span></blockquote>
+<p>La clase no se atoro por falta de ganas. Se atoro porque una idea razonable se habia quedado a medio camino entre conversacion y procedimiento. En la mesa ya habia prisa, capturas abiertas y alguien diciendo que lo importante era avanzar. Por eso el error parecia pequeno: no rompia la historia completa, solo la parte donde la maquina tenia que entender exactamente que hacer.</p>
+</section>
+<section>
+<h2>La fecha era texto disfrazado</h2>
+<blockquote><strong>Ceci:</strong><span>Rellenamos los lunes con cero.</span></blockquote>
+<blockquote><strong>Ivan:</strong><span>Primero averigüemos si los borramos.</span></blockquote>
+<blockquote><strong>Ceci:</strong><span>El cero se ve ordenado.</span></blockquote>
+<blockquote><strong>el mentor:</strong><span>Ordenado y falso es peor.</span></blockquote>
+<blockquote><strong>Ceci:</strong><span>La grafica quedaba suave.</span></blockquote>
+<blockquote><strong>Olga:</strong><span>Demasiado suave para una semana real.</span></blockquote>
+<blockquote><strong>Ivan:</strong><span>Entonces el atajo si hizo trabajo, solo que no el trabajo correcto.</span></blockquote>
+<blockquote><strong>el mentor:</strong><span>Quiero ver donde se separa la intuicion del resultado.</span></blockquote>
+<p>La solucion comoda tenia una virtud: se podia explicar en una frase. El problema era que tambien escondia entradas, reglas y excepciones. Cuando el grupo la siguio dos pasos mas, aparecio lo de siempre: una salida que parecia formal, una persona intentando defenderla y otra buscando el dato exacto donde la historia dejaba de sostenerse.</p>
+</section>
+<section>
+<h2>Filtrar despues de convertir</h2>
+<blockquote><strong>Olga:</strong><span>Revise tipos, filtros y filas antes del groupby.</span></blockquote>
+<blockquote><strong>el mentor:</strong><span>Donde se fueron los lunes.</span></blockquote>
+<blockquote><strong>Olga:</strong><span>Se perdieron al filtrar texto como si fuera fecha.</span></blockquote>
+<blockquote><strong>Ivan:</strong><span>Eso cambia lo que tenemos que enseñar.</span></blockquote>
+<blockquote><strong>Olga:</strong><span>Si. Primero la regla humana, luego la forma tecnica.</span></blockquote>
+<svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="filas antes y despues de filtros de fecha">
+  <rect width="720" height="320" fill="#fff"/>
+  <text x="36" y="32" font-size="18" font-weight="bold">filas antes y despues de filtros de fecha</text>
+  <line x1="58" y1="260" x2="662" y2="260" stroke="#777" stroke-width="2"/>
+  <rect x="70" y="160" width="174" height="100" fill="#286d9b"/>
+  <text x="157" y="150" font-size="18" text-anchor="middle">52</text>
+  <text x="157" y="286" font-size="13" text-anchor="middle">sin validar</text>
+  <rect x="272" y="101" width="174" height="159" fill="#d58b2f"/>
+  <text x="359" y="91" font-size="18" text-anchor="middle">83</text>
+  <text x="359" y="286" font-size="13" text-anchor="middle">fechas ok</text>
+  <rect x="474" y="85" width="174" height="175" fill="#4c8b63"/>
+  <text x="561" y="75" font-size="18" text-anchor="middle">91</text>
+  <text x="561" y="286" font-size="13" text-anchor="middle">join validado</text>
+  <text x="36" y="306" font-size="13" fill="#9f3625">Los tipos correctos protegen el resumen.</text>
+</svg>
+<blockquote class="learning-pause"><strong>Ivan:</strong><span>Que validaciones conviene hacer antes de usar filtros, joins y groupby en pandas.</span></blockquote>
+<p class="explanation"><strong>Lo que muestra:</strong> La evidencia muestra que pandas permite transformar rapido, pero exige revisar tipos, nulos, llaves y conteos. Convertir fechas antes de filtrar evita excluir datos validos. El groupby solo resume lo que sobrevivio.</p>
+</section>
+<section>
+<h2>Agrupar con piso firme</h2>
+<blockquote><strong>el mentor:</strong><span>El flujo validara tipos y conteos antes de resumir.</span></blockquote>
+<blockquote><strong>Ceci:</strong><span>Habra mas pasos antes de la grafica.</span></blockquote>
+<blockquote><strong>Olga:</strong><span>Y menos dias desaparecidos.</span></blockquote>
+<blockquote><strong>Ceci:</strong><span>Y si alguien quiere saltarse ese paso.</span></blockquote>
+<blockquote><strong>Olga:</strong><span>Que primero explique que evidencia esta dispuesto a perder.</span></blockquote>
+<blockquote><strong>Ivan:</strong><span>Pandas no odio los lunes; nosotros los dejamos como texto.</span></blockquote>
+<p class="rule"><strong>Regla:</strong> en pandas, valida tipos y filas antes de confiar en filtros, joins o groupby.</p>
+</section>
+  </main>
+
+  <nav class="case-pager" aria-label="Navegacion entre casos">
+    <a class="pager-link" href="60_lectura_csv_excel_json_api.html">Anterior: Las primeras runas y el archivo que hablaba raro</a>
+    <a class="pager-link" href="../index.html">Todos los casos</a>
+    <a class="pager-link" href="62_limpieza_nulos_duplicados_tipos_outliers.html">Siguiente: La categoria Otro que se comio la limpieza</a>
+  </nav>
+</body>
+</html>

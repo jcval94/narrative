@@ -11,6 +11,7 @@
 7. Cerrar con decision, remate unico y regla.
 8. Generar HTML lineal.
 9. Validar archivos y coleccion.
+10. Regenerar `/docs` con `tools/build_pages_site.py`.
 
 ## Mejorar
 
