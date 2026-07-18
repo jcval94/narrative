@@ -16,3 +16,4 @@ Todas las skills aplican `ABSURD_OFFICE_COMEDY_DATA_STANDARD.md`.
 | 9-12 | Skills analiticas | Proteger decision, piloto, riesgo y rigor. |
 | 13 | `13_html_story_renderer` | Renderizar el Markdown sin inventar contenido. |
 | 14 | `14_quality_gatekeeper` | Auditar naturalidad, humor, datos y variedad. |
+| 15 | `create-colab-data-story` | Crear notebooks Colab con historias del catálogo y datos reales. |
