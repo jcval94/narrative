@@ -1,4 +1,4 @@
 interface:
   display_name: "Colab Data Story"
-  short_description: "Crea notebooks narrativos interactivos con datos reales"
-  default_prompt: "Use $create-colab-data-story para crear un notebook Colab interactivo que conecte hasta cinco conceptos con una historia y datos reales."
+  short_description: "Crea y revisa notebooks narrativos con datos reales"
+  default_prompt: "Use $create-colab-data-story para crear un notebook Colab interactivo que conecte hasta cinco conceptos con una historia, datos reales y doble revisión visual-editorial."

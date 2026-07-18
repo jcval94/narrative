@@ -8,7 +8,7 @@
 4. Canonical story creation
 5. Notebook specification
 6. Visual, code, and image rules
-7. Validation and handoff
+7. Double-check and handoff
 
 ## 1. Repository and story contract
 
@@ -196,14 +196,30 @@ Allow zero or one contextual online image. Require an HTTPS image URL, HTTPS
 source page, license, credit, and alt text. Verify that the URL returns an image
 content type. Omit an image that is merely decorative or cannot be licensed.
 
-## 7. Validation and handoff
+## 7. Double-check and handoff
 
-Run structural validation, live-source validation, and execution:
+Run structural validation, live-source validation, and the first execution:
 
 ```powershell
 python .codex/skills/create-colab-data-story/scripts/validate_notebook.py NOTEBOOK.ipynb --check-network --execute
 ```
 
+Then read the executed artifact and apply `review-checklist.md`. Run a second,
+fresh execution plus rendered-output review:
+
+```powershell
+python .codex/skills/create-colab-data-story/scripts/review_notebook.py NOTEBOOK.ipynb --execute --stamp
+```
+
+The second gate must find one executed learner result and one labeled Plotly
+figure per concept. Every figure needs hover or direct labels, its own native
+control, an explicit non-default palette, honest axes, units or meaning, and a
+title with a contextual subtitle. The story needs at least two speaking
+characters, a contradiction that the data resolves, distinct interpretations,
+and a decision no stronger than the executed evidence. The PASS stamp is bound
+to notebook sources; any later source or narrative-metadata edit makes it stale.
+
 Also validate every newly persisted canonical case with the repository case,
 HTML, and collection validators. Hand off the notebook path, source status, and
 any execution gap. Never write a takeaway before inspecting executed outputs.
+Do not hand off without two passing gates and a current quality-review stamp.

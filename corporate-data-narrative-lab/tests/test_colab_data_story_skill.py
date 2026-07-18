@@ -30,6 +30,7 @@ def load_module(name: str, relative_path: str) -> ModuleType:
 catalog = load_module("colab_story_catalog", "scripts/catalog_stories.py")
 renderer = load_module("colab_story_renderer", "scripts/render_notebook.py")
 validator = load_module("colab_story_validator", "scripts/validate_notebook.py")
+reviewer = load_module("colab_story_reviewer", "scripts/review_notebook.py")
 
 
 def make_spec(concept_count: int, *, exercises: bool = False) -> dict:
@@ -41,15 +42,19 @@ def make_spec(concept_count: int, *, exercises: bool = False) -> dict:
             "name": name,
             "connection_from_previous": previous,
             "question": f"¿Qué cambia al aplicar {name}?",
-            "scene": "El equipo abre la misma tabla porque la primera respuesta dejó una duda concreta.",
+            "scene": (
+                '> **La jefa:** "¿Entonces ya podemos decidir?"\n>\n'
+                '> **La analista:** "Todavía no; la misma tabla dejó una duda concreta."'
+            ),
             "learning_code": (
                 f'resumen_{index} = df.groupby("group", as_index=False)["value"].mean()\n'
                 f"resumen_{index}"
             ),
             "visualization_code": (
                 f'vista_{index} = df.groupby("group", as_index=False)["value"].mean()\n'
-                f'fig = px.bar(vista_{index}, x="group", y="value", title="{name}")\n'
-                'fig.update_layout(updatemenus=[{"buttons": [{"label": "Todos", "method": "update", "args": [{}]}]}])\n'
+                f'fig = px.bar(vista_{index}, x="group", y="value", color_discrete_sequence=["#2F5D62"], title="{name}<br><sup>n=4 observaciones de prueba</sup>")\n'
+                'fig.update_traces(marker_line_color="#173F5F", hovertemplate="grupo=%{x}<br>media=%{y:.1f}<extra></extra>")\n'
+                'fig.update_layout(xaxis_title="Grupo", yaxis_title="Media (unidades)", updatemenus=[{"buttons": [{"label": "Todos", "method": "update", "args": [{}]}]}])\n'
                 "fig.show()"
             ),
             "interpretation": "La comparación usa las mismas observaciones y cambia la decisión sin inventar causalidad.",
@@ -65,7 +70,10 @@ def make_spec(concept_count: int, *, exercises: bool = False) -> dict:
         "title": "Una decisión, varias preguntas",
         "level": "adaptive",
         "central_question": "¿Qué evidencia necesitamos antes de cambiar la operación?",
-        "story_intro": "Una jefa celebra un promedio y el equipo decide revisar qué observaciones quedaron detrás.",
+        "story_intro": (
+            '> **La jefa:** "El promedio quedó bonito; ya podemos decidir."\n>\n'
+            '> **La analista:** "Bonito sí. Primero veamos qué observaciones quedaron detrás."'
+        ),
         "synthesis": "Cada concepto responde la limitación encontrada por el anterior usando la misma tabla.",
         "decision": "Comparar los grupos y documentar la incertidumbre antes de escalar.",
         "rule": "Una técnica nueva debe responder una limitación real de la anterior.",
@@ -267,6 +275,23 @@ def test_rendered_notebook_executes_top_to_bottom() -> None:
     code_cells = [cell for cell in executed.cells if cell.cell_type == "code"]
     assert all(cell.execution_count is not None for cell in code_cells)
     assert all("df" in cell.source for cell in code_cells if cell.metadata.narrative_role == "learner-code")
+
+
+def test_independent_quality_review_stamps_and_invalidates_changed_sources() -> None:
+    pytest.importorskip("nbclient")
+    notebook = renderer.render_notebook(make_spec(1))
+    executed = validator.execute_notebook(notebook, timeout=120)
+
+    errors, figures = reviewer.quality_errors(executed)
+    assert errors == []
+    assert len(figures) == 1
+
+    reviewer.stamp_review(executed, figures)
+    assert validator.notebook_errors(executed) == []
+    assert executed.metadata.narrative_colab.quality_review.status == "passed"
+
+    executed.cells[1].source += "\n\nCambio posterior."
+    assert any("quality review is stale" in error for error in validator.notebook_errors(executed))
 
 
 def test_template_is_valid_nbformat() -> None:

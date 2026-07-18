@@ -1,6 +1,6 @@
 ---
 name: create-colab-data-story
-description: Create and validate compact, interactive Google Colab notebooks that teach one to five connected data-science concepts through one narrative, one public real-world dataset, and Plotly interactions. Use when Codex must select or create a story from this repository, adapt narrative claims to executed data, persist a new canonical case through the local story skills when needed, or produce an executable .ipynb with hidden implementation code and simple learner-facing Python.
+description: Create and double-check compact, interactive Google Colab notebooks that teach one to five connected data-science concepts through one narrative, one public real-world dataset, and polished Plotly interactions. Use when Codex must select or create a story from this repository, adapt narrative claims to executed data, persist a new canonical case through the local story skills when needed, or produce an executable .ipynb with hidden implementation code, simple learner-facing Python, and an independent visual-editorial review.
 ---
 
 # Create Colab Data Story
@@ -11,9 +11,10 @@ the repository story as a teaching frame, never as evidence.
 ## Required context
 
 1. Read `references/authoring-contract.md` completely.
-2. Read `DATA_SCIENCE_CURRICULUM.md`, `ABSURD_OFFICE_COMEDY_DATA_STANDARD.md`,
+2. Read `references/review-checklist.md` completely before the final review.
+3. Read `DATA_SCIENCE_CURRICULUM.md`, `ABSURD_OFFICE_COMEDY_DATA_STANDARD.md`,
    and `CODEX_WORKFLOW.md` from the repository root.
-3. Run `scripts/catalog_stories.py --strict --json` instead of assuming how
+4. Run `scripts/catalog_stories.py --strict --json` instead of assuming how
    many cases exist.
 
 ## Workflow
@@ -37,9 +38,13 @@ the repository story as a teaching frame, never as evidence.
    raw real-world records into it.
 7. Write a temporary YAML notebook specification following the contract.
    Use one story, one dataframe, one decision, and one ordered concept chain.
-8. Render with `scripts/render_notebook.py` and validate with
-   `scripts/validate_notebook.py`. Execute top-to-bottom before handoff.
-9. When the notebook will be shared from GitHub, include a direct Colab badge.
+8. Render with `scripts/render_notebook.py` and run the first gate with
+   `scripts/validate_notebook.py --check-network --execute`.
+9. Read the executed notebook top-to-bottom, compare every conclusion with its
+   output, and apply `references/review-checklist.md`. Then run the independent
+   second gate with `scripts/review_notebook.py --execute --stamp`. Revise and
+   repeat both gates after any source change.
+10. When the notebook will be shared from GitHub, include a direct Colab badge.
    Let the renderer infer `remote.origin.url`, branch, and notebook path, or pass
    `--github-repo owner/repo --branch branch-name` explicitly.
 
@@ -73,7 +78,9 @@ Run from `corporate-data-narrative-lab`:
 python .codex/skills/create-colab-data-story/scripts/catalog_stories.py --strict --json
 python .codex/skills/create-colab-data-story/scripts/render_notebook.py spec.yml outputs/notebooks/case.ipynb --github-repo owner/repo --branch main
 python .codex/skills/create-colab-data-story/scripts/validate_notebook.py outputs/notebooks/case.ipynb --execute --check-network
+python .codex/skills/create-colab-data-story/scripts/review_notebook.py outputs/notebooks/case.ipynb --execute --stamp
 ```
 
-Do not hand off a notebook that fails validation. If a live source cannot be
+Do not hand off a notebook that fails either gate or lacks a current
+`metadata.narrative_colab.quality_review` PASS stamp. If a live source cannot be
 verified, select another source; never fall back silently to synthetic data.

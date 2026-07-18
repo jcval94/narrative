@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import io
+import json
 import os
 import re
 import sys
@@ -30,6 +31,26 @@ COLAB_GITHUB = re.compile(r"^https://colab\.research\.google\.com/github/[^/]+/[
 
 def nonblank_lines(source: str) -> int:
     return sum(bool(line.strip()) for line in source.splitlines())
+
+
+def source_fingerprint(notebook: Any) -> str:
+    """Bind an editorial-review stamp to cell sources and narrative metadata."""
+    narrative_metadata = dict(notebook.metadata.get("narrative_colab", {}))
+    narrative_metadata.pop("quality_review", None)
+    payload = {
+        "cells": [
+            {
+                "id": str(getattr(cell, "id", "")),
+                "cell_type": str(cell.cell_type),
+                "source": str(cell.source),
+                "narrative_role": str(cell.metadata.get("narrative_role", "")),
+            }
+            for cell in notebook.cells
+        ],
+        "narrative_colab": narrative_metadata,
+    }
+    encoded = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
 
 
 def notebook_errors(notebook: Any) -> list[str]:
@@ -218,6 +239,21 @@ def notebook_errors(notebook: Any) -> list[str]:
         for field in ("url", "source_url"):
             if image.get(field) and not str(image[field]).startswith("https://"):
                 errors.append(f"image {field} must use HTTPS")
+
+    quality_review = metadata.get("quality_review")
+    if quality_review is not None:
+        if not isinstance(quality_review, dict):
+            errors.append("metadata.quality_review must be a mapping")
+        else:
+            if quality_review.get("status") != "passed":
+                errors.append("metadata.quality_review.status must be passed")
+            if not SHA256.fullmatch(str(quality_review.get("source_sha256", ""))):
+                errors.append("metadata.quality_review.source_sha256 is invalid")
+            elif quality_review["source_sha256"] != source_fingerprint(notebook):
+                errors.append("quality review is stale because notebook sources or metadata changed")
+            checks = quality_review.get("checks")
+            if not isinstance(checks, list) or not checks:
+                errors.append("metadata.quality_review.checks must be a non-empty list")
 
     return errors
 
