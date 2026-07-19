@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **el coordinador:** "Por eso mismo ya no distingue nada."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+Todas las areas usan urgente para saltarse la fila y la prioridad deja de servir. El atajo dejó de parecer pequeño cuando otra área tuvo que absorber su consecuencia durante el mismo turno.
 
 ## Todo ardia igual
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Mateo:** "Y los casos normales no son normales, solo perdieron la competencia."
 
-> **Irene:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Irene:** "Todas las areas usan urgente para saltarse la fila y la prioridad deja de servir."
 
-> **el coordinador:** "Quiero saber exactamente donde se esta pagando."
+> **el coordinador:** "Quiero ver barras de etiquetas antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Irene muestra la distribucion de etiquetas antes y despues de definir criterios. Con ambos resultados a la vista, la discusión pasó de opiniones generales a una diferencia que podía señalarse.
 
 ## La palabra que tapo el proceso
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Mateo:** "No. Unos hablan de fecha, otros de cliente y otros de miedo."
 
-> **Irene:** "Eso explica por que la salida parecia correcta al principio."
+> **Irene:** "Ahora entiendo por qué si una etiqueta existe, entonces describe bien el proceso."
 
-> **Mateo:** "Correcta para una pregunta que no era la importante."
+> **Mateo:** "Respondía otra pregunta; no servía para separar severidad, fecha limite y excepcion con reglas visibles."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="barras de etiquetas">
   <rect width="720" height="320" fill="#fff"/>
@@ -100,21 +90,17 @@ cara tranquila.
 
 > **el coordinador:** "Quitamos urgente como categoria unica."
 
-> **el coordinador:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **el coordinador:** "Dejen por escrito quién va a separar severidad, fecha limite y excepcion con reglas visibles."
 
 > **Sofia:** "Van a pedir la puerta rapida por otro lado."
 
 > **Mateo:** "Si la piden, ahora sabremos que puerta estan usando."
 
-> **Sofia:** "Y si alguien pide excepcion."
+> **Mateo:** "¿Qué cambiaremos después de revisar barras de etiquetas?"
 
-> **Mateo:** "Que la pida con costo visible y fecha."
+> **Irene:** "La decisión es separar severidad, fecha limite y excepcion con reglas visibles."
 
-> **el coordinador:** "Y si no hay evidencia, no hay lanzamiento."
-
-> **Irene:** "Eso va a incomodar a la prisa."
-
-> **Mateo:** "La prisa ya nos estaba cobrando intereses."
+> **Sofia:** "Y volvemos a medir variables, etiquetas y lenguaje formal antes del siguiente cierre."
 
 > **Irene:** "Urgente no era una categoria; era una fila VIP sin recepcionista."
 

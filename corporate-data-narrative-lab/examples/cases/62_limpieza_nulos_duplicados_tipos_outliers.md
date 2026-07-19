@@ -28,11 +28,7 @@ synthetic_data: true
 
 > **la gerente:** "Sin bitacora no sabemos que quitaste."
 
-La clase no se atoro por falta de ganas. Se atoro porque una idea razonable se
-habia quedado a medio camino entre conversacion y procedimiento. En la mesa ya
-habia prisa, capturas abiertas y alguien diciendo que lo importante era avanzar.
-Por eso el error parecia pequeno: no rompia la historia completa, solo la parte
-donde la maquina tenia que entender exactamente que hacer.
+Nulos, duplicados y categorias rotas se ocultan y la metrica parece mejorar. El ejercicio dejó de ser demostración cuando tuvo que responder una pregunta nueva y el código no sabía dónde buscar el dato.
 
 ## El closet de Otro
 
@@ -48,15 +44,11 @@ donde la maquina tenia que entender exactamente que hacer.
 
 > **Sara:** "A veces molestan porque son el hallazgo."
 
-> **Tomas:** "Entonces el atajo si hizo trabajo, solo que no el trabajo correcto."
+> **Tomas:** "Nulos, duplicados y categorias rotas se ocultan y la metrica parece mejorar."
 
-> **la gerente:** "Quiero ver donde se separa la intuicion del resultado."
+> **la gerente:** "Enséñame problemas de calidad antes y despues de limpieza documentada antes de cerrar."
 
-La solucion comoda tenia una virtud: se podia explicar en una frase. El problema
-era que tambien escondia entradas, reglas y excepciones. Cuando el grupo la
-siguio dos pasos mas, aparecio lo de siempre: una salida que parecia formal, una
-persona intentando defenderla y otra buscando el dato exacto donde la historia
-dejaba de sostenerse.
+El grupo puso problemas de calidad antes y despues de limpieza documentada junto al resultado anterior. La comparación mostró qué estructura o regla permitía adaptar la solución sin esconder un caso especial dentro del resultado.
 
 ## Limpiar no es desaparecer
 
@@ -66,9 +58,9 @@ dejaba de sostenerse.
 
 > **Sara:** "La limpieza correcta arregla tipos sin esconder categorias."
 
-> **Tomas:** "Eso cambia lo que tenemos que enseñar."
+> **Tomas:** "Entonces debemos perfilado, reglas de limpieza, bitacora y validacion de impacto."
 
-> **Sara:** "Si. Primero la regla humana, luego la forma tecnica."
+> **Sara:** "Limpiar datos exige reglas explicitas y revisar como cambian las metricas."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="problemas de calidad antes y despues de limpieza documentada">
   <rect width="720" height="320" fill="#fff"/>
@@ -99,15 +91,17 @@ dejaba de sostenerse.
 
 > **Sara:** "Y tambien confianza."
 
-> **Lina:** "Y si alguien quiere saltarse ese paso."
-
-> **Sara:** "Que primero explique que evidencia esta dispuesto a perder."
-
 > **Tomas:** "Entonces limpiar no es dejarlo bonito."
 
 > **Sara:** "Es dejar claro que cambiaste y por que."
 
 > **la gerente:** "Eso si lo puedo defender en comite."
+
+> **Sara:** "¿Qué cambiaremos después de revisar problemas de calidad antes y despues de limpieza documentada?"
+
+> **Tomas:** "La decisión es perfilado, reglas de limpieza, bitacora y validacion de impacto."
+
+> **Lina:** "Y volvemos a medir limpieza real con nulos, duplicados, tipos, outliers y categorias rotas antes del siguiente cierre."
 
 > **Tomas:** "No limpiamos la casa; metimos todo al closet llamado Otro."
 

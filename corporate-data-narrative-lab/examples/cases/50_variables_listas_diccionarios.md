@@ -28,11 +28,7 @@ synthetic_data: true
 
 > **el mentor:** "Hasta que agregas otro producto y se recorre todo."
 
-La clase no se atoro por falta de ganas. Se atoro porque una idea razonable se
-habia quedado a medio camino entre conversacion y procedimiento. En la mesa ya
-habia prisa, capturas abiertas y alguien diciendo que lo importante era avanzar.
-Por eso el error parecia pequeno: no rompia la historia completa, solo la parte
-donde la maquina tenia que entender exactamente que hacer.
+Los nombres, cantidades y costos se mezclan y nadie puede explicar el resultado. El primer intento funcionaba en un ejemplo pequeño, pero se rompía en cuanto cambiaba una entrada o el orden de los datos.
 
 ## El dato sin apellido
 
@@ -48,15 +44,11 @@ donde la maquina tenia que entender exactamente que hacer.
 
 > **Rita:** "Compacta para romperse en silencio."
 
-> **Samuel:** "Entonces el atajo si hizo trabajo, solo que no el trabajo correcto."
+> **Samuel:** "Los nombres, cantidades y costos se mezclan y nadie puede explicar el resultado."
 
-> **el mentor:** "Quiero ver donde se separa la intuicion del resultado."
+> **el mentor:** "Enséñame estructura de datos contra errores de lectura antes de cerrar."
 
-La solucion comoda tenia una virtud: se podia explicar en una frase. El problema
-era que tambien escondia entradas, reglas y excepciones. Cuando el grupo la
-siguio dos pasos mas, aparecio lo de siempre: una salida que parecia formal, una
-persona intentando defenderla y otra buscando el dato exacto donde la historia
-dejaba de sostenerse.
+El grupo puso estructura de datos contra errores de lectura junto al resultado anterior. Al revisar ambas versiones, el grupo encontró la regla que faltaba y pudo explicar por qué la salida anterior era frágil.
 
 ## Cada cosa en su contenedor
 
@@ -66,9 +58,9 @@ dejaba de sostenerse.
 
 > **Rita:** "El diccionario ayuda cuando cada valor necesita nombre."
 
-> **Samuel:** "Eso cambia lo que tenemos que enseñar."
+> **Samuel:** "Entonces debemos usar variables para valores, listas para colecciones y diccionarios para datos con nombre."
 
-> **Rita:** "Si. Primero la regla humana, luego la forma tecnica."
+> **Rita:** "Elige la estructura segun como necesitas guardar y recuperar el dato."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="estructura de datos contra errores de lectura">
   <rect width="720" height="320" fill="#fff"/>
@@ -99,9 +91,11 @@ dejaba de sostenerse.
 
 > **Rita:** "Leerlo toma menos adivinanza."
 
-> **Caro:** "Y si alguien quiere saltarse ese paso."
+> **Rita:** "¿Qué cambiaremos después de revisar estructura de datos contra errores de lectura?"
 
-> **Rita:** "Que primero explique que evidencia esta dispuesto a perder."
+> **Samuel:** "La decisión es usar variables para valores, listas para colecciones y diccionarios para datos con nombre."
+
+> **Caro:** "Y volvemos a medir variables, listas, diccionarios y estructuras esenciales antes del siguiente cierre."
 
 > **Samuel:** "La lista no estaba desordenada; estaba pidiendo identificacion oficial."
 

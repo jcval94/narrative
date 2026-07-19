@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **el jefe:** "Finanzas pidio tres cosas en esa junta."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+Nadie sabe que notebook produjo la grafica enviada a direccion. El efecto apareció antes del siguiente reporte y obligó al equipo a revisar la regla que estaba guiando la operación.
 
 ## La carpeta como arqueologia
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Ari:** "El nombre esta pidiendo terapia."
 
-> **Leo:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Leo:** "Nadie sabe que notebook produjo la grafica enviada a direccion."
 
-> **el jefe:** "Quiero saber exactamente donde se esta pagando."
+> **el jefe:** "Quiero ver historial de versiones antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Ari reconstruye cambios con historial manual contra historial de Git. La comparación cambió el centro de la junta: ya no importaba defender el atajo, sino decidir qué hacer con su consecuencia.
 
 ## Historial que contesta
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Ari:** "Con nombres manuales no queda claro; con commits si."
 
-> **Leo:** "Eso explica por que la salida parecia correcta al principio."
+> **Leo:** "Ahora entiendo por qué duplicar archivos es una forma suficiente de versionar."
 
-> **Ari:** "Correcta para una pregunta que no era la importante."
+> **Ari:** "Respondía otra pregunta; no servía para usar commits pequenos con mensajes y datos versionados por referencia."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="historial de versiones">
   <rect width="720" height="320" fill="#fff"/>
@@ -97,21 +87,19 @@ cara tranquila.
 
 > **el jefe:** "El analisis entra a Git con commits por cambio logico."
 
-> **el jefe:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **el jefe:** "Dejen por escrito quién va a usar commits pequenos con mensajes y datos versionados por referencia."
 
 > **Fernanda:** "Ya no podremos decorar nombres con angustia."
 
 > **Ari:** "A cambio sabremos que se movio."
 
-> **Fernanda:** "Y si alguien pide excepcion."
+> **Ari:** "¿Qué cambiaremos después de revisar historial de versiones?"
 
-> **Ari:** "Que la pida con costo visible y fecha."
+> **Leo:** "La decisión es usar commits pequenos con mensajes y datos versionados por referencia."
 
-> **el jefe:** "Y si no hay evidencia, no hay lanzamiento."
+> **Fernanda:** "Y volvemos a medir control de versiones para proyectos de datos antes del siguiente cierre."
 
-> **Leo:** "Eso va a incomodar a la prisa."
-
-> **Ari:** "La prisa ya nos estaba cobrando intereses."
+> **Fernanda:** "El siguiente cambio tendrá autor, fecha y una diferencia que cualquiera pueda abrir."
 
 > **Leo:** "El archivo era final tantas veces que ya parecia promesa de campana."
 

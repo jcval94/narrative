@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **el sponsor:** "Todas relevantes significa nadie responsable."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+Las alertas se reenvian entre areas hasta vencer. La primera defensa explicaba por qué se eligió el atajo, aunque no resolvía el daño que había aparecido después.
 
 ## El correo viajo mas que el caso
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Monica:** "Informados de que nadie la tomo."
 
-> **Esteban:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Esteban:** "Las alertas se reenvian entre areas hasta vencer."
 
-> **el sponsor:** "Quiero saber exactamente donde se esta pagando."
+> **el sponsor:** "Quiero ver uso real por area antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Monica mide alertas recibidas, tomadas y cerradas por dueno. El dato central permitió conservar la presión legítima y cambiar solamente la lógica que estaba produciendo el error.
 
 ## Recibir no es hacerse cargo
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Monica:** "Las que tienen dueno sobreviven; las demas circulan."
 
-> **Esteban:** "Eso explica por que la salida parecia correcta al principio."
+> **Esteban:** "Ahora entiendo por qué si el dato llega a tiempo, alguien naturalmente lo usara."
 
-> **Monica:** "Correcta para una pregunta que no era la importante."
+> **Monica:** "Respondía otra pregunta; no servía para asignar dueno, horario, SLA y cierre de cada alerta."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="uso real por area">
   <rect width="720" height="320" fill="#fff"/>
@@ -100,21 +90,19 @@ cara tranquila.
 
 > **el sponsor:** "Cada alerta tendra dueno y tiempo de respuesta."
 
-> **el sponsor:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **el sponsor:** "Dejen por escrito quién va a asignar dueno, horario, SLA y cierre de cada alerta."
 
 > **Silvia:** "Menos personas recibiran el correo."
 
 > **Monica:** "Y por fin alguien lo contestara con accion."
 
-> **Silvia:** "Y si alguien pide excepcion."
+> **Monica:** "¿Qué cambiaremos después de revisar uso real por area?"
 
-> **Monica:** "Que la pida con costo visible y fecha."
+> **Esteban:** "La decisión es asignar dueno, horario, SLA y cierre de cada alerta."
 
-> **el sponsor:** "Y si no hay evidencia, no hay lanzamiento."
+> **Silvia:** "Y volvemos a medir propiedad operativa del producto de datos antes del siguiente cierre."
 
-> **Esteban:** "Eso va a incomodar a la prisa."
-
-> **Monica:** "La prisa ya nos estaba cobrando intereses."
+> **Silvia:** "Operaciones confirmará cada semana si la lista llegó a tiempo y alguien la usó."
 
 > **Esteban:** "La prediccion era puntual; lo que llego tarde fue el organigrama."
 

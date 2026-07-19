@@ -28,11 +28,7 @@ synthetic_data: true
 
 > **el jefe:** "Intuitivo no es gobernanza."
 
-La clase no se atoro por falta de ganas. Se atoro porque una idea razonable se
-habia quedado a medio camino entre conversacion y procedimiento. En la mesa ya
-habia prisa, capturas abiertas y alguien diciendo que lo importante era avanzar.
-Por eso el error parecia pequeno: no rompia la historia completa, solo la parte
-donde la maquina tenia que entender exactamente que hacer.
+El analisis confunde estados tecnicos con estados comerciales. La dificultad surgió al reutilizar el ejercicio: el atajo guardaba supuestos que solo conocía quien había escrito la primera versión.
 
 ## Status no era estado
 
@@ -48,15 +44,11 @@ donde la maquina tenia que entender exactamente que hacer.
 
 > **Nadia:** "SQL no sabe si entendiste el negocio."
 
-> **Hector:** "Entonces el atajo si hizo trabajo, solo que no el trabajo correcto."
+> **Hector:** "El analisis confunde estados tecnicos con estados comerciales."
 
-> **el jefe:** "Quiero ver donde se separa la intuicion del resultado."
+> **el jefe:** "Enséñame columnas con y sin definicion de negocio antes de cerrar."
 
-La solucion comoda tenia una virtud: se podia explicar en una frase. El problema
-era que tambien escondia entradas, reglas y excepciones. Cuando el grupo la
-siguio dos pasos mas, aparecio lo de siempre: una salida que parecia formal, una
-persona intentando defenderla y otra buscando el dato exacto donde la historia
-dejaba de sostenerse.
+El grupo puso columnas con y sin definicion de negocio junto al resultado anterior. La nueva comparación hizo visibles entradas, transformaciones y salida, justo lo necesario para detectar el punto de ruptura.
 
 ## Diccionario antes de conclusion
 
@@ -66,9 +58,9 @@ dejaba de sostenerse.
 
 > **Nadia:** "En campos tecnicos usados como conceptos de negocio."
 
-> **Hector:** "Eso cambia lo que tenemos que enseñar."
+> **Hector:** "Entonces debemos documentar tablas, llaves, definiciones y duenos de datos."
 
-> **Nadia:** "Si. Primero la regla humana, luego la forma tecnica."
+> **Nadia:** "Un esquema util combina estructura tecnica con significado de negocio."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="columnas con y sin definicion de negocio">
   <rect width="720" height="320" fill="#fff"/>
@@ -99,9 +91,15 @@ dejaba de sostenerse.
 
 > **Nadia:** "Pero evita graficar mal con mucha seguridad."
 
-> **Sol:** "Y si alguien quiere saltarse ese paso."
+> **Nadia:** "¿Qué cambiaremos después de revisar columnas con y sin definicion de negocio?"
 
-> **Nadia:** "Que primero explique que evidencia esta dispuesto a perder."
+> **Hector:** "La decisión es documentar tablas, llaves, definiciones y duenos de datos."
+
+> **Sol:** "Y volvemos a medir esquema y contexto de datos antes del siguiente cierre."
+
+> **Sol:** "El diccionario quedará junto a la consulta para que monto no vuelva a significar dos cosas."
+
+> **el jefe:** "También anotaremos quién mantiene cada definición cuando cambie el proceso."
 
 > **Hector:** "La columna se llamaba status, que es como llamar cosa a una cosa importante."
 

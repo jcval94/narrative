@@ -58,7 +58,7 @@ svg {
 <blockquote><strong>Caro:</strong><span>Abrir carpeta no elige interprete.</span></blockquote>
 <blockquote><strong>Diana:</strong><span>Abajo dice Python, eso cuenta.</span></blockquote>
 <blockquote><strong>el mentor:</strong><span>Cuenta como pista, no como garantia.</span></blockquote>
-<p>La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia planeado discutir fundamentos; querian una solucion que cupiera en el correo de seguimiento. El problema era que la frase corta habia salido barata al escribirla y cara al operarla. Cada persona habia completado los huecos con su propia costumbre, y la herramienta habia completado los huecos con lo unico que tenia: instrucciones incompletas.</p>
+<p>El codigo falla para unos y para otros usa paquetes viejos. Lo que había empezado como una forma de avanzar rápido terminó creando trabajo adicional para una persona específica.</p>
 </section>
 <section>
 <h2>La puerta equivocada</h2>
@@ -68,17 +68,17 @@ svg {
 <blockquote><strong>el mentor:</strong><span>Asi terminamos con paquetes en tres lugares.</span></blockquote>
 <blockquote><strong>Diana:</strong><span>Al menos alguno debe funcionar.</span></blockquote>
 <blockquote><strong>Caro:</strong><span>Ese no es un plan, es una rifa.</span></blockquote>
-<blockquote><strong>Benja:</strong><span>Entonces el atajo si tuvo costo, solo que en otro escritorio.</span></blockquote>
-<blockquote><strong>el mentor:</strong><span>Quiero saber exactamente donde se esta pagando.</span></blockquote>
-<p>La mala idea no nacio como capricho. Nacio como atajo razonable para quitar presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia un pedazo visible y empujaba el costo a otro lugar: soporte, clientes, revision, presupuesto o la persona que tendria que explicar el resultado con la cara tranquila.</p>
+<blockquote><strong>Benja:</strong><span>El codigo falla para unos y para otros usa paquetes viejos.</span></blockquote>
+<blockquote><strong>el mentor:</strong><span>Quiero ver rutas de interprete antes de decidir.</span></blockquote>
+<p>Caro muestra ruta de interprete, version y paquetes instalados. El dato decisivo mostró en qué paso se desviaba el resultado y quién necesitaba actuar para corregirlo.</p>
 </section>
 <section>
 <h2>Ruta mata sospecha</h2>
 <blockquote><strong>Caro:</strong><span>Imprimi ruta, version y ubicacion de paquetes.</span></blockquote>
 <blockquote><strong>el mentor:</strong><span>Cual Python esta ejecutando el proyecto.</span></blockquote>
 <blockquote><strong>Caro:</strong><span>El editor apuntaba al global, no al entorno virtual.</span></blockquote>
-<blockquote><strong>Benja:</strong><span>Eso explica por que la salida parecia correcta al principio.</span></blockquote>
-<blockquote><strong>Caro:</strong><span>Correcta para una pregunta que no era la importante.</span></blockquote>
+<blockquote><strong>Benja:</strong><span>Ahora entiendo por qué si el archivo se abre en VS Code, se ejecuta con el entorno correcto.</span></blockquote>
+<blockquote><strong>Caro:</strong><span>Respondía otra pregunta; no servía para seleccionar interprete del proyecto y documentar activacion del entorno.</span></blockquote>
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="rutas de interprete">
   <rect width="720" height="320" fill="#fff"/>
   <text x="36" y="32" font-size="18" font-weight="bold">rutas de interprete</text>
@@ -100,14 +100,13 @@ svg {
 <section>
 <h2>Un proyecto, un interprete</h2>
 <blockquote><strong>el mentor:</strong><span>Fijamos el interprete del entorno virtual en el proyecto.</span></blockquote>
-<blockquote><strong>el mentor:</strong><span>Tambien quiero responsable, criterio y evidencia de revision.</span></blockquote>
+<blockquote><strong>el mentor:</strong><span>Dejen por escrito quién va a seleccionar interprete del proyecto y documentar activacion del entorno.</span></blockquote>
 <blockquote><strong>Diana:</strong><span>Hay que mirar una configuracion mas.</span></blockquote>
 <blockquote><strong>Caro:</strong><span>Y dejamos de perseguir errores imaginarios.</span></blockquote>
-<blockquote><strong>Diana:</strong><span>Y si alguien pide excepcion.</span></blockquote>
-<blockquote><strong>Caro:</strong><span>Que la pida con costo visible y fecha.</span></blockquote>
-<blockquote><strong>el mentor:</strong><span>Y si no hay evidencia, no hay lanzamiento.</span></blockquote>
-<blockquote><strong>Benja:</strong><span>Eso va a incomodar a la prisa.</span></blockquote>
-<blockquote><strong>Caro:</strong><span>La prisa ya nos estaba cobrando intereses.</span></blockquote>
+<blockquote><strong>Caro:</strong><span>¿Qué cambiaremos después de revisar rutas de interprete?</span></blockquote>
+<blockquote><strong>Benja:</strong><span>La decisión es seleccionar interprete del proyecto y documentar activacion del entorno.</span></blockquote>
+<blockquote><strong>Diana:</strong><span>Y volvemos a medir interpretes de Python en VS Code antes del siguiente cierre.</span></blockquote>
+<blockquote><strong>Diana:</strong><span>El editor mostrará la ruta del intérprete antes de ejecutar cualquier archivo.</span></blockquote>
 <blockquote><strong>Benja:</strong><span>No habia dos proyectos; habia dos Pythons peleando por el teclado.</span></blockquote>
 <p class="rule"><strong>Regla:</strong> en VS Code, confirma el interprete antes de culpar al codigo.</p>
 </section>

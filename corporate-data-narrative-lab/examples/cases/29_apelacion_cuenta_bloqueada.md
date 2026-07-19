@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **el director:** "Abrimos un laberinto seguro."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+Las personas afectadas no pueden ver motivo ni presentar evidencia. Para cuando llegó la siguiente junta, el procedimiento cómodo ya había producido una excepción imposible de ignorar.
 
 ## La llave adentro del cuarto
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Rocio:** "Respuesta que encerramos con el caso."
 
-> **Ivan:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Ivan:** "Las personas afectadas no pueden ver motivo ni presentar evidencia."
 
-> **el director:** "Quiero saber exactamente donde se esta pagando."
+> **el director:** "Quiero ver flujo de apelacion antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Rocio dibuja el flujo de bloqueo, notificacion y apelacion. La evidencia puso nombre y tamaño a esa excepción, de modo que la corrección dejó de depender de insistir más fuerte.
 
 ## El flujo se mordia la cola
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Rocio:** "En el mismo paso que exige acceso negado."
 
-> **Ivan:** "Eso explica por que la salida parecia correcta al principio."
+> **Ivan:** "Ahora entiendo por qué si el sistema ya decidio, el usuario puede resolver todo por autoservicio."
 
-> **Rocio:** "Correcta para una pregunta que no era la importante."
+> **Rocio:** "Respondía otra pregunta; no servía para abrir canal externo, mostrar motivo y registrar revision."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="flujo de apelacion">
   <rect width="720" height="320" fill="#fff"/>
@@ -100,21 +90,17 @@ cara tranquila.
 
 > **el director:** "Abrimos apelacion externa con motivo y folio visible."
 
-> **el director:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **el director:** "Dejen por escrito quién va a abrir canal externo, mostrar motivo y registrar revision."
 
 > **Teresa:** "Habra mas casos para revisar."
 
 > **Rocio:** "Al menos seran casos que pueden entrar por la puerta."
 
-> **Teresa:** "Y si alguien pide excepcion."
+> **Rocio:** "¿Qué cambiaremos después de revisar flujo de apelacion?"
 
-> **Rocio:** "Que la pida con costo visible y fecha."
+> **Ivan:** "La decisión es abrir canal externo, mostrar motivo y registrar revision."
 
-> **el director:** "Y si no hay evidencia, no hay lanzamiento."
-
-> **Ivan:** "Eso va a incomodar a la prisa."
-
-> **Rocio:** "La prisa ya nos estaba cobrando intereses."
+> **Teresa:** "Y volvemos a medir apelacion y gobernanza de decisiones automatizadas antes del siguiente cierre."
 
 > **Ivan:** "La apelacion existia; estaba guardada detras de la puerta cerrada."
 

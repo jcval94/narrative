@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **el responsable:** "La burocracia acaba de salvarnos de pisar produccion."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+Se pierde contexto, revision y motivo del cambio. La solución rápida había cumplido una parte del encargo y había complicado otra que no aparecía en el primer reporte.
 
 ## El cambio sin pasaporte
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Mauro:** "No tiene prueba ni conversacion tecnica."
 
-> **Nelly:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Nelly:** "Se pierde contexto, revision y motivo del cambio."
 
-> **el responsable:** "Quiero saber exactamente donde se esta pagando."
+> **el responsable:** "Quiero ver flujo branch PR antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Nelly compara cambios enviados por chat contra cambios con pull request. La lectura completa devolvió el contexto omitido y dejó una acción concreta en lugar de una conclusión tranquilizadora.
 
 ## La revision necesita contexto
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Mauro:** "Se pierde problema, revision, prueba y aprobacion."
 
-> **Nelly:** "Eso explica por que la salida parecia correcta al principio."
+> **Nelly:** "Ahora entiendo por qué mandar el archivo rapido equivale a colaborar."
 
-> **Mauro:** "Correcta para una pregunta que no era la importante."
+> **Mauro:** "Respondía otra pregunta; no servía para abrir issue, trabajar en branch, explicar commit y revisar PR."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="flujo branch PR">
   <rect width="720" height="320" fill="#fff"/>
@@ -97,21 +87,19 @@ cara tranquila.
 
 > **el responsable:** "Todo cambio compartido entra por branch y PR."
 
-> **el responsable:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **el responsable:** "Dejen por escrito quién va a abrir issue, trabajar en branch, explicar commit y revisar PR."
 
 > **Isabel:** "No habra atajos con archivo adjunto."
 
 > **Mauro:** "Tampoco accidentes con confianza adjunta."
 
-> **Isabel:** "Y si alguien pide excepcion."
+> **Mauro:** "¿Qué cambiaremos después de revisar flujo branch PR?"
 
-> **Mauro:** "Que la pida con costo visible y fecha."
+> **Nelly:** "La decisión es abrir issue, trabajar en branch, explicar commit y revisar PR."
 
-> **el responsable:** "Y si no hay evidencia, no hay lanzamiento."
+> **Isabel:** "Y volvemos a medir branches, commits, issues y pull requests antes del siguiente cierre."
 
-> **Nelly:** "Eso va a incomodar a la prisa."
-
-> **Mauro:** "La prisa ya nos estaba cobrando intereses."
+> **Isabel:** "La próxima corrección entrará por una rama visible, aunque tarde más que mandar un archivo."
 
 > **Nelly:** "La rama no venia en WhatsApp; venia un archivo con exceso de confianza."
 

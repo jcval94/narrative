@@ -28,11 +28,7 @@ synthetic_data: true
 
 > **la instructora:** "Excel adivina cosas que Python necesita explicitas."
 
-La clase no se atoro por falta de ganas. Se atoro porque una idea razonable se
-habia quedado a medio camino entre conversacion y procedimiento. En la mesa ya
-habia prisa, capturas abiertas y alguien diciendo que lo importante era avanzar.
-Por eso el error parecia pequeno: no rompia la historia completa, solo la parte
-donde la maquina tenia que entender exactamente que hacer.
+Se mezclan separadores, hojas, objetos anidados y respuestas de API sin validar. El grupo avanzó hasta que un cambio mínimo produjo un número distinto y no quedó claro si era error, excepción o regla.
 
 ## No todo es tabla al nacer
 
@@ -48,15 +44,11 @@ donde la maquina tenia que entender exactamente que hacer.
 
 > **Mora:** "Primero hay que entender como vienen."
 
-> **Diego:** "Entonces el atajo si hizo trabajo, solo que no el trabajo correcto."
+> **Diego:** "Se mezclan separadores, hojas, objetos anidados y respuestas de API sin validar."
 
-> **la instructora:** "Quiero ver donde se separa la intuicion del resultado."
+> **la instructora:** "Enséñame fuentes leidas con validacion de formato antes de cerrar."
 
-La solucion comoda tenia una virtud: se podia explicar en una frase. El problema
-era que tambien escondia entradas, reglas y excepciones. Cuando el grupo la
-siguio dos pasos mas, aparecio lo de siempre: una salida que parecia formal, una
-persona intentando defenderla y otra buscando el dato exacto donde la historia
-dejaba de sostenerse.
+El grupo puso fuentes leidas con validacion de formato junto al resultado anterior. La evidencia separó cada etapa del procedimiento y permitió corregir una sola parte sin rehacer todo el ejercicio.
 
 ## Cada fuente pide su llave
 
@@ -66,9 +58,9 @@ dejaba de sostenerse.
 
 > **Mora:** "Las que usan el lector y parametros correctos."
 
-> **Diego:** "Eso cambia lo que tenemos que enseñar."
+> **Diego:** "Entonces debemos elegir lector por formato y validar filas, columnas y tipos al entrar."
 
-> **Mora:** "Si. Primero la regla humana, luego la forma tecnica."
+> **Mora:** "Leer datos empieza por reconocer formato, estructura y validaciones basicas."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="fuentes leidas con validacion de formato">
   <rect width="720" height="320" fill="#fff"/>
@@ -99,15 +91,17 @@ dejaba de sostenerse.
 
 > **Mora:** "Y menos mistica."
 
-> **Vicky:** "Y si alguien quiere saltarse ese paso."
-
-> **Mora:** "Que primero explique que evidencia esta dispuesto a perder."
-
 > **Diego:** "Tambien podremos repetirla mañana."
 
 > **Mora:** "Exacto. Leer datos no deberia depender del humor del archivo."
 
 > **la instructora:** "Ni del pulso de quien copia y pega."
+
+> **Mora:** "¿Qué cambiaremos después de revisar fuentes leidas con validacion de formato?"
+
+> **Diego:** "La decisión es elegir lector por formato y validar filas, columnas y tipos al entrar."
+
+> **Vicky:** "Y volvemos a medir lectura de CSV, Excel, JSON y APIs antes del siguiente cierre."
 
 > **Diego:** "El CSV no estaba poseido; solo venia con separador regional."
 

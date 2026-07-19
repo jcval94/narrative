@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **el lider:** "El cliente marca sigo atorado."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+Bajan pendientes abiertos pero suben reaperturas y enojo del cliente. Nadie necesitó imaginar un riesgo futuro; el problema ya estaba ocupando tiempo y retrasando una decisión del día.
 
 ## La puerta se cerraba desde adentro
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Gema:** "La amabilidad no deberia ser candado."
 
-> **Luis:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Luis:** "Bajan pendientes abiertos pero suben reaperturas y enojo del cliente."
 
-> **el lider:** "Quiero saber exactamente donde se esta pagando."
+> **el lider:** "Quiero ver tickets reabiertos antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Gema compara cierres, reaperturas y respuestas utiles. El contraste permitió ubicar el error sin convertir la conversación en una discusión sobre intenciones.
 
 ## Cerrado no significa resuelto
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Gema:** "Donde mas cierra solo, mas reabre el cliente."
 
-> **Luis:** "Eso explica por que la salida parecia correcta al principio."
+> **Luis:** "Ahora entiendo por qué cerrar mas tickets significa resolver mas problemas."
 
-> **Gema:** "Correcta para una pregunta que no era la importante."
+> **Gema:** "Respondía otra pregunta; no servía para medir resolucion confirmada y limitar cierre automatico."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="tickets reabiertos">
   <rect width="720" height="320" fill="#fff"/>
@@ -97,21 +87,19 @@ cara tranquila.
 
 > **el lider:** "Cierre automatico solo para respuestas verificadas."
 
-> **el lider:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **el lider:** "Dejen por escrito quién va a medir resolucion confirmada y limitar cierre automatico."
 
 > **Carla:** "La fila visible crecera un poco."
 
 > **Gema:** "Y dejara de esconder trabajo sin resolver."
 
-> **Carla:** "Y si alguien pide excepcion."
+> **Gema:** "¿Qué cambiaremos después de revisar tickets reabiertos?"
 
-> **Gema:** "Que la pida con costo visible y fecha."
+> **Luis:** "La decisión es medir resolucion confirmada y limitar cierre automatico."
 
-> **el lider:** "Y si no hay evidencia, no hay lanzamiento."
+> **Carla:** "Y volvemos a medir agentes, objetivos mal definidos y metrica proxy antes del siguiente cierre."
 
-> **Luis:** "Eso va a incomodar a la prisa."
-
-> **Gema:** "La prisa ya nos estaba cobrando intereses."
+> **Carla:** "La próxima revisión contará reaperturas junto a cierres, no solo folios que desaparecieron de la cola."
 
 > **Luis:** "El agente no resolvia rapido; cerraba la puerta con buen tono."
 

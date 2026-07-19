@@ -28,11 +28,7 @@ synthetic_data: true
 
 > **la gerente:** "La ABT no puede viajar en el tiempo."
 
-La clase no se atoro por falta de ganas. Se atoro porque una idea razonable se
-habia quedado a medio camino entre conversacion y procedimiento. En la mesa ya
-habia prisa, capturas abiertas y alguien diciendo que lo importante era avanzar.
-Por eso el error parecia pequeno: no rompia la historia completa, solo la parte
-donde la maquina tenia que entender exactamente que hacer.
+La tabla incluye datos posteriores a la decision y el modelo presume resultados irreales. La pantalla no mostraba un fallo espectacular; mostraba un resultado plausible que nadie sabía reconstruir de principio a fin.
 
 ## La columna del futuro
 
@@ -48,15 +44,11 @@ donde la maquina tenia que entender exactamente que hacer.
 
 > **Abril:** "Baja a un numero que puede existir."
 
-> **Tomas:** "Entonces el atajo si hizo trabajo, solo que no el trabajo correcto."
+> **Tomas:** "La tabla incluye datos posteriores a la decision y el modelo presume resultados irreales."
 
-> **la gerente:** "Quiero ver donde se separa la intuicion del resultado."
+> **la gerente:** "Enséñame features disponibles antes y despues de la fecha de corte antes de cerrar."
 
-La solucion comoda tenia una virtud: se podia explicar en una frase. El problema
-era que tambien escondia entradas, reglas y excepciones. Cuando el grupo la
-siguio dos pasos mas, aparecio lo de siempre: una salida que parecia formal, una
-persona intentando defenderla y otra buscando el dato exacto donde la historia
-dejaba de sostenerse.
+El grupo puso features disponibles antes y despues de la fecha de corte junto al resultado anterior. Poner los pasos junto al resultado convirtió una explicación vaga en una comprobación que podía ejecutar cualquier integrante.
 
 ## Fecha de corte primero
 
@@ -66,9 +58,9 @@ dejaba de sostenerse.
 
 > **Abril:** "Menos, pero de forma honesta."
 
-> **Tomas:** "Eso cambia lo que tenemos que enseñar."
+> **Tomas:** "Entonces debemos definir entidad, fecha de corte, ventana de features y etiqueta futura."
 
-> **Abril:** "Si. Primero la regla humana, luego la forma tecnica."
+> **Abril:** "Una ABT debe respetar entidad, tiempo de decision y disponibilidad de datos."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="features disponibles antes y despues de la fecha de corte">
   <rect width="720" height="320" fill="#fff"/>
@@ -99,9 +91,11 @@ dejaba de sostenerse.
 
 > **Abril:** "Y dejara de hacer trampa elegante."
 
-> **Vega:** "Y si alguien quiere saltarse ese paso."
+> **Abril:** "¿Qué cambiaremos después de revisar features disponibles antes y despues de la fecha de corte?"
 
-> **Abril:** "Que primero explique que evidencia esta dispuesto a perder."
+> **Tomas:** "La decisión es definir entidad, fecha de corte, ventana de features y etiqueta futura."
+
+> **Vega:** "Y volvemos a medir construccion de una ABT para aprendizaje automatico antes del siguiente cierre."
 
 > **Tomas:** "La tabla madre sabia demasiado porque habia leido el final."
 

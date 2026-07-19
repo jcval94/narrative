@@ -17,33 +17,34 @@ Todo caso sigue
 - La comedia nace de una mala lógica corporativa que escala.
 - Incluye exactamente una gráfica SVG y una pausa educativa natural.
 - Termina con decisión, remate propio y regla transferible.
-- El HTML es una lectura lineal del Markdown, sin JavaScript ni dependencias.
+- El HTML canónico es una lectura lineal del Markdown, sin JavaScript ni dependencias.
 
 ## Colección
 
-`examples/` contiene 18 casos:
-
-- 8 conceptos originales completamente reescritos;
-- 10 casos nuevos sobre extrapolación, definición de KPI, umbrales,
-  taxonomía, experimentos, fraude, drift, gobernanza, campañas y riesgo.
-
-Cada número tiene:
+`examples/` contiene la colección canónica de casos. Cada número tiene:
 
 - `cases/NN_*.md`: historia canónica con SVG;
 - `data_specs/NN_*.yml`: contrato de datos sintéticos;
 - `visual_specs/NN_*.yml`: pregunta y lectura de la gráfica;
 - `html/NN_*.html`: vista lineal generada.
 
-## Crear y validar
+El sitio público se genera en `../docs/` desde esos archivos. No edites `../docs/`
+a mano: cambia las fuentes canónicas y vuelve a ejecutar el generador.
+
+## Crear, publicar y validar
 
 ```powershell
 python tools/render_case_html.py examples/cases/01_dashboard_que_bajo_quejas_cerrando_boton.md examples/html/01_dashboard_que_bajo_quejas_cerrando_boton.html
 $cases = Get-ChildItem examples/cases/*.md | ForEach-Object FullName
 $html = Get-ChildItem examples/html/*.html | ForEach-Object FullName
 python tools/validate_case_structure.py --collection $cases
+python tools/audit_story_language.py --collection $cases
 python tools/validate_html_story.py --collection $html
+python tools/build_pages_site.py
 python -m pytest
 ```
+
+Para GitHub Pages, configura la rama principal con carpeta `/docs`.
 
 ## Documentos
 

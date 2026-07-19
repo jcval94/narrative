@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **la jefa:** "A Operacion le gusta saber que puede romperse."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+Se asignan riesgos y presupuestos iguales a sistemas muy distintos. El efecto apareció antes del siguiente reporte y obligó al equipo a revisar la regla que estaba guiando la operación.
 
 ## Un presupuesto para cinco animales distintos
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Bruno:** "Primero pongamos el nombre de pila."
 
-> **Elena:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Elena:** "Se asignan riesgos y presupuestos iguales a sistemas muy distintos."
 
-> **la jefa:** "Quiero saber exactamente donde se esta pagando."
+> **la jefa:** "Quiero ver matriz de capacidades antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Elena clasifica cada iniciativa por entrada, salida, memoria y accion. La comparación cambió el centro de la junta: ya no importaba defender el atajo, sino decidir qué hacer con su consecuencia.
 
 ## Que entra, que sale y que toca
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Bruno:** "Son familias distintas, con controles distintos."
 
-> **Elena:** "Eso explica por que la salida parecia correcta al principio."
+> **Elena:** "Ahora entiendo por qué llamar IA a todo evita explicar que hace cada cosa."
 
-> **Bruno:** "Correcta para una pregunta que no era la importante."
+> **Bruno:** "Respondía otra pregunta; no servía para nombrar la capacidad real antes de estimar costo, riesgo y control."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="matriz de capacidades">
   <rect width="720" height="320" fill="#fff"/>
@@ -103,21 +93,17 @@ cara tranquila.
 
 > **la jefa:** "El portafolio se reclasifica por capacidad y riesgo."
 
-> **la jefa:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **la jefa:** "Dejen por escrito quién va a nombrar la capacidad real antes de estimar costo, riesgo y control."
 
 > **Victor:** "El resumen deja de caber en una sola etiqueta."
 
 > **Bruno:** "Y empieza a servir para decidir."
 
-> **Victor:** "Y si alguien pide excepcion."
+> **Bruno:** "¿Qué cambiaremos después de revisar matriz de capacidades?"
 
-> **Bruno:** "Que la pida con costo visible y fecha."
+> **Elena:** "La decisión es nombrar la capacidad real antes de estimar costo, riesgo y control."
 
-> **la jefa:** "Y si no hay evidencia, no hay lanzamiento."
-
-> **Elena:** "Eso va a incomodar a la prisa."
-
-> **Bruno:** "La prisa ya nos estaba cobrando intereses."
+> **Victor:** "Y volvemos a medir diferencias entre IA, aprendizaje automatico, generativa, RAG y agentes antes del siguiente cierre."
 
 > **Elena:** "No todo era IA; algunas cosas solo tenian autoestima digital."
 

@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **la lider:** "El comando de siempre apunta al lugar de siempre."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+Se duplican instalaciones, cambian versiones y nadie sabe que entorno corre. A esa altura ya existía un folio, una espera o una aprobación que no podía resolverse con otra explicación general.
 
 ## La recepcion equivocada
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Javi:** "Ninguna en el cuarto correcto."
 
-> **Renata:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Renata:** "Se duplican instalaciones, cambian versiones y nadie sabe que entorno corre."
 
-> **la lider:** "Quiero saber exactamente donde se esta pagando."
+> **la lider:** "Quiero ver paquetes por ambiente antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Renata compara paquetes instalados por entorno y comando usado. La evidencia común hizo posible discutir la misma pregunta y abandonar las interpretaciones que cada área había completado por su cuenta.
 
 ## El paquete estaba, pero no ahi
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Javi:** "En el global, mientras el proyecto corre en el virtual."
 
-> **Renata:** "Eso explica por que la salida parecia correcta al principio."
+> **Renata:** "Ahora entiendo por qué si pip dice instalado, el programa ya lo puede importar."
 
-> **Javi:** "Correcta para una pregunta que no era la importante."
+> **Javi:** "Respondía otra pregunta; no servía para usar python -m pip dentro del entorno activo y guardar requirements."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="paquetes por ambiente">
   <rect width="720" height="320" fill="#fff"/>
@@ -97,21 +87,19 @@ cara tranquila.
 
 > **la lider:** "Instalamos desde el entorno activo y congelamos versiones."
 
-> **la lider:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **la lider:** "Dejen por escrito quién va a usar python -m pip dentro del entorno activo y guardar requirements."
 
 > **Ulises:** "El comando es mas largo."
 
 > **Javi:** "Pero llega a la oficina correcta."
 
-> **Ulises:** "Y si alguien pide excepcion."
+> **Javi:** "¿Qué cambiaremos después de revisar paquetes por ambiente?"
 
-> **Javi:** "Que la pida con costo visible y fecha."
+> **Renata:** "La decisión es usar python -m pip dentro del entorno activo y guardar requirements."
 
-> **la lider:** "Y si no hay evidencia, no hay lanzamiento."
+> **Ulises:** "Y volvemos a medir entornos virtuales y dependencias antes del siguiente cierre."
 
-> **Renata:** "Eso va a incomodar a la prisa."
-
-> **Javi:** "La prisa ya nos estaba cobrando intereses."
+> **Ulises:** "La instalación quedará ligada al entorno que realmente corre el proyecto."
 
 > **Renata:** "Pip si trabajo; solo fue a la oficina equivocada."
 

@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **la profe:** "Con tus archivos montados y tus paquetes vivos."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+La clase no puede reproducir resultados porque faltan paquetes, rutas y versiones. El atajo dejó de parecer pequeño cuando otra área tuvo que absorber su consecuencia durante el mismo turno.
 
 ## El martes como dependencia
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Lau:** "Eso ensena a mirar, no a reproducir."
 
-> **Oscar:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Oscar:** "La clase no puede reproducir resultados porque faltan paquetes, rutas y versiones."
 
-> **la profe:** "Quiero saber exactamente donde se esta pagando."
+> **la profe:** "Quiero ver dependencias y versiones antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Lau compara ejecuciones con y sin celda de setup. Con ambos resultados a la vista, la discusión pasó de opiniones generales a una diferencia que podía señalarse.
 
 ## Setup primero, magia despues
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Lau:** "Faltan paquetes, ruta de datos y version de libreria."
 
-> **Oscar:** "Eso explica por que la salida parecia correcta al principio."
+> **Oscar:** "Ahora entiendo por qué si corrio una vez, el entorno ya esta listo."
 
-> **Lau:** "Correcta para una pregunta que no era la importante."
+> **Lau:** "Respondía otra pregunta; no servía para agregar celda inicial de instalacion, versionado, carga de datos y verificacion."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="dependencias y versiones">
   <rect width="720" height="320" fill="#fff"/>
@@ -100,21 +90,17 @@ cara tranquila.
 
 > **la profe:** "La primera celda prepara todo y falla con mensaje claro."
 
-> **la profe:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **la profe:** "Dejen por escrito quién va a agregar celda inicial de instalacion, versionado, carga de datos y verificacion."
 
 > **Mina:** "La libreta tarda un minuto mas en arrancar."
 
 > **Lau:** "Y deja de necesitar el martes de Oscar."
 
-> **Mina:** "Y si alguien pide excepcion."
+> **Lau:** "¿Qué cambiaremos después de revisar dependencias y versiones?"
 
-> **Lau:** "Que la pida con costo visible y fecha."
+> **Oscar:** "La decisión es agregar celda inicial de instalacion, versionado, carga de datos y verificacion."
 
-> **la profe:** "Y si no hay evidencia, no hay lanzamiento."
-
-> **Oscar:** "Eso va a incomodar a la prisa."
-
-> **Lau:** "La prisa ya nos estaba cobrando intereses."
+> **Mina:** "Y volvemos a medir setup reproducible en Google Colab antes del siguiente cierre."
 
 > **Oscar:** "El notebook no estaba roto; estaba viviendo en el martes de Oscar."
 

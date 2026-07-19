@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **la directora:** "Entonces el producto es una adivinanza compartida."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+Las areas reciben scores pero nadie sabe si llamar, descontar o esperar. El plan seguía pareciendo razonable desde lejos, pero en la operación diaria ya estaba enviando el trabajo al lugar equivocado.
 
 ## Saber no era actuar
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Clara:** "Finanzas acaba de sentir un escalofrio."
 
-> **Diego:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Diego:** "Las areas reciben scores pero nadie sabe si llamar, descontar o esperar."
 
-> **la directora:** "Quiero saber exactamente donde se esta pagando."
+> **la directora:** "Quiero ver arbol de decision antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Clara convierte el score en un arbol de decisiones por accion y costo. La comparación mostró la distancia entre el indicador presentado y la decisión que realmente necesitaba tomar el equipo.
 
 ## El score necesita verbo
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Clara:** "Hay clientes para llamada, oferta y no intervencion."
 
-> **Diego:** "Eso explica por que la salida parecia correcta al principio."
+> **Diego:** "Ahora entiendo por qué predecir algo importante ya es un producto."
 
-> **Clara:** "Correcta para una pregunta que no era la importante."
+> **Clara:** "Respondía otra pregunta; no servía para crear segmentos accionables y medir respuesta por accion."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="arbol de decision">
   <rect width="720" height="320" fill="#fff"/>
@@ -97,21 +87,17 @@ cara tranquila.
 
 > **la directora:** "Publicamos recomendaciones por accion, no solo riesgo."
 
-> **la directora:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **la directora:** "Dejen por escrito quién va a crear segmentos accionables y medir respuesta por accion."
 
 > **Ramon:** "El modelo se vera menos magico."
 
 > **Clara:** "Y mas facil de usar el lunes."
 
-> **Ramon:** "Y si alguien pide excepcion."
+> **Clara:** "¿Qué cambiaremos después de revisar arbol de decision?"
 
-> **Clara:** "Que la pida con costo visible y fecha."
+> **Diego:** "La decisión es crear segmentos accionables y medir respuesta por accion."
 
-> **la directora:** "Y si no hay evidencia, no hay lanzamiento."
-
-> **Diego:** "Eso va a incomodar a la prisa."
-
-> **Clara:** "La prisa ya nos estaba cobrando intereses."
+> **Ramon:** "Y volvemos a medir definir la decision antes del modelo antes del siguiente cierre."
 
 > **Diego:** "El modelo sabia quien se iba; nosotros no sabiamos que hacer con la despedida."
 

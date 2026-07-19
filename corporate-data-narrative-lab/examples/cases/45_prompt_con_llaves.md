@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **el arquitecto:** "Eso no es permiso, es silencio peligroso."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+El asistente toca secretos, rutas y permisos que no debia tocar. El plan seguía pareciendo razonable desde lejos, pero en la operación diaria ya estaba enviando el trabajo al lugar equivocado.
 
 ## Funciono demasiado amplio
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Alma:** "Y nos dejo auditoria con tos."
 
-> **Cesar:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Cesar:** "El asistente toca secretos, rutas y permisos que no debia tocar."
 
-> **el arquitecto:** "Quiero saber exactamente donde se esta pagando."
+> **el arquitecto:** "Quiero ver tareas con limites antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Alma compara tareas con limites explicitos contra tareas abiertas. La comparación mostró la distancia entre el indicador presentado y la decisión que realmente necesitaba tomar el equipo.
 
 ## Las bardas tambien son requisito
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Alma:** "En prompts abiertos, sobre todo cerca de configuracion."
 
-> **Cesar:** "Eso explica por que la salida parecia correcta al principio."
+> **Cesar:** "Ahora entiendo por qué mientras el objetivo sea claro, los limites sobran."
 
-> **Alma:** "Correcta para una pregunta que no era la importante."
+> **Alma:** "Respondía otra pregunta; no servía para especificar archivos permitidos, no tocar secretos y pedir confirmacion ante riesgo."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="tareas con limites">
   <rect width="720" height="320" fill="#fff"/>
@@ -97,21 +87,19 @@ cara tranquila.
 
 > **el arquitecto:** "Usaremos prompts con objetivo, limites y pruebas esperadas."
 
-> **el arquitecto:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **el arquitecto:** "Dejen por escrito quién va a especificar archivos permitidos, no tocar secretos y pedir confirmacion ante riesgo."
 
 > **Lidia:** "Escribir la tarea tomara mas."
 
 > **Alma:** "Revisar el desastre tomara menos."
 
-> **Lidia:** "Y si alguien pide excepcion."
+> **Alma:** "¿Qué cambiaremos después de revisar tareas con limites?"
 
-> **Alma:** "Que la pida con costo visible y fecha."
+> **Cesar:** "La decisión es especificar archivos permitidos, no tocar secretos y pedir confirmacion ante riesgo."
 
-> **el arquitecto:** "Y si no hay evidencia, no hay lanzamiento."
+> **Lidia:** "Y volvemos a medir especificaciones y limites para asistentes de codigo antes del siguiente cierre."
 
-> **Cesar:** "Eso va a incomodar a la prisa."
-
-> **Alma:** "La prisa ya nos estaba cobrando intereses."
+> **Lidia:** "Las llaves de ejemplo serán falsas y los secretos vivirán fuera del prompt."
 
 > **Cesar:** "El prompt no tenia llaves; por eso el asistente entro hasta la bodega."
 

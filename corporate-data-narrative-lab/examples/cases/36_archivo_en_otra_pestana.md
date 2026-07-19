@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **el instructor:** "Cada quien subio uno con nombre diferente."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+Cada estudiante sube datos con nombres distintos y aparecen resultados incompatibles. La decisión ya afectaba tiempos, permisos o dinero, así que posponer la revisión también tenía un costo claro.
 
 ## Cada quien cargo su mundo
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Vero:** "De archivos que no eran el mismo."
 
-> **Hector:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Hector:** "Cada estudiante sube datos con nombres distintos y aparecen resultados incompatibles."
 
-> **el instructor:** "Quiero saber exactamente donde se esta pagando."
+> **el instructor:** "Quiero ver rutas y fuentes antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Vero compara rutas usadas y numero de filas cargadas. La nueva lectura permitió separar lo que el equipo esperaba de lo que el proceso estaba produciendo realmente.
 
 ## La ruta tambien es dato
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Vero:** "Menos de los que creian."
 
-> **Hector:** "Eso explica por que la salida parecia correcta al principio."
+> **Hector:** "Ahora entiendo por qué si el archivo se ve en el navegador, Python tambien sabe donde esta."
 
-> **Vero:** "Correcta para una pregunta que no era la importante."
+> **Vero:** "Respondía otra pregunta; no servía para definir una sola ruta, validar columnas y mostrar conteo antes de analizar."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="rutas y fuentes">
   <rect width="720" height="320" fill="#fff"/>
@@ -100,21 +90,17 @@ cara tranquila.
 
 > **el instructor:** "El notebook descarga una fuente unica y valida esquema."
 
-> **el instructor:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **el instructor:** "Dejen por escrito quién va a definir una sola ruta, validar columnas y mostrar conteo antes de analizar."
 
 > **Nadia:** "Habra menos libertad creativa con nombres."
 
 > **Vero:** "Y mas confianza en el resultado compartido."
 
-> **Nadia:** "Y si alguien pide excepcion."
+> **Vero:** "¿Qué cambiaremos después de revisar rutas y fuentes?"
 
-> **Vero:** "Que la pida con costo visible y fecha."
+> **Hector:** "La decisión es definir una sola ruta, validar columnas y mostrar conteo antes de analizar."
 
-> **el instructor:** "Y si no hay evidencia, no hay lanzamiento."
-
-> **Hector:** "Eso va a incomodar a la prisa."
-
-> **Vero:** "La prisa ya nos estaba cobrando intereses."
+> **Nadia:** "Y volvemos a medir rutas, montaje de Drive y carga de datos en Colab antes del siguiente cierre."
 
 > **Hector:** "El archivo estaba cerca visualmente, que es muy lejos para Python."
 

@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **la product manager:** "Claro para que accion."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+El agente cambia colores y layout pero no resuelve la decision del usuario. La primera defensa explicaba por qué se eligió el atajo, aunque no resolvía el daño que había aparecido después.
 
 ## Bonito hizo ruido
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Jimena:** "Moderno no contesta la pregunta."
 
-> **Dario:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Dario:** "El agente cambia colores y layout pero no resuelve la decision del usuario."
 
-> **la product manager:** "Quiero saber exactamente donde se esta pagando."
+> **la product manager:** "Quiero ver criterios de aceptacion antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Jimena compara requerimientos vagos contra criterios de usuario y decision. El dato central permitió conservar la presión legítima y cambiar solamente la lógica que estaba produciendo el error.
 
 ## El PRD necesita decision
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Jimena:** "Con criterios claros cambia menos y resuelve mejor."
 
-> **Dario:** "Eso explica por que la salida parecia correcta al principio."
+> **Dario:** "Ahora entiendo por qué una frase aspiracional basta para construir una solucion."
 
-> **Jimena:** "Correcta para una pregunta que no era la importante."
+> **Jimena:** "Respondía otra pregunta; no servía para reescribir PRD con usuario, problema, decision, no objetivos y aceptacion."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="criterios de aceptacion">
   <rect width="720" height="320" fill="#fff"/>
@@ -100,21 +90,17 @@ cara tranquila.
 
 > **la product manager:** "El PRD se reescribe antes de pedir cambios."
 
-> **la product manager:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **la product manager:** "Dejen por escrito quién va a reescribir PRD con usuario, problema, decision, no objetivos y aceptacion."
 
 > **Sol:** "No saldremos corriendo a generar pantalla."
 
 > **Jimena:** "Y no confundiremos movimiento con avance."
 
-> **Sol:** "Y si alguien pide excepcion."
+> **Jimena:** "¿Qué cambiaremos después de revisar criterios de aceptacion?"
 
-> **Jimena:** "Que la pida con costo visible y fecha."
+> **Dario:** "La decisión es reescribir PRD con usuario, problema, decision, no objetivos y aceptacion."
 
-> **la product manager:** "Y si no hay evidencia, no hay lanzamiento."
-
-> **Dario:** "Eso va a incomodar a la prisa."
-
-> **Jimena:** "La prisa ya nos estaba cobrando intereses."
+> **Sol:** "Y volvemos a medir PRD para agentes y productos de datos antes del siguiente cierre."
 
 > **Dario:** "Hazlo bonito era una direccion estetica, no un destino de producto."
 

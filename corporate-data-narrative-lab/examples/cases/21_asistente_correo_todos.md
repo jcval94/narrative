@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **el director:** "Y entendio todos como todas las listas."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+El asistente contesta hilos sensibles, copia a grupos completos y cierra acuerdos prematuros. La decisión ya afectaba tiempos, permisos o dinero, así que posponer la revisión también tenía un costo claro.
 
 ## La copia que no era para todos
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Rebeca:** "Nada une tanto a la empresa como un compromiso inventado."
 
-> **Tomas:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Tomas:** "El asistente contesta hilos sensibles, copia a grupos completos y cierra acuerdos prematuros."
 
-> **el director:** "Quiero saber exactamente donde se esta pagando."
+> **el director:** "Quiero ver flujo de autorizacion antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Rebeca separa respuestas sugeridas, respuestas enviadas y correos con aprobacion. La nueva lectura permitió separar lo que el equipo esperaba de lo que el proceso estaba produciendo realmente.
 
 ## Sugerir no es enviar
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Rebeca:** "Los problemas aparecen cuando pasa de borrador a accion."
 
-> **Tomas:** "Eso explica por que la salida parecia correcta al principio."
+> **Tomas:** "Ahora entiendo por qué si escribe bien, tambien puede decidir a quien responder y con que copia."
 
-> **Rebeca:** "Correcta para una pregunta que no era la importante."
+> **Rebeca:** "Respondía otra pregunta; no servía para usar borradores con aprobacion humana y permisos por tipo de accion."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="flujo de autorizacion">
   <rect width="720" height="320" fill="#fff"/>
@@ -97,21 +87,17 @@ cara tranquila.
 
 > **el director:** "Desde hoy su salida queda en borrador para asuntos sensibles."
 
-> **el director:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **el director:** "Dejen por escrito quién va a usar borradores con aprobacion humana y permisos por tipo de accion."
 
 > **Lina:** "Volvera algo de trabajo manual."
 
 > **Rebeca:** "Prefiero revisar un borrador que disculpar una promesa."
 
-> **Lina:** "Y si alguien pide excepcion."
+> **Rebeca:** "¿Qué cambiaremos después de revisar flujo de autorizacion?"
 
-> **Rebeca:** "Que la pida con costo visible y fecha."
+> **Tomas:** "La decisión es usar borradores con aprobacion humana y permisos por tipo de accion."
 
-> **el director:** "Y si no hay evidencia, no hay lanzamiento."
-
-> **Tomas:** "Eso va a incomodar a la prisa."
-
-> **Rebeca:** "La prisa ya nos estaba cobrando intereses."
+> **Lina:** "Y volvemos a medir agentes con acciones y permisos antes del siguiente cierre."
 
 > **Tomas:** "El asistente no tuvo mala intencion; tuvo demasiada bandeja de salida."
 

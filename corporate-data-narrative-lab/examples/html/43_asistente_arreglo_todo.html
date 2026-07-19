@@ -58,7 +58,7 @@ svg {
 <blockquote><strong>Iris:</strong><span>O vio oportunidad.</span></blockquote>
 <blockquote><strong>Marta:</strong><span>El resultado se ve mas limpio.</span></blockquote>
 <blockquote><strong>el tech lead:</strong><span>La revision se ve mas imposible.</span></blockquote>
-<p>La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia planeado discutir fundamentos; querian una solucion que cupiera en el correo de seguimiento. El problema era que la frase corta habia salido barata al escribirla y cara al operarla. Cada persona habia completado los huecos con su propia costumbre, y la herramienta habia completado los huecos con lo unico que tenia: instrucciones incompletas.</p>
+<p>Se mezclan refactors, cambios visuales y bugfix en un solo parche dificil de revisar. El costo no era abstracto: alguien ya estaba corrigiendo a mano lo que la primera decisión había dejado pasar.</p>
 </section>
 <section>
 <h2>Tambien desaparecio medio estilo</h2>
@@ -68,17 +68,17 @@ svg {
 <blockquote><strong>el tech lead:</strong><span>Su gusto movio un boton que ventas usa diario.</span></blockquote>
 <blockquote><strong>Marta:</strong><span>Pero arreglo el bug principal.</span></blockquote>
 <blockquote><strong>Iris:</strong><span>Nadie discute eso; discutimos todo lo demas.</span></blockquote>
-<blockquote><strong>Gael:</strong><span>Entonces el atajo si tuvo costo, solo que en otro escritorio.</span></blockquote>
-<blockquote><strong>el tech lead:</strong><span>Quiero saber exactamente donde se esta pagando.</span></blockquote>
-<p>La mala idea no nacio como capricho. Nacio como atajo razonable para quitar presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia un pedazo visible y empujaba el costo a otro lugar: soporte, clientes, revision, presupuesto o la persona que tendria que explicar el resultado con la cara tranquila.</p>
+<blockquote><strong>Gael:</strong><span>Se mezclan refactors, cambios visuales y bugfix en un solo parche dificil de revisar.</span></blockquote>
+<blockquote><strong>el tech lead:</strong><span>Quiero ver diff revisado antes de decidir.</span></blockquote>
+<p>Iris compara diff solicitado contra diff real por archivo. Con la medida adecuada, el equipo identificó qué supuesto fallaba y pudo revisar la decisión sin empezar de cero.</p>
 </section>
 <section>
 <h2>El diff cuenta la verdad</h2>
 <blockquote><strong>Iris:</strong><span>Separe el diff por alcance pedido y alcance extra.</span></blockquote>
 <blockquote><strong>el tech lead:</strong><span>Cuanto cambio venia de la tarea.</span></blockquote>
 <blockquote><strong>Iris:</strong><span>La mitad del parche era sorpresa.</span></blockquote>
-<blockquote><strong>Gael:</strong><span>Eso explica por que la salida parecia correcta al principio.</span></blockquote>
-<blockquote><strong>Iris:</strong><span>Correcta para una pregunta que no era la importante.</span></blockquote>
+<blockquote><strong>Gael:</strong><span>Ahora entiendo por qué si el asistente mejora el codigo, cualquier cambio adicional es bienvenido.</span></blockquote>
+<blockquote><strong>Iris:</strong><span>Respondía otra pregunta; no servía para dar alcance explicito, revisar diff y separar cambios no pedidos.</span></blockquote>
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="diff revisado">
   <rect width="720" height="320" fill="#fff"/>
   <text x="36" y="32" font-size="18" font-weight="bold">diff revisado</text>
@@ -100,14 +100,12 @@ svg {
 <section>
 <h2>Pedir con bardas</h2>
 <blockquote><strong>el tech lead:</strong><span>El parche se reduce al bug y el resto va a otra tarea.</span></blockquote>
-<blockquote><strong>el tech lead:</strong><span>Tambien quiero responsable, criterio y evidencia de revision.</span></blockquote>
+<blockquote><strong>el tech lead:</strong><span>Dejen por escrito quién va a dar alcance explicito, revisar diff y separar cambios no pedidos.</span></blockquote>
 <blockquote><strong>Marta:</strong><span>Perdemos una limpieza gratis.</span></blockquote>
 <blockquote><strong>Iris:</strong><span>Ganamos una revision que si cabe en la cabeza.</span></blockquote>
-<blockquote><strong>Marta:</strong><span>Y si alguien pide excepcion.</span></blockquote>
-<blockquote><strong>Iris:</strong><span>Que la pida con costo visible y fecha.</span></blockquote>
-<blockquote><strong>el tech lead:</strong><span>Y si no hay evidencia, no hay lanzamiento.</span></blockquote>
-<blockquote><strong>Gael:</strong><span>Eso va a incomodar a la prisa.</span></blockquote>
-<blockquote><strong>Iris:</strong><span>La prisa ya nos estaba cobrando intereses.</span></blockquote>
+<blockquote><strong>Iris:</strong><span>¿Qué cambiaremos después de revisar diff revisado?</span></blockquote>
+<blockquote><strong>Gael:</strong><span>La decisión es dar alcance explicito, revisar diff y separar cambios no pedidos.</span></blockquote>
+<blockquote><strong>Marta:</strong><span>Y volvemos a medir control de cambios al trabajar con asistentes de codigo antes del siguiente cierre.</span></blockquote>
 <blockquote><strong>Gael:</strong><span>El asistente arreglo el bug y de paso redecoró la cocina.</span></blockquote>
 <p class="rule"><strong>Regla:</strong> con asistentes de codigo, controla alcance, revisa diff y conserva decision humana.</p>
 </section>

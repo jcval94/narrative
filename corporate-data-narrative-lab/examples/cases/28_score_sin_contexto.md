@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **la directora:** "Tambien baja la oportunidad de explicar."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+Personas con eventos normales quedan bloqueadas sin explicacion. El costo no era abstracto: alguien ya estaba corrigiendo a mano lo que la primera decisión había dejado pasar.
 
 ## Cambiar de vida parecia fraude
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Ines:** "Si la cuenta esta bloqueada, no lo va a leer."
 
-> **Marco:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Marco:** "Personas con eventos normales quedan bloqueadas sin explicacion."
 
-> **la directora:** "Quiero saber exactamente donde se esta pagando."
+> **la directora:** "Quiero ver errores por umbral y revision antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Ines compara errores con y sin revision de contexto. Con la medida adecuada, el equipo identificó qué supuesto fallaba y pudo revisar la decisión sin empezar de cero.
 
 ## El contexto baja errores
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Ines:** "La revision conserva alertas y baja bloqueos injustos."
 
-> **Marco:** "Eso explica por que la salida parecia correcta al principio."
+> **Marco:** "Ahora entiendo por qué si el score sube, la decision automatica debe endurecerse."
 
-> **Ines:** "Correcta para una pregunta que no era la importante."
+> **Ines:** "Respondía otra pregunta; no servía para usar score como alerta, pedir contexto y dejar apelacion."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="errores por umbral y revision">
   <rect width="720" height="320" fill="#fff"/>
@@ -97,21 +87,17 @@ cara tranquila.
 
 > **la directora:** "El bloqueo automatico queda limitado a casos confirmados."
 
-> **la directora:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **la directora:** "Dejen por escrito quién va a usar score como alerta, pedir contexto y dejar apelacion."
 
 > **Paula:** "Algunas revisiones tardaran mas."
 
 > **Ines:** "La rapidez deja de atropellar mudanzas."
 
-> **Paula:** "Y si alguien pide excepcion."
+> **Ines:** "¿Qué cambiaremos después de revisar errores por umbral y revision?"
 
-> **Ines:** "Que la pida con costo visible y fecha."
+> **Marco:** "La decisión es usar score como alerta, pedir contexto y dejar apelacion."
 
-> **la directora:** "Y si no hay evidencia, no hay lanzamiento."
-
-> **Marco:** "Eso va a incomodar a la prisa."
-
-> **Ines:** "La prisa ya nos estaba cobrando intereses."
+> **Paula:** "Y volvemos a medir human in the loop para decisiones de alto impacto antes del siguiente cierre."
 
 > **Marco:** "El score veia riesgo; Paula tuvo que recordarle que la gente se muda."
 

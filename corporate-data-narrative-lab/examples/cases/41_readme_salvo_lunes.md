@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **la coordinadora:** "Eva esta de vacaciones y no dejo webhook mental."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+La persona dueña sale de vacaciones y el equipo no puede regenerar resultados. Nadie necesitó imaginar un riesgo futuro; el problema ya estaba ocupando tiempo y retrasando una decisión del día.
 
 ## El codigo no contestaba llamadas
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Tania:** "Descriptivos para quien ya entiende la historia."
 
-> **Joel:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Joel:** "La persona dueña sale de vacaciones y el equipo no puede regenerar resultados."
 
-> **la coordinadora:** "Quiero saber exactamente donde se esta pagando."
+> **la coordinadora:** "Quiero ver checklist de reproducibilidad antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Tania compara tiempos de arranque con y sin README. El contraste permitió ubicar el error sin convertir la conversación en una discusión sobre intenciones.
 
 ## Cinco cosas para empezar
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Tania:** "Faltan objetivo, setup, datos, comando y salida esperada."
 
-> **Joel:** "Eso explica por que la salida parecia correcta al principio."
+> **Joel:** "Ahora entiendo por qué el codigo se explica solo si esta bien escrito."
 
-> **Tania:** "Correcta para una pregunta que no era la importante."
+> **Tania:** "Respondía otra pregunta; no servía para agregar objetivo, datos, setup, comandos y salida esperada."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="checklist de reproducibilidad">
   <rect width="720" height="320" fill="#fff"/>
@@ -97,21 +87,21 @@ cara tranquila.
 
 > **la coordinadora:** "Agregamos README antes de compartir resultados."
 
-> **la coordinadora:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **la coordinadora:** "Dejen por escrito quién va a agregar objetivo, datos, setup, comandos y salida esperada."
 
 > **Eva:** "Tardaremos una hora en escribirlo."
 
 > **Tania:** "Y ahorraremos muchas horas de lunes."
 
-> **Eva:** "Y si alguien pide excepcion."
+> **Tania:** "¿Qué cambiaremos después de revisar checklist de reproducibilidad?"
 
-> **Tania:** "Que la pida con costo visible y fecha."
+> **Joel:** "La decisión es agregar objetivo, datos, setup, comandos y salida esperada."
 
-> **la coordinadora:** "Y si no hay evidencia, no hay lanzamiento."
+> **Eva:** "Y volvemos a medir documentacion minima reproducible antes del siguiente cierre."
 
-> **Joel:** "Eso va a incomodar a la prisa."
+> **Eva:** "Mañana otra persona repetirá el proceso usando solo el README y los archivos del repositorio."
 
-> **Tania:** "La prisa ya nos estaba cobrando intereses."
+> **la coordinadora:** "La prueba termina cuando alguien nuevo reproduce la salida sin pedir ayuda por chat."
 
 > **Joel:** "El README no hizo analisis; solo encontro la luz del cuarto."
 

@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **el jefe:** "Tambien aplana lo dificil."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+El modelo falla justo donde la decision importa mas. La falla ya interrumpía una tarea concreta y el plan original no podía seguir sin una corrección visible.
 
 ## La prueba estaba muy comoda
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Santi:** "Eso deja fuera el trabajo importante."
 
-> **Marisol:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Marisol:** "El modelo falla justo donde la decision importa mas."
 
-> **el jefe:** "Quiero saber exactamente donde se esta pagando."
+> **el jefe:** "Quiero ver matriz por dificultad antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Marisol divide desempeno por dificultad y valor de caso. La comparación reunió por primera vez la versión cómoda y el costo que había quedado fuera de la conversación.
 
 ## Facil tambien cuenta, pero no decide solo
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Santi:** "En facil va perfecto; en dificil se cae."
 
-> **Marisol:** "Eso explica por que la salida parecia correcta al principio."
+> **Marisol:** "Ahora entiendo por qué la metrica promedio representa todos los tipos de caso."
 
-> **Santi:** "Correcta para una pregunta que no era la importante."
+> **Santi:** "Respondía otra pregunta; no servía para evaluar por segmento y lanzar solo donde cumple."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="matriz por dificultad">
   <rect width="720" height="320" fill="#fff"/>
@@ -97,21 +87,21 @@ cara tranquila.
 
 > **el jefe:** "Lanzamos solo en casos simples y revisamos los dificiles."
 
-> **el jefe:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **el jefe:** "Dejen por escrito quién va a evaluar por segmento y lanzar solo donde cumple."
 
 > **Elia:** "El alcance inicial sera menor."
 
 > **Santi:** "Y las fallas no caeran donde mas pesan."
 
-> **Elia:** "Y si alguien pide excepcion."
+> **Santi:** "¿Qué cambiaremos después de revisar matriz por dificultad?"
 
-> **Santi:** "Que la pida con costo visible y fecha."
+> **Marisol:** "La decisión es evaluar por segmento y lanzar solo donde cumple."
 
-> **el jefe:** "Y si no hay evidencia, no hay lanzamiento."
+> **Elia:** "Y volvemos a medir evaluacion por segmentos y dificultad antes del siguiente cierre."
 
-> **Marisol:** "Eso va a incomodar a la prisa."
+> **Elia:** "También separaremos casos fáciles y difíciles antes de comparar a los dos modelos."
 
-> **Santi:** "La prisa ya nos estaba cobrando intereses."
+> **el jefe:** "El reporte incluirá volumen y costo de fallar en cada segmento."
 
 > **Marisol:** "El modelo era excelente nadando en alberca para ninos."
 

@@ -28,11 +28,7 @@ synthetic_data: true
 
 > **la jefa:** "Hoy la carpeta cambio y el script no aviso."
 
-La clase no se atoro por falta de ganas. Se atoro porque una idea razonable se
-habia quedado a medio camino entre conversacion y procedimiento. En la mesa ya
-habia prisa, capturas abiertas y alguien diciendo que lo importante era avanzar.
-Por eso el error parecia pequeno: no rompia la historia completa, solo la parte
-donde la maquina tenia que entender exactamente que hacer.
+El proceso falla en silencio cuando cambia la ruta o falta una columna. El grupo avanzó hasta que un cambio mínimo produjo un número distinto y no quedó claro si era error, excepción o regla.
 
 ## El silencio tambien es error
 
@@ -48,15 +44,11 @@ donde la maquina tenia que entender exactamente que hacer.
 
 > **Dana:** "Fallo rapido y sin explicar."
 
-> **Ruben:** "Entonces el atajo si hizo trabajo, solo que no el trabajo correcto."
+> **Ruben:** "El proceso falla en silencio cuando cambia la ruta o falta una columna."
 
-> **la jefa:** "Quiero ver donde se separa la intuicion del resultado."
+> **la jefa:** "Enséñame corridas con errores visibles y silenciosos antes de cerrar."
 
-La solucion comoda tenia una virtud: se podia explicar en una frase. El problema
-era que tambien escondia entradas, reglas y excepciones. Cuando el grupo la
-siguio dos pasos mas, aparecio lo de siempre: una salida que parecia formal, una
-persona intentando defenderla y otra buscando el dato exacto donde la historia
-dejaba de sostenerse.
+El grupo puso corridas con errores visibles y silenciosos junto al resultado anterior. La evidencia separó cada etapa del procedimiento y permitió corregir una sola parte sin rehacer todo el ejercicio.
 
 ## Preguntar antes de caer
 
@@ -66,9 +58,9 @@ dejaba de sostenerse.
 
 > **Dana:** "Los fallos dejaron de ser adivinanzas."
 
-> **Ruben:** "Eso cambia lo que tenemos que enseñar."
+> **Ruben:** "Entonces debemos validar rutas, manejar excepciones y registrar mensajes utiles."
 
-> **Dana:** "Si. Primero la regla humana, luego la forma tecnica."
+> **Dana:** "Un buen script espera fallas comunes y las explica con mensajes utiles."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="corridas con errores visibles y silenciosos">
   <rect width="720" height="320" fill="#fff"/>
@@ -99,9 +91,15 @@ dejaba de sostenerse.
 
 > **Dana:** "Pero diran que hacer cuando algo falte."
 
-> **Silvia:** "Y si alguien quiere saltarse ese paso."
+> **Dana:** "¿Qué cambiaremos después de revisar corridas con errores visibles y silenciosos?"
 
-> **Dana:** "Que primero explique que evidencia esta dispuesto a perder."
+> **Ruben:** "La decisión es validar rutas, manejar excepciones y registrar mensajes utiles."
+
+> **Silvia:** "Y volvemos a medir manejo de errores, archivos y buenas practicas antes del siguiente cierre."
+
+> **Silvia:** "También registraremos el archivo fallido sin esconder la causa del error."
+
+> **la jefa:** "Un mensaje claro dirá qué archivo faltó y qué puede hacer la persona."
 
 > **Ruben:** "El script no fallo misteriosamente; fallo con mucha discrecion."
 

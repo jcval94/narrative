@@ -58,7 +58,7 @@ svg {
 <blockquote><strong>Javi:</strong><span>O hablan de entornos distintos.</span></blockquote>
 <blockquote><strong>Ulises:</strong><span>Use el comando de siempre.</span></blockquote>
 <blockquote><strong>la lider:</strong><span>El comando de siempre apunta al lugar de siempre.</span></blockquote>
-<p>La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia planeado discutir fundamentos; querian una solucion que cupiera en el correo de seguimiento. El problema era que la frase corta habia salido barata al escribirla y cara al operarla. Cada persona habia completado los huecos con su propia costumbre, y la herramienta habia completado los huecos con lo unico que tenia: instrucciones incompletas.</p>
+<p>Se duplican instalaciones, cambian versiones y nadie sabe que entorno corre. A esa altura ya existía un folio, una espera o una aprobación que no podía resolverse con otra explicación general.</p>
 </section>
 <section>
 <h2>La recepcion equivocada</h2>
@@ -68,17 +68,17 @@ svg {
 <blockquote><strong>la lider:</strong><span>Tambien aparecieron versiones diferentes.</span></blockquote>
 <blockquote><strong>Ulises:</strong><span>La computadora esta llena de soluciones.</span></blockquote>
 <blockquote><strong>Javi:</strong><span>Ninguna en el cuarto correcto.</span></blockquote>
-<blockquote><strong>Renata:</strong><span>Entonces el atajo si tuvo costo, solo que en otro escritorio.</span></blockquote>
-<blockquote><strong>la lider:</strong><span>Quiero saber exactamente donde se esta pagando.</span></blockquote>
-<p>La mala idea no nacio como capricho. Nacio como atajo razonable para quitar presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia un pedazo visible y empujaba el costo a otro lugar: soporte, clientes, revision, presupuesto o la persona que tendria que explicar el resultado con la cara tranquila.</p>
+<blockquote><strong>Renata:</strong><span>Se duplican instalaciones, cambian versiones y nadie sabe que entorno corre.</span></blockquote>
+<blockquote><strong>la lider:</strong><span>Quiero ver paquetes por ambiente antes de decidir.</span></blockquote>
+<p>Renata compara paquetes instalados por entorno y comando usado. La evidencia común hizo posible discutir la misma pregunta y abandonar las interpretaciones que cada área había completado por su cuenta.</p>
 </section>
 <section>
 <h2>El paquete estaba, pero no ahi</h2>
 <blockquote><strong>Javi:</strong><span>Compare pip, Python y paquetes por ruta.</span></blockquote>
 <blockquote><strong>la lider:</strong><span>Donde quedo instalado el paquete.</span></blockquote>
 <blockquote><strong>Javi:</strong><span>En el global, mientras el proyecto corre en el virtual.</span></blockquote>
-<blockquote><strong>Renata:</strong><span>Eso explica por que la salida parecia correcta al principio.</span></blockquote>
-<blockquote><strong>Javi:</strong><span>Correcta para una pregunta que no era la importante.</span></blockquote>
+<blockquote><strong>Renata:</strong><span>Ahora entiendo por qué si pip dice instalado, el programa ya lo puede importar.</span></blockquote>
+<blockquote><strong>Javi:</strong><span>Respondía otra pregunta; no servía para usar python -m pip dentro del entorno activo y guardar requirements.</span></blockquote>
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="paquetes por ambiente">
   <rect width="720" height="320" fill="#fff"/>
   <text x="36" y="32" font-size="18" font-weight="bold">paquetes por ambiente</text>
@@ -100,14 +100,13 @@ svg {
 <section>
 <h2>Una puerta para instalar y correr</h2>
 <blockquote><strong>la lider:</strong><span>Instalamos desde el entorno activo y congelamos versiones.</span></blockquote>
-<blockquote><strong>la lider:</strong><span>Tambien quiero responsable, criterio y evidencia de revision.</span></blockquote>
+<blockquote><strong>la lider:</strong><span>Dejen por escrito quién va a usar python -m pip dentro del entorno activo y guardar requirements.</span></blockquote>
 <blockquote><strong>Ulises:</strong><span>El comando es mas largo.</span></blockquote>
 <blockquote><strong>Javi:</strong><span>Pero llega a la oficina correcta.</span></blockquote>
-<blockquote><strong>Ulises:</strong><span>Y si alguien pide excepcion.</span></blockquote>
-<blockquote><strong>Javi:</strong><span>Que la pida con costo visible y fecha.</span></blockquote>
-<blockquote><strong>la lider:</strong><span>Y si no hay evidencia, no hay lanzamiento.</span></blockquote>
-<blockquote><strong>Renata:</strong><span>Eso va a incomodar a la prisa.</span></blockquote>
-<blockquote><strong>Javi:</strong><span>La prisa ya nos estaba cobrando intereses.</span></blockquote>
+<blockquote><strong>Javi:</strong><span>¿Qué cambiaremos después de revisar paquetes por ambiente?</span></blockquote>
+<blockquote><strong>Renata:</strong><span>La decisión es usar python -m pip dentro del entorno activo y guardar requirements.</span></blockquote>
+<blockquote><strong>Ulises:</strong><span>Y volvemos a medir entornos virtuales y dependencias antes del siguiente cierre.</span></blockquote>
+<blockquote><strong>Ulises:</strong><span>La instalación quedará ligada al entorno que realmente corre el proyecto.</span></blockquote>
 <blockquote><strong>Renata:</strong><span>Pip si trabajo; solo fue a la oficina equivocada.</span></blockquote>
 <p class="rule"><strong>Regla:</strong> instala dependencias desde el mismo Python que ejecuta el proyecto.</p>
 </section>

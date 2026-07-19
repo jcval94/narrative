@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **la gerente:** "Y ahora tenemos casos graves esperando turno."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+El sistema acomoda casos por texto literal y manda reclamos graves al final. La falla ya interrumpía una tarea concreta y el plan original no podía seguir sin una corrección visible.
 
 ## La frase que todos entendian
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Nora:** "Y se quedo atras una cancelacion con dinero retenido."
 
-> **Hugo:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Hugo:** "El sistema acomoda casos por texto literal y manda reclamos graves al final."
 
-> **la gerente:** "Quiero saber exactamente donde se esta pagando."
+> **la gerente:** "Quiero ver tabla de instrucciones y resultados antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Nora compara instrucciones vagas contra instrucciones con criterio y salida esperada. La comparación reunió por primera vez la versión cómoda y el costo que había quedado fuera de la conversación.
 
 ## Lo que la maquina si leyo
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Nora:** "La version vaga ordena por palabra; la clara ordena por impacto."
 
-> **Hugo:** "Eso explica por que la salida parecia correcta al principio."
+> **Hugo:** "Ahora entiendo por qué si una persona entiende la intencion, la maquina tambien la entiende."
 
-> **Nora:** "Correcta para una pregunta que no era la importante."
+> **Nora:** "Respondía otra pregunta; no servía para escribir instrucciones con objetivo, datos de entrada, criterio y ejemplo de salida."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="tabla de instrucciones y resultados">
   <rect width="720" height="320" fill="#fff"/>
@@ -97,21 +87,17 @@ cara tranquila.
 
 > **la gerente:** "Desde hoy cada pedido lleva entrada, criterio y ejemplo."
 
-> **la gerente:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **la gerente:** "Dejen por escrito quién va a escribir instrucciones con objetivo, datos de entrada, criterio y ejemplo de salida."
 
 > **Celia:** "Va a tardar mas que escribir porfa arreglalo."
 
 > **Nora:** "Y menos que explicar por que arreglo otra cosa."
 
-> **Celia:** "Y si alguien pide excepcion."
+> **Nora:** "¿Qué cambiaremos después de revisar tabla de instrucciones y resultados?"
 
-> **Nora:** "Que la pida con costo visible y fecha."
+> **Hugo:** "La decisión es escribir instrucciones con objetivo, datos de entrada, criterio y ejemplo de salida."
 
-> **la gerente:** "Y si no hay evidencia, no hay lanzamiento."
-
-> **Hugo:** "Eso va a incomodar a la prisa."
-
-> **Nora:** "La prisa ya nos estaba cobrando intereses."
+> **Celia:** "Y volvemos a medir instrucciones precisas para comunicarse con una maquina antes del siguiente cierre."
 
 > **Hugo:** "La maquina si escucho; el problema es que nadie le dijo lo que querian."
 

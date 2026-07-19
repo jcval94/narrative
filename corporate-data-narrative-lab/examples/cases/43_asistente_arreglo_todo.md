@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **el tech lead:** "La revision se ve mas imposible."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+Se mezclan refactors, cambios visuales y bugfix en un solo parche dificil de revisar. El costo no era abstracto: alguien ya estaba corrigiendo a mano lo que la primera decisión había dejado pasar.
 
 ## Tambien desaparecio medio estilo
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Iris:** "Nadie discute eso; discutimos todo lo demas."
 
-> **Gael:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Gael:** "Se mezclan refactors, cambios visuales y bugfix en un solo parche dificil de revisar."
 
-> **el tech lead:** "Quiero saber exactamente donde se esta pagando."
+> **el tech lead:** "Quiero ver diff revisado antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Iris compara diff solicitado contra diff real por archivo. Con la medida adecuada, el equipo identificó qué supuesto fallaba y pudo revisar la decisión sin empezar de cero.
 
 ## El diff cuenta la verdad
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Iris:** "La mitad del parche era sorpresa."
 
-> **Gael:** "Eso explica por que la salida parecia correcta al principio."
+> **Gael:** "Ahora entiendo por qué si el asistente mejora el codigo, cualquier cambio adicional es bienvenido."
 
-> **Iris:** "Correcta para una pregunta que no era la importante."
+> **Iris:** "Respondía otra pregunta; no servía para dar alcance explicito, revisar diff y separar cambios no pedidos."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="diff revisado">
   <rect width="720" height="320" fill="#fff"/>
@@ -97,21 +87,17 @@ cara tranquila.
 
 > **el tech lead:** "El parche se reduce al bug y el resto va a otra tarea."
 
-> **el tech lead:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **el tech lead:** "Dejen por escrito quién va a dar alcance explicito, revisar diff y separar cambios no pedidos."
 
 > **Marta:** "Perdemos una limpieza gratis."
 
 > **Iris:** "Ganamos una revision que si cabe en la cabeza."
 
-> **Marta:** "Y si alguien pide excepcion."
+> **Iris:** "¿Qué cambiaremos después de revisar diff revisado?"
 
-> **Iris:** "Que la pida con costo visible y fecha."
+> **Gael:** "La decisión es dar alcance explicito, revisar diff y separar cambios no pedidos."
 
-> **el tech lead:** "Y si no hay evidencia, no hay lanzamiento."
-
-> **Gael:** "Eso va a incomodar a la prisa."
-
-> **Iris:** "La prisa ya nos estaba cobrando intereses."
+> **Marta:** "Y volvemos a medir control de cambios al trabajar con asistentes de codigo antes del siguiente cierre."
 
 > **Gael:** "El asistente arreglo el bug y de paso redecoró la cocina."
 

@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **la revisora:** "Lo obvio tarde se llama retrabajo."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+Cada revision agrega una expectativa nueva y el trabajo se alarga. El problema llegó con una fecha y una persona responsable de responder, dos detalles que el resumen inicial no contenía.
 
 ## Casi tambien es retrabajo
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Karla:** "Tambien cambia que significa terminar."
 
-> **Hernan:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Hernan:** "Cada revision agrega una expectativa nueva y el trabajo se alarga."
 
-> **la revisora:** "Quiero saber exactamente donde se esta pagando."
+> **la revisora:** "Quiero ver matriz alcance antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Karla convierte expectativas en criterios verificables antes de implementar. Al revisar la medida correcta, el equipo pudo abandonar una salida vistosa y elegir otra que sí resistía preguntas.
 
 ## La matriz dice si
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Karla:** "La matriz separa requerido, opcional y no alcance."
 
-> **Hernan:** "Eso explica por que la salida parecia correcta al principio."
+> **Hernan:** "Ahora entiendo por qué si la entrega se parece a lo pedido, se acepta."
 
-> **Karla:** "Correcta para una pregunta que no era la importante."
+> **Karla:** "Respondía otra pregunta; no servía para aceptar o rechazar con criterios previos y pruebas observables."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="matriz alcance">
   <rect width="720" height="320" fill="#fff"/>
@@ -97,21 +87,19 @@ cara tranquila.
 
 > **la revisora:** "Ninguna tarea pasa a agente sin criterios verificables."
 
-> **la revisora:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **la revisora:** "Dejen por escrito quién va a aceptar o rechazar con criterios previos y pruebas observables."
 
 > **Milo:** "Discutiremos antes de construir."
 
 > **Karla:** "Y no despues de tres vueltas."
 
-> **Milo:** "Y si alguien pide excepcion."
+> **Karla:** "¿Qué cambiaremos después de revisar matriz alcance?"
 
-> **Karla:** "Que la pida con costo visible y fecha."
+> **Hernan:** "La decisión es aceptar o rechazar con criterios previos y pruebas observables."
 
-> **la revisora:** "Y si no hay evidencia, no hay lanzamiento."
+> **Milo:** "Y volvemos a medir criterios de aceptacion y revision antes del siguiente cierre."
 
-> **Hernan:** "Eso va a incomodar a la prisa."
-
-> **Karla:** "La prisa ya nos estaba cobrando intereses."
+> **Milo:** "Cada criterio tendrá entrada, salida esperada y una forma clara de rechazarla."
 
 > **Hernan:** "Los criterios no eran mala onda; eran el unico que sabia decir hasta aqui."
 
