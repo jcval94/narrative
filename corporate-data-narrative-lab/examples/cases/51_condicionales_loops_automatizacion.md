@@ -28,11 +28,7 @@ synthetic_data: true
 
 > **la coordinadora:** "A mano al menos alguien distinguia pendientes de cerrados."
 
-La clase no se atoro por falta de ganas. Se atoro porque una idea razonable se
-habia quedado a medio camino entre conversacion y procedimiento. En la mesa ya
-habia prisa, capturas abiertas y alguien diciendo que lo importante era avanzar.
-Por eso el error parecia pequeno: no rompia la historia completa, solo la parte
-donde la maquina tenia que entender exactamente que hacer.
+El loop procesa todo igual y manda avisos incorrectos. La pantalla no mostraba un fallo espectacular; mostraba un resultado plausible que nadie sabía reconstruir de principio a fin.
 
 ## Repetir no es decidir
 
@@ -48,15 +44,11 @@ donde la maquina tenia que entender exactamente que hacer.
 
 > **Nico:** "Educado y falso sigue siendo falso."
 
-> **Irene:** "Entonces el atajo si hizo trabajo, solo que no el trabajo correcto."
+> **Irene:** "El loop procesa todo igual y manda avisos incorrectos."
 
-> **la coordinadora:** "Quiero ver donde se separa la intuicion del resultado."
+> **la coordinadora:** "Enséñame casos procesados con y sin condicion antes de cerrar."
 
-La solucion comoda tenia una virtud: se podia explicar en una frase. El problema
-era que tambien escondia entradas, reglas y excepciones. Cuando el grupo la
-siguio dos pasos mas, aparecio lo de siempre: una salida que parecia formal, una
-persona intentando defenderla y otra buscando el dato exacto donde la historia
-dejaba de sostenerse.
+El grupo puso casos procesados con y sin condicion junto al resultado anterior. Poner los pasos junto al resultado convirtió una explicación vaga en una comprobación que podía ejecutar cualquier integrante.
 
 ## La pregunta antes de la vuelta
 
@@ -66,9 +58,9 @@ dejaba de sostenerse.
 
 > **Nico:** "La condicion separo quien necesitaba accion y quien no."
 
-> **Irene:** "Eso cambia lo que tenemos que enseñar."
+> **Irene:** "Entonces debemos agregar condiciones antes de repetir acciones."
 
-> **Nico:** "Si. Primero la regla humana, luego la forma tecnica."
+> **Nico:** "Un loop repite, pero la condicion decide cuando debe cambiar el camino."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="casos procesados con y sin condicion">
   <rect width="720" height="320" fill="#fff"/>
@@ -99,9 +91,13 @@ dejaba de sostenerse.
 
 > **Nico:** "Y dejar de molestar a quien ya termino."
 
-> **Joel:** "Y si alguien quiere saltarse ese paso."
+> **Nico:** "¿Qué cambiaremos después de revisar casos procesados con y sin condicion?"
 
-> **Nico:** "Que primero explique que evidencia esta dispuesto a perder."
+> **Irene:** "La decisión es agregar condiciones antes de repetir acciones."
+
+> **Joel:** "Y volvemos a medir condicionales, loops y logica de automatizacion antes del siguiente cierre."
+
+> **Joel:** "El siguiente ejercicio incluirá un caso normal, una excepción y una entrada vacía."
 
 > **Irene:** "El loop trabajo muchisimo; el problema es que nunca pregunto a quien."
 

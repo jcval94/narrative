@@ -2,6 +2,8 @@
 
 ## Crear o reescribir un caso
 
+Usa siempre `.codex/skills/create-narrative-case/SKILL.md`.
+
 1. Define el concepto de datos y la decision que debe cambiar.
 2. Completa el story spine corto.
 3. Elige tres o cuatro personajes con posturas distintas.
@@ -22,6 +24,7 @@
 python tools/render_case_html.py examples/cases/NN_caso.md examples/html/NN_caso.html
 python tools/validate_case_structure.py examples/cases/NN_caso.md
 python tools/validate_case_structure.py --collection (Get-ChildItem examples/cases/*.md)
+python tools/audit_story_language.py --collection (Get-ChildItem examples/cases/*.md)
 python tools/validate_html_story.py examples/html/NN_caso.html
 python tools/validate_html_story.py --collection (Get-ChildItem examples/html/*.html)
 python tools/build_pages_site.py

@@ -16,7 +16,7 @@ def test_catalog_contains_current_collection_with_topics() -> None:
     case_count = len(list((PROJECT_ROOT / "examples" / "cases").glob("[0-9][0-9]_*.md")))
 
     assert len(entries) == case_count
-    assert len(entries) >= 48
+    assert len(entries) >= 87
     assert all(entry.topic for entry in entries)
     assert all(entry.published_path.startswith("cases/") for entry in entries)
     assert entries[0].case_id == "01"

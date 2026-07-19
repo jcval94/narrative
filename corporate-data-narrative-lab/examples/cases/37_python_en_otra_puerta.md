@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **el mentor:** "Cuenta como pista, no como garantia."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+El codigo falla para unos y para otros usa paquetes viejos. Lo que había empezado como una forma de avanzar rápido terminó creando trabajo adicional para una persona específica.
 
 ## La puerta equivocada
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Caro:** "Ese no es un plan, es una rifa."
 
-> **Benja:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Benja:** "El codigo falla para unos y para otros usa paquetes viejos."
 
-> **el mentor:** "Quiero saber exactamente donde se esta pagando."
+> **el mentor:** "Quiero ver rutas de interprete antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Caro muestra ruta de interprete, version y paquetes instalados. El dato decisivo mostró en qué paso se desviaba el resultado y quién necesitaba actuar para corregirlo.
 
 ## Ruta mata sospecha
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Caro:** "El editor apuntaba al global, no al entorno virtual."
 
-> **Benja:** "Eso explica por que la salida parecia correcta al principio."
+> **Benja:** "Ahora entiendo por qué si el archivo se abre en VS Code, se ejecuta con el entorno correcto."
 
-> **Caro:** "Correcta para una pregunta que no era la importante."
+> **Caro:** "Respondía otra pregunta; no servía para seleccionar interprete del proyecto y documentar activacion del entorno."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="rutas de interprete">
   <rect width="720" height="320" fill="#fff"/>
@@ -97,21 +87,19 @@ cara tranquila.
 
 > **el mentor:** "Fijamos el interprete del entorno virtual en el proyecto."
 
-> **el mentor:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **el mentor:** "Dejen por escrito quién va a seleccionar interprete del proyecto y documentar activacion del entorno."
 
 > **Diana:** "Hay que mirar una configuracion mas."
 
 > **Caro:** "Y dejamos de perseguir errores imaginarios."
 
-> **Diana:** "Y si alguien pide excepcion."
+> **Caro:** "¿Qué cambiaremos después de revisar rutas de interprete?"
 
-> **Caro:** "Que la pida con costo visible y fecha."
+> **Benja:** "La decisión es seleccionar interprete del proyecto y documentar activacion del entorno."
 
-> **el mentor:** "Y si no hay evidencia, no hay lanzamiento."
+> **Diana:** "Y volvemos a medir interpretes de Python en VS Code antes del siguiente cierre."
 
-> **Benja:** "Eso va a incomodar a la prisa."
-
-> **Caro:** "La prisa ya nos estaba cobrando intereses."
+> **Diana:** "El editor mostrará la ruta del intérprete antes de ejecutar cualquier archivo."
 
 > **Benja:** "No habia dos proyectos; habia dos Pythons peleando por el teclado."
 

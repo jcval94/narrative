@@ -81,6 +81,31 @@ TOPIC_OVERRIDES = {
     "60": "Lectura de fuentes",
     "61": "Pandas esencial",
     "62": "Limpieza de datos",
+    "63": "Conteos y tasas",
+    "64": "Distribuciones y percentiles",
+    "65": "Segmentacion y mezcla",
+    "66": "Ventanas temporales",
+    "67": "Valores atipicos",
+    "68": "Seleccion de graficas",
+    "69": "Escalas visuales",
+    "70": "Color y jerarquia visual",
+    "71": "Doble eje",
+    "72": "Anotaciones y contexto",
+    "73": "Sesgo de seleccion",
+    "74": "Incertidumbre y muestra",
+    "75": "Pruebas multiples",
+    "76": "Correlacion y causalidad",
+    "77": "Aleatorizacion",
+    "78": "Fuga de objetivo",
+    "79": "Particiones de datos",
+    "80": "Clases desbalanceadas",
+    "81": "Umbrales y capacidad",
+    "82": "Sobreajuste",
+    "83": "Ventanas de variables",
+    "84": "Lineas base",
+    "85": "Explicabilidad y apelacion",
+    "86": "Drift y monitoreo",
+    "87": "Contratos de datos",
 }
 
 TOPIC_RULES = [
@@ -359,10 +384,12 @@ def clean_site_root(site_root: Path) -> None:
         if path.exists():
             path.unlink()
     for directory in [site_root / "cases", site_root / "assets"]:
-        if directory.exists():
-            shutil.rmtree(directory)
-    (site_root / "cases").mkdir(parents=True, exist_ok=True)
-    (site_root / "assets").mkdir(parents=True, exist_ok=True)
+        directory.mkdir(parents=True, exist_ok=True)
+        for child in directory.iterdir():
+            if child.is_dir():
+                shutil.rmtree(child)
+            else:
+                child.unlink()
 
 
 def topic_counts(entries: list[CaseEntry]) -> list[tuple[str, int]]:

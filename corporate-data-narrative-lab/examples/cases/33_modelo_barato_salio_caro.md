@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **la CFO:** "El presupuesto de reclamos sube con ganas."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+Se ahorra en computo y se pierde mas por errores caros. La mala decisión no necesitó crecer más para hacerse visible: ya había alterado una prioridad, un turno o una respuesta al cliente.
 
 ## El ahorro encontro otro recibo
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Emilia:** "Aceptemos primero saber cuales."
 
-> **Raul:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Raul:** "Se ahorra en computo y se pierde mas por errores caros."
 
-> **la CFO:** "Quiero saber exactamente donde se esta pagando."
+> **la CFO:** "Quiero ver costo por error antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Emilia compara costo total de errores y operacion. La gráfica reunió contexto y resultado en un mismo lugar, suficiente para cambiar el siguiente paso sin exagerar la conclusión.
 
 ## No todos los errores cuestan igual
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Emilia:** "El caro en computo cuesta menos al final."
 
-> **Raul:** "Eso explica por que la salida parecia correcta al principio."
+> **Raul:** "Ahora entiendo por qué si dos modelos tienen precision parecida, gana el mas barato."
 
-> **Emilia:** "Correcta para una pregunta que no era la importante."
+> **Emilia:** "Respondía otra pregunta; no servía para elegir modelo por costo esperado y no solo por costo de ejecucion."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="costo por error">
   <rect width="720" height="320" fill="#fff"/>
@@ -97,21 +87,17 @@ cara tranquila.
 
 > **la CFO:** "Elegimos por costo total esperado."
 
-> **la CFO:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **la CFO:** "Dejen por escrito quién va a elegir modelo por costo esperado y no solo por costo de ejecucion."
 
 > **Berta:** "La factura tecnica sube."
 
 > **Emilia:** "La factura completa baja."
 
-> **Berta:** "Y si alguien pide excepcion."
+> **Emilia:** "¿Qué cambiaremos después de revisar costo por error?"
 
-> **Emilia:** "Que la pida con costo visible y fecha."
+> **Raul:** "La decisión es elegir modelo por costo esperado y no solo por costo de ejecucion."
 
-> **la CFO:** "Y si no hay evidencia, no hay lanzamiento."
-
-> **Raul:** "Eso va a incomodar a la prisa."
-
-> **Emilia:** "La prisa ya nos estaba cobrando intereses."
+> **Berta:** "Y volvemos a medir costo de error y metrica de negocio antes del siguiente cierre."
 
 > **Raul:** "Ahorramos en el modelo y pagamos la factura en los errores."
 

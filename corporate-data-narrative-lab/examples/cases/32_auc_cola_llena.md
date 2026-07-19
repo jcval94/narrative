@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **el director:** "Ordenar mucho no aumenta sillas."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+La operacion no puede revisar las alertas y atiende casos por orden de llegada. El problema llegó con una fecha y una persona responsable de responder, dos detalles que el resumen inicial no contenía.
 
 ## La fila fea
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Valeria:** "Disponible no es revisado."
 
-> **Nico:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Nico:** "La operacion no puede revisar las alertas y atiende casos por orden de llegada."
 
-> **el director:** "Quiero saber exactamente donde se esta pagando."
+> **el director:** "Quiero ver curva y capacidad antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Valeria compara curva de desempeno con capacidad semanal. Al revisar la medida correcta, el equipo pudo abandonar una salida vistosa y elegir otra que sí resistía preguntas.
 
 ## El umbral tambien trabaja
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Valeria:** "El mejor umbral no es el mas vistoso, es el revisable."
 
-> **Nico:** "Eso explica por que la salida parecia correcta al principio."
+> **Nico:** "Ahora entiendo por qué una metrica tecnica alta basta para aprobar el modelo."
 
-> **Valeria:** "Correcta para una pregunta que no era la importante."
+> **Valeria:** "Respondía otra pregunta; no servía para elegir umbral por valor, costo y capacidad."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="curva y capacidad">
   <rect width="720" height="320" fill="#fff"/>
@@ -97,21 +87,17 @@ cara tranquila.
 
 > **el director:** "Aprobamos el modelo solo con umbral y cupo definidos."
 
-> **el director:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **el director:** "Dejen por escrito quién va a elegir umbral por valor, costo y capacidad."
 
 > **Patricia:** "El reporte tecnico tendra una nota menos elegante."
 
 > **Valeria:** "Y la operacion una fila que si puede terminar."
 
-> **Patricia:** "Y si alguien pide excepcion."
+> **Valeria:** "¿Qué cambiaremos después de revisar curva y capacidad?"
 
-> **Valeria:** "Que la pida con costo visible y fecha."
+> **Nico:** "La decisión es elegir umbral por valor, costo y capacidad."
 
-> **el director:** "Y si no hay evidencia, no hay lanzamiento."
-
-> **Nico:** "Eso va a incomodar a la prisa."
-
-> **Valeria:** "La prisa ya nos estaba cobrando intereses."
+> **Patricia:** "Y volvemos a medir metrica tecnica contra capacidad operativa antes del siguiente cierre."
 
 > **Nico:** "El modelo separaba muy bien; nosotros juntamos todo en una fila imposible."
 

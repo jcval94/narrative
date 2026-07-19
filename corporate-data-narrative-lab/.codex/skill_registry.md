@@ -1,6 +1,8 @@
 # Skill Registry
 
-Todas las skills aplican `ABSURD_OFFICE_COMEDY_DATA_STANDARD.md`.
+Toda creación o revisión de casos empieza por `create-narrative-case`, la skill
+compuesta y obligatoria. Las skills numeradas son módulos de apoyo: se consultan
+desde ese flujo cuando aportan una decisión o control concreto.
 
 | Orden | Skill | Responsabilidad |
 | ---: | --- | --- |
@@ -17,3 +19,11 @@ Todas las skills aplican `ABSURD_OFFICE_COMEDY_DATA_STANDARD.md`.
 | 13 | `13_html_story_renderer` | Renderizar el Markdown sin inventar contenido. |
 | 14 | `14_quality_gatekeeper` | Auditar naturalidad, humor, datos y variedad. |
 | 15 | `15_pages_site_publisher` | Regenerar el sitio publico de GitHub Pages desde la coleccion canonica. |
+
+## Ruta obligatoria
+
+`create-narrative-case` coordina currículo, tesis, evidencia, escritura,
+auditoría de lenguaje, revisión técnica, render y publicación. `09`, `10` y
+`11` son condicionales: usarlas solo cuando el caso requiera decisión de negocio,
+piloto o revisión ética. Separarlas del flujo principal evita formularios y
+jerga que terminan filtrándose al diálogo.

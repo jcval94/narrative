@@ -2,6 +2,9 @@
 
 ## Crear
 
+Usar siempre `create-narrative-case` como orquestador. Las skills numeradas son
+apoyo especializado y no una lista de pasos que deba invocarse completa.
+
 1. Elegir concepto y decision.
 2. Completar diez campos del story spine.
 3. Escribir la conversacion antes de la explicacion.
@@ -21,6 +24,8 @@
 4. Cambiar explicacion por accion o dialogo.
 5. Rehacer cualquier remate repetido.
 6. Acortar hasta 450-700 palabras.
+7. Ejecutar `tools/audit_story_language.py --collection` y eliminar cualquier
+   texto de plantilla detectado.
 
 ## Revisar
 

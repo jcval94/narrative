@@ -28,11 +28,7 @@ synthetic_data: true
 
 > **la instructora:** "Necesitas decirle donde estan, que sumar y que mostrar."
 
-La clase no se atoro por falta de ganas. Se atoro porque una idea razonable se
-habia quedado a medio camino entre conversacion y procedimiento. En la mesa ya
-habia prisa, capturas abiertas y alguien diciendo que lo importante era avanzar.
-Por eso el error parecia pequeno: no rompia la historia completa, solo la parte
-donde la maquina tenia que entender exactamente que hacer.
+El equipo pide resultados sin escribir pasos verificables. El error apareció cuando otra persona intentó ejecutar los pasos y obtuvo una salida distinta con los mismos datos.
 
 ## Pensarlo no cuenta como correrlo
 
@@ -48,15 +44,11 @@ donde la maquina tenia que entender exactamente que hacer.
 
 > **Luz:** "Primero hagamos un bloque que lea, sume y muestre."
 
-> **Beto:** "Entonces el atajo si hizo trabajo, solo que no el trabajo correcto."
+> **Beto:** "El equipo pide resultados sin escribir pasos verificables."
 
-> **la instructora:** "Quiero ver donde se separa la intuicion del resultado."
+> **la instructora:** "Enséñame pasos escritos contra salidas correctas antes de cerrar."
 
-La solucion comoda tenia una virtud: se podia explicar en una frase. El problema
-era que tambien escondia entradas, reglas y excepciones. Cuando el grupo la
-siguio dos pasos mas, aparecio lo de siempre: una salida que parecia formal, una
-persona intentando defenderla y otra buscando el dato exacto donde la historia
-dejaba de sostenerse.
+El grupo puso pasos escritos contra salidas correctas junto al resultado anterior. La comparación permitió ubicar la instrucción ausente y repetir el ejercicio sin depender de cómo lo recordaba su autor.
 
 ## Del deseo al bloque
 
@@ -66,9 +58,9 @@ dejaba de sostenerse.
 
 > **Luz:** "Cuando cada paso existe en codigo y se puede correr."
 
-> **Beto:** "Eso cambia lo que tenemos que enseñar."
+> **Beto:** "Entonces debemos convertir instrucciones humanas en bloques de codigo pequenos y ejecutables."
 
-> **Luz:** "Si. Primero la regla humana, luego la forma tecnica."
+> **Luz:** "Programar es escribir pasos precisos que una maquina pueda ejecutar y verificar."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="pasos escritos contra salidas correctas">
   <rect width="720" height="320" fill="#fff"/>
@@ -99,9 +91,13 @@ dejaba de sostenerse.
 
 > **Luz:** "Pero por fin hace algo que podemos comprobar."
 
-> **Marina:** "Y si alguien quiere saltarse ese paso."
+> **Luz:** "¿Qué cambiaremos después de revisar pasos escritos contra salidas correctas?"
 
-> **Luz:** "Que primero explique que evidencia esta dispuesto a perder."
+> **Beto:** "La decisión es convertir instrucciones humanas en bloques de codigo pequenos y ejecutables."
+
+> **Marina:** "Y volvemos a medir que es programar y ejecutar instrucciones antes del siguiente cierre."
+
+> **Marina:** "El bloque final imprimirá entrada, cálculo y salida para poder revisarlos."
 
 > **Beto:** "La computadora no estaba terca; nada mas no habia recibido la orden."
 

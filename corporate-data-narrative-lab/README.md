@@ -38,6 +38,7 @@ python tools/render_case_html.py examples/cases/01_dashboard_que_bajo_quejas_cer
 $cases = Get-ChildItem examples/cases/*.md | ForEach-Object FullName
 $html = Get-ChildItem examples/html/*.html | ForEach-Object FullName
 python tools/validate_case_structure.py --collection $cases
+python tools/audit_story_language.py --collection $cases
 python tools/validate_html_story.py --collection $html
 python tools/build_pages_site.py
 python -m pytest

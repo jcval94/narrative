@@ -28,11 +28,7 @@ synthetic_data: true
 
 > **el gerente:** "Entonces faltaba filtrar, agrupar y ordenar."
 
-La clase no se atoro por falta de ganas. Se atoro porque una idea razonable se
-habia quedado a medio camino entre conversacion y procedimiento. En la mesa ya
-habia prisa, capturas abiertas y alguien diciendo que lo importante era avanzar.
-Por eso el error parecia pequeno: no rompia la historia completa, solo la parte
-donde la maquina tenia que entender exactamente que hacer.
+La consulta devuelve filas innecesarias y una conclusion sin agrupar. El ejercicio dejó de ser demostración cuando tuvo que responder una pregunta nueva y el código no sabía dónde buscar el dato.
 
 ## La tabla no era la respuesta
 
@@ -48,15 +44,11 @@ donde la maquina tenia que entender exactamente que hacer.
 
 > **Meli:** "Correr no es responder."
 
-> **Sergio:** "Entonces el atajo si hizo trabajo, solo que no el trabajo correcto."
+> **Sergio:** "La consulta devuelve filas innecesarias y una conclusion sin agrupar."
 
-> **el gerente:** "Quiero ver donde se separa la intuicion del resultado."
+> **el gerente:** "Enséñame filas consultadas contra respuesta necesaria antes de cerrar."
 
-La solucion comoda tenia una virtud: se podia explicar en una frase. El problema
-era que tambien escondia entradas, reglas y excepciones. Cuando el grupo la
-siguio dos pasos mas, aparecio lo de siempre: una salida que parecia formal, una
-persona intentando defenderla y otra buscando el dato exacto donde la historia
-dejaba de sostenerse.
+El grupo puso filas consultadas contra respuesta necesaria junto al resultado anterior. La comparación mostró qué estructura o regla permitía adaptar la solución sin esconder un caso especial dentro del resultado.
 
 ## Cuatro palabras que ordenan la pregunta
 
@@ -66,9 +58,9 @@ dejaba de sostenerse.
 
 > **Meli:** "Muchas menos cuando la pregunta guia SELECT y WHERE."
 
-> **Sergio:** "Eso cambia lo que tenemos que enseñar."
+> **Sergio:** "Entonces debemos seleccionar columnas, filtrar filas, agrupar ventas y ordenar resultados."
 
-> **Meli:** "Si. Primero la regla humana, luego la forma tecnica."
+> **Meli:** "Una consulta basica debe pedir solo las columnas, filas y agrupaciones que responden la pregunta."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="filas consultadas contra respuesta necesaria">
   <rect width="720" height="320" fill="#fff"/>
@@ -99,9 +91,11 @@ dejaba de sostenerse.
 
 > **Meli:** "Y tendremos algo que si contesta."
 
-> **Paula:** "Y si alguien quiere saltarse ese paso."
+> **Meli:** "¿Qué cambiaremos después de revisar filas consultadas contra respuesta necesaria?"
 
-> **Meli:** "Que primero explique que evidencia esta dispuesto a perder."
+> **Sergio:** "La decisión es seleccionar columnas, filtrar filas, agrupar ventas y ordenar resultados."
+
+> **Paula:** "Y volvemos a medir SQL basico con SELECT, WHERE, GROUP BY y ORDER BY antes del siguiente cierre."
 
 > **Sergio:** "La consulta no respondio la pregunta; trajo la tienda completa para que la entrevistaramos."
 

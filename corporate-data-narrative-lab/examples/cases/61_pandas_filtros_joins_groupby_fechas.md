@@ -28,11 +28,7 @@ synthetic_data: true
 
 > **el mentor:** "Pandas no siempre se queja por ti."
 
-La clase no se atoro por falta de ganas. Se atoro porque una idea razonable se
-habia quedado a medio camino entre conversacion y procedimiento. En la mesa ya
-habia prisa, capturas abiertas y alguien diciendo que lo importante era avanzar.
-Por eso el error parecia pequeno: no rompia la historia completa, solo la parte
-donde la maquina tenia que entender exactamente que hacer.
+Un filtro de fechas mal convertido excluye dias y el resumen cambia. La solución parecía suficiente mientras nadie pidiera repetirla con otro archivo, otra fecha o una cantidad diferente.
 
 ## La fecha era texto disfrazado
 
@@ -48,15 +44,11 @@ donde la maquina tenia que entender exactamente que hacer.
 
 > **Olga:** "Demasiado suave para una semana real."
 
-> **Ivan:** "Entonces el atajo si hizo trabajo, solo que no el trabajo correcto."
+> **Ivan:** "Un filtro de fechas mal convertido excluye dias y el resumen cambia."
 
-> **el mentor:** "Quiero ver donde se separa la intuicion del resultado."
+> **el mentor:** "Enséñame filas antes y despues de filtros de fecha antes de cerrar."
 
-La solucion comoda tenia una virtud: se podia explicar en una frase. El problema
-era que tambien escondia entradas, reglas y excepciones. Cuando el grupo la
-siguio dos pasos mas, aparecio lo de siempre: una salida que parecia formal, una
-persona intentando defenderla y otra buscando el dato exacto donde la historia
-dejaba de sostenerse.
+El grupo puso filas antes y despues de filtros de fecha junto al resultado anterior. Al contrastar resultados, el equipo sustituyó memoria y orden accidental por pasos que podían verificarse uno a uno.
 
 ## Filtrar despues de convertir
 
@@ -66,9 +58,9 @@ dejaba de sostenerse.
 
 > **Olga:** "Se perdieron al filtrar texto como si fuera fecha."
 
-> **Ivan:** "Eso cambia lo que tenemos que enseñar."
+> **Ivan:** "Entonces debemos convertir tipos, filtrar explicitamente, unir con llaves y agrupar despues de validar."
 
-> **Olga:** "Si. Primero la regla humana, luego la forma tecnica."
+> **Olga:** "En pandas, valida tipos y filas antes de confiar en filtros, joins o groupby."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="filas antes y despues de filtros de fecha">
   <rect width="720" height="320" fill="#fff"/>
@@ -99,9 +91,13 @@ dejaba de sostenerse.
 
 > **Olga:** "Y menos dias desaparecidos."
 
-> **Ceci:** "Y si alguien quiere saltarse ese paso."
+> **Olga:** "¿Qué cambiaremos después de revisar filas antes y despues de filtros de fecha?"
 
-> **Olga:** "Que primero explique que evidencia esta dispuesto a perder."
+> **Ivan:** "La decisión es convertir tipos, filtrar explicitamente, unir con llaves y agrupar despues de validar."
+
+> **Ceci:** "Y volvemos a medir pandas esencial con filtros, joins, groupby y fechas antes del siguiente cierre."
+
+> **Ceci:** "Cada transformación quedará en un paso nombrado y fácil de inspeccionar."
 
 > **Ivan:** "Pandas no odio los lunes; nosotros los dejamos como texto."
 

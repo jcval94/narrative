@@ -28,11 +28,7 @@ synthetic_data: true
 
 > **la directora:** "En promociones product_id aparece varias veces."
 
-La clase no se atoro por falta de ganas. Se atoro porque una idea razonable se
-habia quedado a medio camino entre conversacion y procedimiento. En la mesa ya
-habia prisa, capturas abiertas y alguien diciendo que lo importante era avanzar.
-Por eso el error parecia pequeno: no rompia la historia completa, solo la parte
-donde la maquina tenia que entender exactamente que hacer.
+Ventas se multiplican porque promociones tiene varias filas por producto. El error apareció cuando otra persona intentó ejecutar los pasos y obtuvo una salida distinta con los mismos datos.
 
 ## La union tenia eco
 
@@ -48,15 +44,11 @@ donde la maquina tenia que entender exactamente que hacer.
 
 > **Hana:** "A contabilidad le va a gustar menos."
 
-> **Pedro:** "Entonces el atajo si hizo trabajo, solo que no el trabajo correcto."
+> **Pedro:** "Ventas se multiplican porque promociones tiene varias filas por producto."
 
-> **la directora:** "Quiero ver donde se separa la intuicion del resultado."
+> **la directora:** "Enséñame ventas antes y despues del join antes de cerrar."
 
-La solucion comoda tenia una virtud: se podia explicar en una frase. El problema
-era que tambien escondia entradas, reglas y excepciones. Cuando el grupo la
-siguio dos pasos mas, aparecio lo de siempre: una salida que parecia formal, una
-persona intentando defenderla y otra buscando el dato exacto donde la historia
-dejaba de sostenerse.
+El grupo puso ventas antes y despues del join junto al resultado anterior. La comparación permitió ubicar la instrucción ausente y repetir el ejercicio sin depender de cómo lo recordaba su autor.
 
 ## Una fila contra muchas
 
@@ -66,9 +58,9 @@ dejaba de sostenerse.
 
 > **Hana:** "Cada venta se repitio por cada promocion del producto."
 
-> **Pedro:** "Eso cambia lo que tenemos que enseñar."
+> **Pedro:** "Entonces debemos identificar llave, granularidad y duplicados antes de unir."
 
-> **Hana:** "Si. Primero la regla humana, luego la forma tecnica."
+> **Hana:** "Antes de unir tablas, revisa llave unica, granularidad y filas duplicadas."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="ventas antes y despues del join">
   <rect width="720" height="320" fill="#fff"/>
@@ -99,9 +91,15 @@ dejaba de sostenerse.
 
 > **Hana:** "Y las ventas dejaran de reproducirse."
 
-> **Lucia:** "Y si alguien quiere saltarse ese paso."
+> **Hana:** "¿Qué cambiaremos después de revisar ventas antes y despues del join?"
 
-> **Hana:** "Que primero explique que evidencia esta dispuesto a perder."
+> **Pedro:** "La decisión es identificar llave, granularidad y duplicados antes de unir."
+
+> **Lucia:** "Y volvemos a medir JOINs, llaves, granularidad y duplicados antes del siguiente cierre."
+
+> **Lucia:** "Antes del próximo JOIN escribiremos la llave y la granularidad esperada de cada tabla."
+
+> **la directora:** "La consulta contará filas antes y después para detectar multiplicaciones inesperadas."
 
 > **Pedro:** "El JOIN no vendio mas; nada mas conto la misma venta con entusiasmo."
 

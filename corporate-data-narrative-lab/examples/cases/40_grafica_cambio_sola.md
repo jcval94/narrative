@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **la gerente:** "Eso es comodo y peligrosamente silencioso."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+Se discute el analisis sin saber que tabla alimento cada version. La presión por cerrar seguía ahí, pero ahora también había un caso concreto que mostraba por qué la salida era insuficiente.
 
 ## El dato se movio sin hacer ruido
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Noe:** "No confundamos mejora con actualizacion."
 
-> **Sara:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Sara:** "Se discute el analisis sin saber que tabla alimento cada version."
 
-> **la gerente:** "Quiero saber exactamente donde se esta pagando."
+> **la gerente:** "Quiero ver diff de datos y codigo antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Sara compara hash de datos, fecha de extraccion y commit de codigo. Al ordenar la evidencia, el equipo pudo distinguir una coincidencia conveniente de una señal útil para decidir.
 
 ## Tres huellas para una grafica
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Noe:** "El commit era igual; el corte de datos no."
 
-> **Sara:** "Eso explica por que la salida parecia correcta al principio."
+> **Sara:** "Ahora entiendo por qué si el codigo no cambio, el resultado debe ser el mismo."
 
-> **Noe:** "Correcta para una pregunta que no era la importante."
+> **Noe:** "Respondía otra pregunta; no servía para registrar versiones de datos y parametros junto con cada salida."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="diff de datos y codigo">
   <rect width="720" height="320" fill="#fff"/>
@@ -97,21 +87,17 @@ cara tranquila.
 
 > **la gerente:** "Cada grafica guardara commit, fecha de datos y parametros."
 
-> **la gerente:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **la gerente:** "Dejen por escrito quién va a registrar versiones de datos y parametros junto con cada salida."
 
 > **Miguel:** "La carpeta de salidas tendra mas metadata."
 
 > **Noe:** "Y menos misterio."
 
-> **Miguel:** "Y si alguien pide excepcion."
+> **Noe:** "¿Qué cambiaremos después de revisar diff de datos y codigo?"
 
-> **Noe:** "Que la pida con costo visible y fecha."
+> **Sara:** "La decisión es registrar versiones de datos y parametros junto con cada salida."
 
-> **la gerente:** "Y si no hay evidencia, no hay lanzamiento."
-
-> **Sara:** "Eso va a incomodar a la prisa."
-
-> **Noe:** "La prisa ya nos estaba cobrando intereses."
+> **Miguel:** "Y volvemos a medir diferencias reproducibles en codigo y datos antes del siguiente cierre."
 
 > **Sara:** "La grafica no cambio sola; solo fue mas discreta que nosotros."
 

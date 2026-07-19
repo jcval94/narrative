@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **el gerente:** "Aprendio de quienes tuvieron oportunidad."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+Candidatos capaces quedan abajo por no parecerse al patron anterior. La solución rápida había cumplido una parte del encargo y había complicado otra que no aparecía en el primer reporte.
 
 ## Parecido no era desempeno
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Ana:** "Algunas senales son el grupo con bigote falso."
 
-> **Pablo:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Pablo:** "Candidatos capaces quedan abajo por no parecerse al patron anterior."
 
-> **el gerente:** "Quiero saber exactamente donde se esta pagando."
+> **el gerente:** "Quiero ver seleccion por grupo antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Ana compara seleccion por experiencia real y por parecido historico. La lectura completa devolvió el contexto omitido y dejó una acción concreta en lugar de una conclusión tranquilizadora.
 
 ## El historial tenia memoria selectiva
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Ana:** "Los perfiles no historicos caen mas aun con desempeno similar."
 
-> **Pablo:** "Eso explica por que la salida parecia correcta al principio."
+> **Pablo:** "Ahora entiendo por qué si los mejores empleados historicos se parecen, el modelo debe buscar perfiles parecidos."
 
-> **Ana:** "Correcta para una pregunta que no era la importante."
+> **Ana:** "Respondía otra pregunta; no servía para auditar sesgos, quitar proxies y mantener revision humana."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="seleccion por grupo">
   <rect width="720" height="320" fill="#fff"/>
@@ -97,21 +87,17 @@ cara tranquila.
 
 > **el gerente:** "El filtro deja de descartar solo y pasa a priorizar revision."
 
-> **el gerente:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **el gerente:** "Dejen por escrito quién va a auditar sesgos, quitar proxies y mantener revision humana."
 
 > **Lorena:** "RH leera mas candidatos."
 
 > **Ana:** "Y menos copias del mismo pasado."
 
-> **Lorena:** "Y si alguien pide excepcion."
+> **Ana:** "¿Qué cambiaremos después de revisar seleccion por grupo?"
 
-> **Ana:** "Que la pida con costo visible y fecha."
+> **Pablo:** "La decisión es auditar sesgos, quitar proxies y mantener revision humana."
 
-> **el gerente:** "Y si no hay evidencia, no hay lanzamiento."
-
-> **Pablo:** "Eso va a incomodar a la prisa."
-
-> **Ana:** "La prisa ya nos estaba cobrando intereses."
+> **Lorena:** "Y volvemos a medir sesgo en datos historicos y decisiones automatizadas antes del siguiente cierre."
 
 > **Pablo:** "El modelo no buscaba talento; buscaba al gerente con otro correo."
 

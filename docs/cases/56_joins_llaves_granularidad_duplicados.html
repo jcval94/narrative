@@ -35,7 +35,7 @@
 <blockquote><strong>Hana:</strong><span>O la tabla se multiplico.</span></blockquote>
 <blockquote><strong>Lucia:</strong><span>Uni por product_id, eso era la llave.</span></blockquote>
 <blockquote><strong>la directora:</strong><span>En promociones product_id aparece varias veces.</span></blockquote>
-<p>La clase no se atoro por falta de ganas. Se atoro porque una idea razonable se habia quedado a medio camino entre conversacion y procedimiento. En la mesa ya habia prisa, capturas abiertas y alguien diciendo que lo importante era avanzar. Por eso el error parecia pequeno: no rompia la historia completa, solo la parte donde la maquina tenia que entender exactamente que hacer.</p>
+<p>Ventas se multiplican porque promociones tiene varias filas por producto. El error apareció cuando otra persona intentó ejecutar los pasos y obtuvo una salida distinta con los mismos datos.</p>
 </section>
 <section>
 <h2>La union tenia eco</h2>
@@ -45,17 +45,17 @@
 <blockquote><strong>la directora:</strong><span>Elegante no significa correcto.</span></blockquote>
 <blockquote><strong>Lucia:</strong><span>El total nuevo le gustaba a direccion.</span></blockquote>
 <blockquote><strong>Hana:</strong><span>A contabilidad le va a gustar menos.</span></blockquote>
-<blockquote><strong>Pedro:</strong><span>Entonces el atajo si hizo trabajo, solo que no el trabajo correcto.</span></blockquote>
-<blockquote><strong>la directora:</strong><span>Quiero ver donde se separa la intuicion del resultado.</span></blockquote>
-<p>La solucion comoda tenia una virtud: se podia explicar en una frase. El problema era que tambien escondia entradas, reglas y excepciones. Cuando el grupo la siguio dos pasos mas, aparecio lo de siempre: una salida que parecia formal, una persona intentando defenderla y otra buscando el dato exacto donde la historia dejaba de sostenerse.</p>
+<blockquote><strong>Pedro:</strong><span>Ventas se multiplican porque promociones tiene varias filas por producto.</span></blockquote>
+<blockquote><strong>la directora:</strong><span>Enséñame ventas antes y despues del join antes de cerrar.</span></blockquote>
+<p>El grupo puso ventas antes y despues del join junto al resultado anterior. La comparación permitió ubicar la instrucción ausente y repetir el ejercicio sin depender de cómo lo recordaba su autor.</p>
 </section>
 <section>
 <h2>Una fila contra muchas</h2>
 <blockquote><strong>Hana:</strong><span>Revise filas por llave antes de unir.</span></blockquote>
 <blockquote><strong>la directora:</strong><span>Donde se duplicaron las ventas.</span></blockquote>
 <blockquote><strong>Hana:</strong><span>Cada venta se repitio por cada promocion del producto.</span></blockquote>
-<blockquote><strong>Pedro:</strong><span>Eso cambia lo que tenemos que enseñar.</span></blockquote>
-<blockquote><strong>Hana:</strong><span>Si. Primero la regla humana, luego la forma tecnica.</span></blockquote>
+<blockquote><strong>Pedro:</strong><span>Entonces debemos identificar llave, granularidad y duplicados antes de unir.</span></blockquote>
+<blockquote><strong>Hana:</strong><span>Antes de unir tablas, revisa llave unica, granularidad y filas duplicadas.</span></blockquote>
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="ventas antes y despues del join">
   <rect width="720" height="320" fill="#fff"/>
   <text x="36" y="32" font-size="18" font-weight="bold">ventas antes y despues del join</text>
@@ -79,8 +79,11 @@
 <blockquote><strong>la directora:</strong><span>Agregaremos promociones antes de unirlas a ventas.</span></blockquote>
 <blockquote><strong>Lucia:</strong><span>La consulta tendra una CTE mas.</span></blockquote>
 <blockquote><strong>Hana:</strong><span>Y las ventas dejaran de reproducirse.</span></blockquote>
-<blockquote><strong>Lucia:</strong><span>Y si alguien quiere saltarse ese paso.</span></blockquote>
-<blockquote><strong>Hana:</strong><span>Que primero explique que evidencia esta dispuesto a perder.</span></blockquote>
+<blockquote><strong>Hana:</strong><span>¿Qué cambiaremos después de revisar ventas antes y despues del join?</span></blockquote>
+<blockquote><strong>Pedro:</strong><span>La decisión es identificar llave, granularidad y duplicados antes de unir.</span></blockquote>
+<blockquote><strong>Lucia:</strong><span>Y volvemos a medir JOINs, llaves, granularidad y duplicados antes del siguiente cierre.</span></blockquote>
+<blockquote><strong>Lucia:</strong><span>Antes del próximo JOIN escribiremos la llave y la granularidad esperada de cada tabla.</span></blockquote>
+<blockquote><strong>la directora:</strong><span>La consulta contará filas antes y después para detectar multiplicaciones inesperadas.</span></blockquote>
 <blockquote><strong>Pedro:</strong><span>El JOIN no vendio mas; nada mas conto la misma venta con entusiasmo.</span></blockquote>
 <p class="rule"><strong>Regla:</strong> antes de unir tablas, revisa llave unica, granularidad y filas duplicadas.</p>
 </section>

@@ -28,11 +28,7 @@ synthetic_data: true
 
 > **la moderadora:** "Justo por eso necesitamos reglas claras."
 
-La clase no se atoro por falta de ganas. Se atoro porque una idea razonable se
-habia quedado a medio camino entre conversacion y procedimiento. En la mesa ya
-habia prisa, capturas abiertas y alguien diciendo que lo importante era avanzar.
-Por eso el error parecia pequeno: no rompia la historia completa, solo la parte
-donde la maquina tenia que entender exactamente que hacer.
+La calculadora promete materiales imposibles y el equipo planea una base que no puede construir. La solución parecía suficiente mientras nadie pidiera repetirla con otro archivo, otra fecha o una cantidad diferente.
 
 ## El inventario tenia limites
 
@@ -48,15 +44,11 @@ donde la maquina tenia que entender exactamente que hacer.
 
 > **Axel:** "La frustracion tambien ensena, pero prefiero evitarla."
 
-> **Nora:** "Entonces el atajo si hizo trabajo, solo que no el trabajo correcto."
+> **Nora:** "La calculadora promete materiales imposibles y el equipo planea una base que no puede construir."
 
-> **la moderadora:** "Quiero ver donde se separa la intuicion del resultado."
+> **la moderadora:** "Enséñame recursos estimados contra recursos necesarios antes de cerrar."
 
-La solucion comoda tenia una virtud: se podia explicar en una frase. El problema
-era que tambien escondia entradas, reglas y excepciones. Cuando el grupo la
-siguio dos pasos mas, aparecio lo de siempre: una salida que parecia formal, una
-persona intentando defenderla y otra buscando el dato exacto donde la historia
-dejaba de sostenerse.
+El grupo puso recursos estimados contra recursos necesarios junto al resultado anterior. Al contrastar resultados, el equipo sustituyó memoria y orden accidental por pasos que podían verificarse uno a uno.
 
 ## Receta antes que promesa
 
@@ -66,9 +58,9 @@ dejaba de sostenerse.
 
 > **Axel:** "Cuando cada construccion consume ingredientes reales."
 
-> **Nora:** "Eso cambia lo que tenemos que enseñar."
+> **Nora:** "Entonces debemos crear una funcion que calcule recursos por receta y avise faltantes."
 
-> **Axel:** "Si. Primero la regla humana, luego la forma tecnica."
+> **Axel:** "Un reto de programacion debe transformar reglas del juego en calculos verificables."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="recursos estimados contra recursos necesarios">
   <rect width="720" height="320" fill="#fff"/>
@@ -99,9 +91,13 @@ dejaba de sostenerse.
 
 > **Axel:** "Pero se podra construir sin magia contable."
 
-> **Tavo:** "Y si alguien quiere saltarse ese paso."
+> **Axel:** "¿Qué cambiaremos después de revisar recursos estimados contra recursos necesarios?"
 
-> **Axel:** "Que primero explique que evidencia esta dispuesto a perder."
+> **Nora:** "La decisión es crear una funcion que calcule recursos por receta y avise faltantes."
+
+> **Tavo:** "Y volvemos a medir mini reto narrativo con calculadora de recursos en Minecraft antes del siguiente cierre."
+
+> **Tavo:** "La calculadora probará recetas completas, faltantes y cantidades que no formen una pila exacta."
 
 > **Nora:** "La calculadora no construyo el castillo; solo nos cobro la fantasia en bloques."
 

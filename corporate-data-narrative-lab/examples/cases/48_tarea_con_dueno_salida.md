@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **el responsable:** "Y mas rapido se va por otra calle."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+Los agentes entregan cosas incompatibles y nadie sabe quien aprueba. La mala decisión no necesitó crecer más para hacerse visible: ya había alterado una prioridad, un turno o una respuesta al cliente.
 
 ## Chiquita pero incompleta
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Fabi:** "Simple para enviar, cara para revisar."
 
-> **Tono:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Tono:** "Los agentes entregan cosas incompatibles y nadie sabe quien aprueba."
 
-> **el responsable:** "Quiero saber exactamente donde se esta pagando."
+> **el responsable:** "Quiero ver flujo de revision antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Fabi compara tareas con dueno, salida y revision contra tareas abiertas. La gráfica reunió contexto y resultado en un mismo lugar, suficiente para cambiar el siguiente paso sin exagerar la conclusión.
 
 ## La salida se puede revisar
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Fabi:** "Las que tienen dueno, archivos, pruebas y aprobador."
 
-> **Tono:** "Eso explica por que la salida parecia correcta al principio."
+> **Tono:** "Ahora entiendo por qué una tarea corta es mejor aunque no diga salida esperada."
 
-> **Fabi:** "Correcta para una pregunta que no era la importante."
+> **Fabi:** "Respondía otra pregunta; no servía para crear tareas con contexto, archivos, salida esperada, pruebas y aprobador."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="flujo de revision">
   <rect width="720" height="320" fill="#fff"/>
@@ -100,21 +90,17 @@ cara tranquila.
 
 > **el responsable:** "Adoptamos plantilla de tarea antes de invocar agentes."
 
-> **el responsable:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **el responsable:** "Dejen por escrito quién va a crear tareas con contexto, archivos, salida esperada, pruebas y aprobador."
 
 > **Greta:** "La tarea tendra mas lineas."
 
 > **Fabi:** "Y menos drama en la revision."
 
-> **Greta:** "Y si alguien pide excepcion."
+> **Fabi:** "¿Qué cambiaremos después de revisar flujo de revision?"
 
-> **Fabi:** "Que la pida con costo visible y fecha."
+> **Tono:** "La decisión es crear tareas con contexto, archivos, salida esperada, pruebas y aprobador."
 
-> **el responsable:** "Y si no hay evidencia, no hay lanzamiento."
-
-> **Tono:** "Eso va a incomodar a la prisa."
-
-> **Fabi:** "La prisa ya nos estaba cobrando intereses."
+> **Greta:** "Y volvemos a medir tareas para agentes con responsable, salida y revision antes del siguiente cierre."
 
 > **Tono:** "La tarea no se volvio larga; se volvio adulta."
 

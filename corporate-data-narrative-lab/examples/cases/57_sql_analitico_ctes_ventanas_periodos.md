@@ -28,11 +28,7 @@ synthetic_data: true
 
 > **el director:** "Ahora la decision depende de restar a mano."
 
-La clase no se atoro por falta de ganas. Se atoro porque una idea razonable se
-habia quedado a medio camino entre conversacion y procedimiento. En la mesa ya
-habia prisa, capturas abiertas y alguien diciendo que lo importante era avanzar.
-Por eso el error parecia pequeno: no rompia la historia completa, solo la parte
-donde la maquina tenia que entender exactamente que hacer.
+El reporte muestra valores mensuales pero no variacion ni acumulados. El primer intento funcionaba en un ejemplo pequeño, pero se rompía en cuanto cambiaba una entrada o el orden de los datos.
 
 ## La historia quedo fuera
 
@@ -48,15 +44,11 @@ donde la maquina tenia que entender exactamente que hacer.
 
 > **Elena:** "Una CTE tambien comenta con estructura."
 
-> **Uriel:** "Entonces el atajo si hizo trabajo, solo que no el trabajo correcto."
+> **Uriel:** "El reporte muestra valores mensuales pero no variacion ni acumulados."
 
-> **el director:** "Quiero ver donde se separa la intuicion del resultado."
+> **el director:** "Enséñame metrica mensual con y sin ventana antes de cerrar."
 
-La solucion comoda tenia una virtud: se podia explicar en una frase. El problema
-era que tambien escondia entradas, reglas y excepciones. Cuando el grupo la
-siguio dos pasos mas, aparecio lo de siempre: una salida que parecia formal, una
-persona intentando defenderla y otra buscando el dato exacto donde la historia
-dejaba de sostenerse.
+El grupo puso metrica mensual con y sin ventana junto al resultado anterior. Al revisar ambas versiones, el grupo encontró la regla que faltaba y pudo explicar por qué la salida anterior era frágil.
 
 ## CTE para respirar
 
@@ -66,9 +58,9 @@ dejaba de sostenerse.
 
 > **Elena:** "Se ve la variacion sin perder el valor mensual."
 
-> **Uriel:** "Eso cambia lo que tenemos que enseñar."
+> **Uriel:** "Entonces debemos usar CTEs para ordenar pasos y ventanas para comparar periodos."
 
-> **Elena:** "Si. Primero la regla humana, luego la forma tecnica."
+> **Elena:** "Las ventanas permiten comparar una fila con su historia sin perder detalle."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="metrica mensual con y sin ventana">
   <rect width="720" height="320" fill="#fff"/>
@@ -99,9 +91,13 @@ dejaba de sostenerse.
 
 > **Elena:** "Y menos calculadora al lado."
 
-> **Rosa:** "Y si alguien quiere saltarse ese paso."
+> **Elena:** "¿Qué cambiaremos después de revisar metrica mensual con y sin ventana?"
 
-> **Elena:** "Que primero explique que evidencia esta dispuesto a perder."
+> **Uriel:** "La decisión es usar CTEs para ordenar pasos y ventanas para comparar periodos."
+
+> **Rosa:** "Y volvemos a medir SQL analitico con CTEs, ventanas y metricas por periodo antes del siguiente cierre."
+
+> **Rosa:** "La consulta final mostrará periodo actual y anterior sin perder el detalle de cada fila."
 
 > **Uriel:** "La metrica tenia memoria de pez, pero en formato corporativo."
 

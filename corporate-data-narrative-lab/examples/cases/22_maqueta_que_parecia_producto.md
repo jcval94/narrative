@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **la vicepresidenta:** "No nos ahorro permisos, soporte ni auditoria."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+Se promete lanzamiento mientras faltan integraciones, controles y soporte. Lo que había empezado como una forma de avanzar rápido terminó creando trabajo adicional para una persona específica.
 
 ## El lanzamiento de la pantalla bonita
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Daniela:** "Disponible como foto, todavia no como servicio."
 
-> **Omar:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Omar:** "Se promete lanzamiento mientras faltan integraciones, controles y soporte."
 
-> **la vicepresidenta:** "Quiero saber exactamente donde se esta pagando."
+> **la vicepresidenta:** "Quiero ver brecha prototipo producto antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Daniela compara avance visual contra avance operable. El dato decisivo mostró en qué paso se desviaba el resultado y quién necesitaba actuar para corregirlo.
 
 ## Lo que no se ve en la maqueta
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Daniela:** "Visualmente mucho; en controles y datos, bastante menos."
 
-> **Omar:** "Eso explica por que la salida parecia correcta al principio."
+> **Omar:** "Ahora entiendo por qué si la demo se ve real, el producto esta casi listo."
 
-> **Daniela:** "Correcta para una pregunta que no era la importante."
+> **Daniela:** "Respondía otra pregunta; no servía para separar demo, piloto y producto con criterios de salida."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="brecha prototipo producto">
   <rect width="720" height="320" fill="#fff"/>
@@ -100,21 +90,17 @@ cara tranquila.
 
 > **la vicepresidenta:** "La demo se queda como demo hasta cumplir criterios."
 
-> **la vicepresidenta:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **la vicepresidenta:** "Dejen por escrito quién va a separar demo, piloto y producto con criterios de salida."
 
 > **Julia:** "La fecha comercial pierde brillo."
 
 > **Daniela:** "Y el producto gana piso."
 
-> **Julia:** "Y si alguien pide excepcion."
+> **Daniela:** "¿Qué cambiaremos después de revisar brecha prototipo producto?"
 
-> **Daniela:** "Que la pida con costo visible y fecha."
+> **Omar:** "La decisión es separar demo, piloto y producto con criterios de salida."
 
-> **la vicepresidenta:** "Y si no hay evidencia, no hay lanzamiento."
-
-> **Omar:** "Eso va a incomodar a la prisa."
-
-> **Daniela:** "La prisa ya nos estaba cobrando intereses."
+> **Julia:** "Y volvemos a medir diferencia entre prototipo generativo y producto operable antes del siguiente cierre."
 
 > **Omar:** "La maqueta no mintio; nada mas se vistio mejor que el producto."
 

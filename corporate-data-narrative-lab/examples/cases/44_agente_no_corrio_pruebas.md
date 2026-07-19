@@ -28,12 +28,7 @@ synthetic_data: true
 
 > **la lider:** "Arreglar produccion tarda mas."
 
-La sala todavia olia a cafe recalentado y a cierre de trimestre. Nadie habia
-planeado discutir fundamentos; querian una solucion que cupiera en el correo de
-seguimiento. El problema era que la frase corta habia salido barata al escribirla
-y cara al operarla. Cada persona habia completado los huecos con su propia
-costumbre, y la herramienta habia completado los huecos con lo unico que tenia:
-instrucciones incompletas.
+El arreglo rompe un caso cercano que nadie corrio. Para cuando llegó la siguiente junta, el procedimiento cómodo ya había producido una excepción imposible de ignorar.
 
 ## La prueba pendiente
 
@@ -49,16 +44,11 @@ instrucciones incompletas.
 
 > **Pilar:** "El agente no paga el incidente."
 
-> **Tadeo:** "Entonces el atajo si tuvo costo, solo que en otro escritorio."
+> **Tadeo:** "El arreglo rompe un caso cercano que nadie corrio."
 
-> **la lider:** "Quiero saber exactamente donde se esta pagando."
+> **la lider:** "Quiero ver pruebas fallidas y pasadas antes de decidir."
 
-La mala idea no nacio como capricho. Nacio como atajo razonable para quitar
-presion, cerrar pendientes y poder decir en la siguiente junta que algo ya se
-habia movido. Por eso sobrevivio mas de lo que merecia. Cada defensa resolvia
-un pedazo visible y empujaba el costo a otro lugar: soporte, clientes,
-revision, presupuesto o la persona que tendria que explicar el resultado con la
-cara tranquila.
+Pilar compara archivos modificados, pruebas ejecutadas y fallas detectadas. La evidencia puso nombre y tamaño a esa excepción, de modo que la corrección dejó de depender de insistir más fuerte.
 
 ## Verificar deja huella
 
@@ -68,9 +58,9 @@ cara tranquila.
 
 > **Pilar:** "El caso cercano fallaba y nadie lo habia corrido."
 
-> **Tadeo:** "Eso explica por que la salida parecia correcta al principio."
+> **Tadeo:** "Ahora entiendo por qué si el cambio parece razonable, verificar es opcional."
 
-> **Pilar:** "Correcta para una pregunta que no era la importante."
+> **Pilar:** "Respondía otra pregunta; no servía para exigir comando de verificacion y salida antes de aprobar."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="pruebas fallidas y pasadas">
   <rect width="720" height="320" fill="#fff"/>
@@ -100,21 +90,21 @@ cara tranquila.
 
 > **la lider:** "La definicion de listo exige salida de pruebas."
 
-> **la lider:** "Tambien quiero responsable, criterio y evidencia de revision."
+> **la lider:** "Dejen por escrito quién va a exigir comando de verificacion y salida antes de aprobar."
 
 > **Rosa:** "Cada tarea tendra un paso mas visible."
 
 > **Pilar:** "Y menos fe disfrazada de productividad."
 
-> **Rosa:** "Y si alguien pide excepcion."
+> **Pilar:** "¿Qué cambiaremos después de revisar pruebas fallidas y pasadas?"
 
-> **Pilar:** "Que la pida con costo visible y fecha."
+> **Tadeo:** "La decisión es exigir comando de verificacion y salida antes de aprobar."
 
-> **la lider:** "Y si no hay evidencia, no hay lanzamiento."
+> **Rosa:** "Y volvemos a medir verificacion al usar agentes de desarrollo antes del siguiente cierre."
 
-> **Tadeo:** "Eso va a incomodar a la prisa."
+> **Rosa:** "Cada cambio del asistente llevará una prueba que muestre qué dejó intacto."
 
-> **Pilar:** "La prisa ya nos estaba cobrando intereses."
+> **la lider:** "Si una prueba falla, el cambio vuelve al agente con el error visible."
 
 > **Tadeo:** "El agente tenia mucha seguridad para alguien que no habia prendido la luz."
 

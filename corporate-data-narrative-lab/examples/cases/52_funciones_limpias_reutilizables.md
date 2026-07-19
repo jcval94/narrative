@@ -28,11 +28,7 @@ synthetic_data: true
 
 > **el lider:** "Corregir cinco copias ya no fue rapido."
 
-La clase no se atoro por falta de ganas. Se atoro porque una idea razonable se
-habia quedado a medio camino entre conversacion y procedimiento. En la mesa ya
-habia prisa, capturas abiertas y alguien diciendo que lo importante era avanzar.
-Por eso el error parecia pequeno: no rompia la historia completa, solo la parte
-donde la maquina tenia que entender exactamente que hacer.
+Cinco calculos parecidos cambian de forma distinta y producen resultados incompatibles. La dificultad surgió al reutilizar el ejercicio: el atajo guardaba supuestos que solo conocía quien había escrito la primera versión.
 
 ## La correccion no llego a todas partes
 
@@ -48,15 +44,11 @@ donde la maquina tenia que entender exactamente que hacer.
 
 > **Paz:** "Y ahora cada area tiene una verdad privada."
 
-> **Leo:** "Entonces el atajo si hizo trabajo, solo que no el trabajo correcto."
+> **Leo:** "Cinco calculos parecidos cambian de forma distinta y producen resultados incompatibles."
 
-> **el lider:** "Quiero ver donde se separa la intuicion del resultado."
+> **el lider:** "Enséñame copias de codigo contra resultados consistentes antes de cerrar."
 
-La solucion comoda tenia una virtud: se podia explicar en una frase. El problema
-era que tambien escondia entradas, reglas y excepciones. Cuando el grupo la
-siguio dos pasos mas, aparecio lo de siempre: una salida que parecia formal, una
-persona intentando defenderla y otra buscando el dato exacto donde la historia
-dejaba de sostenerse.
+El grupo puso copias de codigo contra resultados consistentes junto al resultado anterior. La nueva comparación hizo visibles entradas, transformaciones y salida, justo lo necesario para detectar el punto de ruptura.
 
 ## Una funcion, una verdad
 
@@ -66,9 +58,9 @@ dejaba de sostenerse.
 
 > **Paz:** "Cuando todos llamaron la misma logica."
 
-> **Leo:** "Eso cambia lo que tenemos que enseñar."
+> **Leo:** "Entonces debemos extraer la logica repetida a una funcion con nombre claro y pruebas simples."
 
-> **Paz:** "Si. Primero la regla humana, luego la forma tecnica."
+> **Paz:** "Si una logica se repite, conviertela en funcion y hazla facil de probar."
 
 <svg data-chart="central" viewBox="0 0 720 320" role="img" aria-label="copias de codigo contra resultados consistentes">
   <rect width="720" height="320" fill="#fff"/>
@@ -99,9 +91,13 @@ dejaba de sostenerse.
 
 > **Paz:** "Y dejar de mantener cinco disfraces."
 
-> **Marta:** "Y si alguien quiere saltarse ese paso."
+> **Paz:** "¿Qué cambiaremos después de revisar copias de codigo contra resultados consistentes?"
 
-> **Paz:** "Que primero explique que evidencia esta dispuesto a perder."
+> **Leo:** "La decisión es extraer la logica repetida a una funcion con nombre claro y pruebas simples."
+
+> **Marta:** "Y volvemos a medir funciones limpias y reutilizables antes del siguiente cierre."
+
+> **Marta:** "La función devolverá resultados sin depender de variables escondidas."
 
 > **Leo:** "No teniamos cinco soluciones; teniamos una solucion con cinco disfraces."
 
