@@ -8,3 +8,5 @@
 6. La critica apunta al sistema; la persona bajo presion conserva dignidad.
 7. Toda afirmacion analitica debe estar sostenida por datos sinteticos
    consistentes y una visualizacion legible.
+8. El sitio publico en `/docs` siempre se regenera desde fuentes canonicas; no
+   se edita a mano.
